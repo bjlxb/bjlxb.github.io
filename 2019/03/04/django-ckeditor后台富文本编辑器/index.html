@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Django,">
 
 
 
@@ -81,15 +81,20 @@
 
 
 
-<meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="schedule">
-<meta property="og:url" content="http://yoursite.com/schedule/index.html">
+<meta name="description" content="Django很多富文本已经很久没有维护了，django-ckeditor使用方便，配置简单，还支持图片上传。具体说明可见pypi">
+<meta name="keywords" content="Django">
+<meta property="og:type" content="article">
+<meta property="og:title" content="django-ckeditor后台富文本编辑器">
+<meta property="og:url" content="http://yoursite.com/2019/03/04/django-ckeditor后台富文本编辑器/index.html">
 <meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="Django很多富文本已经很久没有维护了，django-ckeditor使用方便，配置简单，还支持图片上传。具体说明可见pypi">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-03T09:11:14.494Z">
+<meta property="og:image" content="https://i.imgur.com/I7miQIC.jpg">
+<meta property="og:updated_time" content="2019-03-04T15:10:22.586Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="schedule">
+<meta name="twitter:title" content="django-ckeditor后台富文本编辑器">
+<meta name="twitter:description" content="Django很多富文本已经很久没有维护了，django-ckeditor使用方便，配置简单，还支持图片上传。具体说明可见pypi">
+<meta name="twitter:image" content="https://i.imgur.com/I7miQIC.jpg">
 
 
 
@@ -119,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/schedule/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/04/django-ckeditor后台富文本编辑器/">
 
 
 
 
 
-  <title>schedule | 个人小站</title>
+  <title>django-ckeditor后台富文本编辑器 | 个人小站</title>
   
 
 
@@ -272,33 +277,201 @@
 
   <div id="posts" class="posts-expand">
     
+
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/04/django-ckeditor后台富文本编辑器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="新波">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/Avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">schedule</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">django-ckeditor后台富文本编辑器</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-04T22:36:17+08:00">
+                2019-03-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Django/" itemprop="url" rel="index">
+                    <span itemprop="name">Django</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+		  
+		  
+		    <span class="post-meta-divider">|</span>
+	        <span id="busuanzi_value_page_pv"></span>次阅读
+		  
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>Django很多富文本已经很久没有维护了，django-ckeditor使用方便，配置简单，还支持图片上传。具体说明可见<a href="https://pypi.org/project/django-ckeditor/" target="_blank" rel="noopener">pypi</a><br><a id="more"></a></p>
+<p>##一、简单使用django-ckeditor</p>
+<p>#####1）安装django-ckeditor<br>使用pip安装，现在最新版本是5.6.1：</p>
+<pre><code>pip install django-ckeditor
+</code></pre><p>#####2）注册应用<br>在django项目中，找到settings.py文件中的INSTALLED_APPS加入’ckeditor’：</p>
+<pre><code>INSTALLED_APPS = [
+&apos;ckeditor&apos;,
+]
+</code></pre><p>#####3）修改模型</p>
+<p>在模型文件models.py中修改字段为富文本编辑：</p>
+<pre><code>from django.db import models
+
+
+class Activity(models.Model):
+    activity_name = models.CharField(max_length=20, verbose_name=&quot;活动名称&quot;)
+    activity_simple_depict = models.CharField(max_length=50, verbose_name=&quot;简单描述&quot;)
+    activity_depict = models.TextField(verbose_name=&quot;活动描述&quot;)
+</code></pre><p>将活动描述更改为富文本：</p>
+<pre><code>from django.db import models
+from ckeditor.fields import RichTextField
+
+class Activity(models.Model):
+    activity_name = models.CharField(max_length=20, verbose_name=&quot;活动名称&quot;)
+    activity_simple_depict = models.CharField(max_length=50, verbose_name=&quot;简单描述&quot;)
+    activity_depict = RichTextField(&apos;活动描述&apos;)
+</code></pre><p><img src="https://i.imgur.com/I7miQIC.jpg" alt></p>
+<p>需要简体中文，设置settings.py的LANGUAGE_CODE = ‘zh-hans’。</p>
+<p>注：zh-hans都是小写。</p>
+<p>若写为zh-Hans，会显示为繁体。</p>
+<p>另外，此时无法从本地上传图片，只能使用网络图片。可添加上传图片功能。</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Django/" rel="tag"># Django</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/04/Python字典/" rel="next" title="Python字典">
+                <i class="fa fa-chevron-left"></i> Python字典
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
