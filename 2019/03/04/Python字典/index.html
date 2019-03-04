@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="字典是Python中常见的数据类型，是一个可变数据类型，且可以存储任意类型对象。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-04T15:15:52.552Z">
+<meta property="og:updated_time" content="2019-03-04T15:28:14.856Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python字典">
 <meta name="twitter:description" content="字典是Python中常见的数据类型，是一个可变数据类型，且可以存储任意类型对象。">
@@ -390,43 +390,47 @@
 <pre><code>dict={key1:value1, key2:value2}
 </code></pre><p>字典中键是必须唯一，值可以重复。</p>
 <p>字典中键必须是不可变类型（字符串，数字或元组），值可以为任意类型。</p>
-<h2 id="2-字典的基本操作"><a href="#2-字典的基本操作" class="headerlink" title="2.字典的基本操作"></a>2.字典的基本操作</h2><p>#####1.根据键取值：#####<br>dict[‘key’] 若不存在会报错,KeyError</p>
+<h2 id="2-字典的基本操作"><a href="#2-字典的基本操作" class="headerlink" title="2.字典的基本操作"></a>2.字典的基本操作</h2><h5 id="1-根据键取值："><a href="#1-根据键取值：" class="headerlink" title="1.根据键取值："></a>1.根据键取值：</h5><p>dict[‘key’] 若不存在会报错,KeyError</p>
 <p>dict.get(‘key’) 若不存在,返回None</p>
 <p>dict.get(‘key’,’not exist’)</p>
-<p>#####2.判断key或value是否存在：#####<br>has_key()：有返回True，没有返回False</p>
+<h5 id="2-判断key或value是否存在："><a href="#2-判断key或value是否存在：" class="headerlink" title="2.判断key或value是否存在："></a>2.判断key或value是否存在：</h5><p>has_key()：有返回True，没有返回False</p>
 <p>in 有返回True，没有返回False 、not in 有返回False，没有返回True</p>
 <p>dict.keys() 以列表形式返回一个字典所有的键</p>
 <p>dict.values() 以列表形式返回字典中的所有值</p>
 <p>dict.items() 以列表形式返回可遍历的(键, 值) 元组数组</p>
-<p>#####3.修改字典#####<br>dict[‘key’] = value  key值不存在即新增，key值存在即修改</p>
+<h5 id="3-修改字典"><a href="#3-修改字典" class="headerlink" title="3.修改字典"></a>3.修改字典</h5><p>dict[‘key’] = value  key值不存在即新增，key值存在即修改</p>
 <p>dict.setdefault(‘key’,value)   只能新增</p>
-<p>#####4.删除字典#####<br>del dict[‘key’] 删除键key的项</p>
+<h5 id="4-删除字典"><a href="#4-删除字典" class="headerlink" title="4.删除字典"></a>4.删除字典</h5><p>del dict[‘key’] 删除键key的项</p>
 <p>del dict 删除整个字典</p>
 <p>dict.popitem()  随机删除字典中的一对键和值并将该键值对返回</p>
 <p>dict.pop(key[,default]) 删除字典给定键 key 所对应的值，返回值为被删除的值。key值必须给出。 否则，返回default值。</p>
 <p>dict.clear()  清空字典,字典存在，只清空了所有元素</p>
-<p>#####5.字典其他内置函数或方法#####</p>
-<p>######内置函数：######<br>cmp(dict1, dict2) 比较两个字典元素</p>
+<h5 id="5-字典其他内置函数或方法"><a href="#5-字典其他内置函数或方法" class="headerlink" title="5.字典其他内置函数或方法"></a>5.字典其他内置函数或方法</h5><h6 id="内置函数："><a href="#内置函数：" class="headerlink" title="内置函数："></a>内置函数：</h6><p>cmp(dict1, dict2) 比较两个字典元素</p>
 <p>len(dict) 计算字典元素个数，即键的总数</p>
 <p>str(dict) 输出字典的字符串格式</p>
 <p>type(variable) 返回输入的变量类型</p>
-<p>######内置方法：######<br>dict.copy() 返回一个字典的浅复制</p>
+<h6 id="内置方法："><a href="#内置方法：" class="headerlink" title="内置方法："></a>内置方法：</h6><p>dict.copy() 返回一个字典的浅复制</p>
 <p>dict.fromkeys(seq, val=None) 创建并返回一个新字典，以seq中的元素做该字典的键，val做该字典中所有键对应的初始值（默认为None）</p>
 <p>dict.update(dict2) 把字典dict2的键/值对更新到dict里</p>
-<p>###Python 中两个字典（dict）合并###</p>
-<p>######方法一：######<br>    merge_dict = dict( dict1, **dict2 )</p>
-<pre><code>注：如果当key不是字符串的时候，python3中会运行失败
+<h3 id="Python-中两个字典（dict）合并"><a href="#Python-中两个字典（dict）合并" class="headerlink" title="Python 中两个字典（dict）合并"></a>Python 中两个字典（dict）合并</h3><h6 id="方法一："><a href="#方法一：" class="headerlink" title="方法一："></a>方法一：</h6><pre><code>merge_dict = dict( dict1, **dict2 )
+
+注：如果当key不是字符串的时候，python3中会运行失败
 TypeError: keyword arguments must be strings
-</code></pre><p>######方法二：######<br>    merge_dict = dict(dict1.items() + dict2.items())</p>
-<pre><code>注：
+</code></pre><h6 id="方法二："><a href="#方法二：" class="headerlink" title="方法二："></a>方法二：</h6><pre><code>merge_dict = dict(dict1.items() + dict2.items())
+
+注：
 在python3中会出现错误
 TypeError: unsupported operand type(s) for +: &apos;dict_items&apos; and &apos;dict_items&apos;
 解决方案：
 dict3 = dict(list(dict1.items()) + list(dict2.items()))
-</code></pre><p>######方法三：######<br>    merge_dict = dict1.copy()<br>    merge_dict.update( dict2 )</p>
-<p>######方法四：######<br>    merge_dict = dict( dict1 )<br>    merge_dict.update( dict2 )</p>
-<p>######方法五：######<br>    for k, v in dict1.items():<br>        dict3[k] = v</p>
-<pre><code>for k, v in dict2.items():
+</code></pre><h6 id="方法三："><a href="#方法三：" class="headerlink" title="方法三："></a>方法三：</h6><pre><code>merge_dict = dict1.copy()
+merge_dict.update( dict2 )
+</code></pre><h6 id="方法四："><a href="#方法四：" class="headerlink" title="方法四："></a>方法四：</h6><pre><code>merge_dict = dict( dict1 )
+merge_dict.update( dict2 )
+</code></pre><h6 id="方法五："><a href="#方法五：" class="headerlink" title="方法五："></a>方法五：</h6><pre><code>for k, v in dict1.items():
+    dict3[k] = v
+
+for k, v in dict2.items():
     dict3[k] = v
 </code></pre>
       
@@ -639,7 +643,7 @@ dict3 = dict(list(dict1.items()) + list(dict2.items()))
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-什么是字典"><span class="nav-text">1.什么是字典</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-字典的基本操作"><span class="nav-text">2.字典的基本操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-什么是字典"><span class="nav-text">1.什么是字典</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-字典的基本操作"><span class="nav-text">2.字典的基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-根据键取值："><span class="nav-text">1.根据键取值：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-判断key或value是否存在："><span class="nav-text">2.判断key或value是否存在：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-修改字典"><span class="nav-text">3.修改字典</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-删除字典"><span class="nav-text">4.删除字典</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-字典其他内置函数或方法"><span class="nav-text">5.字典其他内置函数或方法</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#内置函数："><span class="nav-text">内置函数：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#内置方法："><span class="nav-text">内置方法：</span></a></li></ol></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-中两个字典（dict）合并"><span class="nav-text">Python 中两个字典（dict）合并</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#方法一："><span class="nav-text">方法一：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#方法二："><span class="nav-text">方法二：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#方法三："><span class="nav-text">方法三：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#方法四："><span class="nav-text">方法四：</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#方法五："><span class="nav-text">方法五：</span></a></li></ol></li></div>
             
 
           </div>

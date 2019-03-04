@@ -90,7 +90,7 @@
 <meta property="og:description" content="Django很多富文本已经很久没有维护了，django-ckeditor使用方便，配置简单，还支持图片上传。具体说明可见pypi">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.imgur.com/I7miQIC.jpg">
-<meta property="og:updated_time" content="2019-03-04T15:18:35.116Z">
+<meta property="og:updated_time" content="2019-03-04T15:28:39.210Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="django-ckeditor后台富文本编辑器">
 <meta name="twitter:description" content="Django很多富文本已经很久没有维护了，django-ckeditor使用方便，配置简单，还支持图片上传。具体说明可见pypi">
@@ -385,15 +385,13 @@
 
       
         <p>Django很多富文本已经很久没有维护了，django-ckeditor使用方便，配置简单，还支持图片上传。具体说明可见<a href="https://pypi.org/project/django-ckeditor/" target="_blank" rel="noopener">pypi</a><br><a id="more"></a></p>
-<p>##一、简单使用django-ckeditor##</p>
-<p>#####1）安装django-ckeditor#####<br>使用pip安装，现在最新版本是5.6.1：</p>
+<h2 id="一、简单使用django-ckeditor"><a href="#一、简单使用django-ckeditor" class="headerlink" title="一、简单使用django-ckeditor"></a>一、简单使用django-ckeditor</h2><h5 id="1）安装django-ckeditor"><a href="#1）安装django-ckeditor" class="headerlink" title="1）安装django-ckeditor"></a>1）安装django-ckeditor</h5><p>使用pip安装，现在最新版本是5.6.1：</p>
 <pre><code>pip install django-ckeditor
-</code></pre><p>#####2）注册应用#####<br>在django项目中，找到settings.py文件中的INSTALLED_APPS加入’ckeditor’：</p>
+</code></pre><h5 id="2）注册应用"><a href="#2）注册应用" class="headerlink" title="2）注册应用"></a>2）注册应用</h5><p>在django项目中，找到settings.py文件中的INSTALLED_APPS加入’ckeditor’：</p>
 <pre><code>INSTALLED_APPS = [
 &apos;ckeditor&apos;,
 ]
-</code></pre><p>#####3）修改模型#####</p>
-<p>在模型文件models.py中修改字段为富文本编辑：</p>
+</code></pre><h5 id="3）修改模型"><a href="#3）修改模型" class="headerlink" title="3）修改模型"></a>3）修改模型</h5><p>在模型文件models.py中修改字段为富文本编辑：</p>
 <pre><code>from django.db import models
 
 
@@ -504,8 +502,17 @@ class Activity(models.Model):
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -602,6 +609,22 @@ class Activity(models.Model):
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、简单使用django-ckeditor"><span class="nav-text">一、简单使用django-ckeditor</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1）安装django-ckeditor"><span class="nav-text">1）安装django-ckeditor</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2）注册应用"><span class="nav-text">2）注册应用</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3）修改模型"><span class="nav-text">3）修改模型</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
