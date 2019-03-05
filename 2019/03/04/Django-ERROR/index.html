@@ -81,20 +81,20 @@
 
 
 
-<meta name="description" content="Django中的Error出现UNICODEENCODEERROR: ‘ASCII’ CODEC CAN’T ENCODE CHARACTERS IN POSITION 2-5: ORDINAL NOT IN RANGE(128)错误解决方案：字符集出现问题，在文件前加两行代码解决问题。 reload(sys) sys.setdefaultencoding(&amp;apos;utf-8&amp;apos;)">
+<meta name="description" content="Django中的Error出现UNICODEENCODEERROR: ‘ASCII’ CODEC CAN’T ENCODE CHARACTERS IN POSITION 2-5: ORDINAL NOT IN RANGE(128)错误解决方案：字符集出现问题，在文件前加两行代码解决问题。12reload(sys)sys.setdefaultencoding(&apos;utf-8&apos;)">
 <meta name="keywords" content="Django">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Django-ERROR">
 <meta property="og:url" content="http://yoursite.com/2019/03/04/Django-ERROR/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="Django中的Error出现UNICODEENCODEERROR: ‘ASCII’ CODEC CAN’T ENCODE CHARACTERS IN POSITION 2-5: ORDINAL NOT IN RANGE(128)错误解决方案：字符集出现问题，在文件前加两行代码解决问题。 reload(sys) sys.setdefaultencoding(&amp;apos;utf-8&amp;apos;)">
+<meta property="og:description" content="Django中的Error出现UNICODEENCODEERROR: ‘ASCII’ CODEC CAN’T ENCODE CHARACTERS IN POSITION 2-5: ORDINAL NOT IN RANGE(128)错误解决方案：字符集出现问题，在文件前加两行代码解决问题。12reload(sys)sys.setdefaultencoding(&apos;utf-8&apos;)">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://cn.bing.com/az/hprichbg/rb/FinWhale_ZH-CN9010064973_1920x1080.jpg">
 <meta property="og:image" content="https://cn.bing.com/az/hprichbg/rb/HZMB_ZH-CN5238831909_1920x1080.jpg">
-<meta property="og:updated_time" content="2019-03-04T15:17:58.022Z">
+<meta property="og:updated_time" content="2019-03-05T11:46:42.807Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django-ERROR">
-<meta name="twitter:description" content="Django中的Error出现UNICODEENCODEERROR: ‘ASCII’ CODEC CAN’T ENCODE CHARACTERS IN POSITION 2-5: ORDINAL NOT IN RANGE(128)错误解决方案：字符集出现问题，在文件前加两行代码解决问题。 reload(sys) sys.setdefaultencoding(&amp;apos;utf-8&amp;apos;)">
+<meta name="twitter:description" content="Django中的Error出现UNICODEENCODEERROR: ‘ASCII’ CODEC CAN’T ENCODE CHARACTERS IN POSITION 2-5: ORDINAL NOT IN RANGE(128)错误解决方案：字符集出现问题，在文件前加两行代码解决问题。12reload(sys)sys.setdefaultencoding(&apos;utf-8&apos;)">
 <meta name="twitter:image" content="https://cn.bing.com/az/hprichbg/rb/FinWhale_ZH-CN9010064973_1920x1080.jpg">
 
 
@@ -387,13 +387,13 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://cn.bing.com/az/hprichbg/rb/FinWhale_ZH-CN9010064973_1920x1080.jpg" rel="gallery_cjsui32om00019su6xia2zg8h" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://cn.bing.com/az/hprichbg/rb/FinWhale_ZH-CN9010064973_1920x1080.jpg" rel="gallery_cjsvpohys0007qgu6cx33qevg" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://cn.bing.com/az/hprichbg/rb/FinWhale_ZH-CN9010064973_1920x1080.jpg" itemprop="contentUrl">
               </a>
             
           
             
-              <a class="post-gallery-img fancybox" href="https://cn.bing.com/az/hprichbg/rb/HZMB_ZH-CN5238831909_1920x1080.jpg" rel="gallery_cjsui32om00019su6xia2zg8h" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://cn.bing.com/az/hprichbg/rb/HZMB_ZH-CN5238831909_1920x1080.jpg" rel="gallery_cjsvpohys0007qgu6cx33qevg" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://cn.bing.com/az/hprichbg/rb/HZMB_ZH-CN5238831909_1920x1080.jpg" itemprop="contentUrl">
               </a>
             
@@ -406,10 +406,8 @@
 
       
         <a id="more"></a>
-<h1 id="Django中的Error"><a href="#Django中的Error" class="headerlink" title="Django中的Error"></a>Django中的Error</h1><p>出现<font color="#FF0000">UNICODEENCODEERROR: ‘ASCII’ CODEC CAN’T ENCODE CHARACTERS IN POSITION 2-5: ORDINAL NOT IN RANGE(128)</font>错误<br><!--more--><br>解决方案：<br>字符集出现问题，在文件前加两行代码解决问题。</p>
-<pre><code>reload(sys)
-sys.setdefaultencoding(&apos;utf-8&apos;)
-</code></pre>
+<h1 id="Django中的Error"><a href="#Django中的Error" class="headerlink" title="Django中的Error"></a>Django中的Error</h1><p>出现<font color="#FF0000">UNICODEENCODEERROR: ‘ASCII’ CODEC CAN’T ENCODE CHARACTERS IN POSITION 2-5: ORDINAL NOT IN RANGE(128)</font>错误<br><!--more--><br>解决方案：<br>字符集出现问题，在文件前加两行代码解决问题。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">reload(sys)</span><br><span class="line">sys.setdefaultencoding(<span class="string">'utf-8'</span>)</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -526,7 +524,7 @@ sys.setdefaultencoding(&apos;utf-8&apos;)
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

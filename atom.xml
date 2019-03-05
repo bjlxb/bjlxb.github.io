@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-04T15:28:39.210Z</updated>
+  <updated>2019-03-05T11:49:42.105Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Django创建同一个模型的多个外键</title>
+    <link href="http://yoursite.com/2019/03/05/Django%E5%88%9B%E5%BB%BA%E5%90%8C%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%A4%9A%E4%B8%AA%E5%A4%96%E9%94%AE/"/>
+    <id>http://yoursite.com/2019/03/05/Django创建同一个模型的多个外键/</id>
+    <published>2019-03-05T11:11:25.000Z</published>
+    <updated>2019-03-05T11:49:42.105Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;有时推荐关系记录时，可能会出现同一表中两个字段设置外键对应另外同一个表！&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Django" scheme="http://yoursite.com/categories/Django/"/>
+    
+    
+      <category term="Django" scheme="http://yoursite.com/tags/Django/"/>
+    
+  </entry>
   
   <entry>
     <title>django-ckeditor后台富文本编辑器</title>
@@ -41,7 +61,7 @@
     <link href="http://yoursite.com/2019/03/04/Python%E5%AD%97%E5%85%B8/"/>
     <id>http://yoursite.com/2019/03/04/Python字典/</id>
     <published>2019-03-04T11:27:59.000Z</published>
-    <updated>2019-03-04T15:28:14.856Z</updated>
+    <updated>2019-03-05T11:46:10.670Z</updated>
     
     <summary type="html">
     
@@ -61,7 +81,7 @@
     <link href="http://yoursite.com/2019/03/04/Django-ERROR/"/>
     <id>http://yoursite.com/2019/03/04/Django-ERROR/</id>
     <published>2019-03-04T11:17:59.000Z</published>
-    <updated>2019-03-04T15:17:58.022Z</updated>
+    <updated>2019-03-05T11:46:42.807Z</updated>
     
     <summary type="html">
     

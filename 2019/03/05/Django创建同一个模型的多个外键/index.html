@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Django,">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="菜单示例配置menu:  home: /  archives: /archives  about: /about  categories: /categories  tags: /tags   #commonweal: /404.html">
-<meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="个人小站">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="有时推荐关系记录时，可能会出现同一表中两个字段设置外键对应另外同一个表！">
+<meta name="keywords" content="Django">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Django创建同一个模型的多个外键">
+<meta property="og:url" content="http://yoursite.com/2019/03/05/Django创建同一个模型的多个外键/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="菜单示例配置menu:  home: /  archives: /archives  about: /about  categories: /categories  tags: /tags   #commonweal: /404.html">
+<meta property="og:description" content="有时推荐关系记录时，可能会出现同一表中两个字段设置外键对应另外同一个表！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-03T15:14:28.396Z">
+<meta property="og:updated_time" content="2019-03-05T11:49:42.105Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="个人小站">
-<meta name="twitter:description" content="菜单示例配置menu:  home: /  archives: /archives  about: /about  categories: /categories  tags: /tags   #commonweal: /404.html">
+<meta name="twitter:title" content="Django创建同一个模型的多个外键">
+<meta name="twitter:description" content="有时推荐关系记录时，可能会出现同一表中两个字段设置外键对应另外同一个表！">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/05/Django创建同一个模型的多个外键/">
 
 
 
 
 
-  <title> | 个人小站</title>
+  <title>Django创建同一个模型的多个外键 | 个人小站</title>
   
 
 
@@ -275,35 +275,172 @@
 
   <div id="posts" class="posts-expand">
     
+
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/05/Django创建同一个模型的多个外键/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="新波">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/Avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="个人小站">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <h1 id="菜单示例配置"><a href="#菜单示例配置" class="headerlink" title="菜单示例配置"></a>菜单示例配置</h1><p>menu:<br>  home: /<br>  archives: /archives<br>  about: /about<br>  categories: /categories<br>  tags: /tags</p>
-<p>  #commonweal: /404.html</p>
-
+          <h1 class="post-title" itemprop="name headline">Django创建同一个模型的多个外键</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-05T19:11:25+08:00">
+                2019-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Django/" itemprop="url" rel="index">
+                    <span itemprop="name">Django</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+		  
+		  
+		    <span class="post-meta-divider">|</span>
+	        <span id="busuanzi_value_page_pv"></span>次阅读
+		  
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>有时推荐关系记录时，可能会出现同一表中两个字段设置外键对应另外同一个表！<br><a id="more"></a><br>若默认models.ForeignKey(）会报错，错误信息如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Unhandled exception <span class="keyword">in</span> thread started by &lt;function wrapper at <span class="number">0x101f46758</span>&gt;</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"/Users/liuxin/myworkspace/weixinmp/lib/python2.7/site-packages/django/utils/autoreload.py"</span>, line <span class="number">228</span>, <span class="keyword">in</span> wrapper</span><br><span class="line">    fn(*args, **kwargs)</span><br><span class="line">  File <span class="string">"/Users/liuxin/myworkspace/weixinmp/lib/python2.7/site-packages/django/core/management/commands/runserver.py"</span>, line <span class="number">124</span>, <span class="keyword">in</span> inner_run</span><br><span class="line">    self.check(display_num_errors=<span class="literal">True</span>)</span><br><span class="line">  File <span class="string">"/Users/liuxin/myworkspace/weixinmp/lib/python2.7/site-packages/django/core/management/base.py"</span>, line <span class="number">405</span>, <span class="keyword">in</span> check</span><br><span class="line">    <span class="keyword">raise</span> SystemCheckError(msg)</span><br><span class="line">django.core.management.base.SystemCheckError: SystemCheckError: System check identified some issues:</span><br><span class="line"></span><br><span class="line">ERRORS:</span><br><span class="line">wx_user.ShareHistory.recommend_user: (fields.E304) Reverse accessor <span class="keyword">for</span> <span class="string">'ShareHistory.recommend_user'</span> clashes <span class="keyword">with</span> reverse accessor <span class="keyword">for</span> <span class="string">'ShareHistory.share_user'</span>.</span><br><span class="line">	HINT: Add <span class="keyword">or</span> change a related_name argument to the definition <span class="keyword">for</span> <span class="string">'ShareHistory.recommend_user'</span> <span class="keyword">or</span> <span class="string">'ShareHistory.share_user'</span>.</span><br><span class="line">wx_user.ShareHistory.recommend_wechat: (fields.E304) Reverse accessor <span class="keyword">for</span> <span class="string">'ShareHistory.recommend_wechat'</span> clashes <span class="keyword">with</span> reverse accessor <span class="keyword">for</span> <span class="string">'ShareHistory.share_wechat'</span>.</span><br><span class="line">	HINT: Add <span class="keyword">or</span> change a related_name argument to the definition <span class="keyword">for</span> <span class="string">'ShareHistory.recommend_wechat'</span> <span class="keyword">or</span> <span class="string">'ShareHistory.share_wechat'</span>.</span><br><span class="line">wx_user.ShareHistory.share_user: (fields.E304) Reverse accessor <span class="keyword">for</span> <span class="string">'ShareHistory.share_user'</span> clashes <span class="keyword">with</span> reverse accessor <span class="keyword">for</span> <span class="string">'ShareHistory.recommend_user'</span>.</span><br><span class="line">	HINT: Add <span class="keyword">or</span> change a related_name argument to the definition <span class="keyword">for</span> <span class="string">'ShareHistory.share_user'</span> <span class="keyword">or</span> <span class="string">'ShareHistory.recommend_user'</span>.</span><br><span class="line">wx_user.ShareHistory.share_wechat: (fields.E304) Reverse accessor <span class="keyword">for</span> <span class="string">'ShareHistory.share_wechat'</span> clashes <span class="keyword">with</span> reverse accessor <span class="keyword">for</span> <span class="string">'ShareHistory.recommend_wechat'</span>.</span><br><span class="line">	HINT: Add <span class="keyword">or</span> change a related_name argument to the definition <span class="keyword">for</span> <span class="string">'ShareHistory.share_wechat'</span> <span class="keyword">or</span> <span class="string">'ShareHistory.recommend_wechat'</span>.</span><br></pre></td></tr></table></figure><br>解决方案：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ShareHistory</span><span class="params">(models.Model)</span>:</span></span><br><span class="line">	share_user = models.ForeignKey(UserInfo, related_name=<span class="string">'share_user'</span>, verbose_name=<span class="string">'分享用户信息'</span>)</span><br><span class="line">	share_wechat = models.ForeignKey(WeChatInfo, related_name=<span class="string">'share_wechat'</span>, verbose_name=<span class="string">'分享微信信息'</span>)</span><br><span class="line">	recommend_user = models.ForeignKey(UserInfo, related_name=<span class="string">'recommend_user'</span>, verbose_name=<span class="string">'被推荐用户信息'</span>)</span><br><span class="line">	recommend_wechat = models.ForeignKey(WeChatInfo, related_name=<span class="string">'recommend_wechat'</span>, verbose_name=<span class="string">'被推荐微信信息'</span>)</span><br><span class="line">	share_time = models.FloatField(verbose_name=<span class="string">'分享时间'</span>)</span><br></pre></td></tr></table></figure><br>在外键对应的字段添加 related_name=’’，内容不能重复，否则会报错！</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Django/" rel="tag"># Django</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/04/django-ckeditor后台富文本编辑器/" rel="next" title="django-ckeditor后台富文本编辑器">
+                <i class="fa fa-chevron-left"></i> django-ckeditor后台富文本编辑器
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -336,17 +473,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -443,22 +571,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#菜单示例配置"><span class="nav-text">菜单示例配置</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
