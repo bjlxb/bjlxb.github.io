@@ -43,9 +43,6 @@ def my_view(request):
     # ...
     return render(request, "a_template.html", c)
 ```
-{% codeblock lang:django %}
-
-{% endcodeblock %}
 ## 3.普通FORM表单的POST提交
 ```django
 <form method="post">
