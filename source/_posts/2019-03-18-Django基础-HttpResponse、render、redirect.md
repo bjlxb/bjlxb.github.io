@@ -7,7 +7,7 @@ date: 2019-03-18 22:39:00
 categories: Django
 photos:
 ---
-
+列举Django常用的响应。
 <!--more-->
 ## HttpResponse
 将字符串参数返回给浏览器
@@ -54,10 +54,10 @@ from django.shortcuts import render_to_response
 def index(request):
 	# 业务逻辑代码
 	return render(request, "index.html", {})
-```from django.shortcuts import render_to_response
+​```from django.shortcuts import render_to_response
 ## redirect
 参数为URL，表示让浏览器重定向到指定网址。
-```django
+​```django
 from django.shortcuts import redirect
 
 def index(request):
