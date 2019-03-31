@@ -65,3 +65,22 @@ sudo pacman -S archlinuxcn-keyring
 运行命令：`sudo pacman -Syyu`
 出现无法安装更新的问题：`无法安装更新，xxx被manjaro-release所有`解决:
 卸载`manjaro-release`:`sudo pacman -R manjaro-release`,再执行更新命令。
+
+### 时区问题
+安装完成后,会发现时间总是比实际快了8个小时，试了很多方法，最终使用openNTPD方法解决了问题。
+步骤:
+```bash
+# 安装openNTPD：
+sudo pacman -S openntpd
+# 重启openNTPD：
+systemctl restart openntpd
+# 设置开机启动：
+systemctl enable openntpd
+```
+### 垃圾清理
+```bash
+# 清除系统中无用的包
+sudo pacman -R $(pacman -Qdtq)
+# 清除已下载的安装包
+sudo pacman -Scc
+```
