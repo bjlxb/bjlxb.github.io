@@ -22,7 +22,10 @@ Python2 版本大于2.7.9或者Python3版本大于3.4都默认安装了pip
 	- Fedora系下：**sudo yum install python-pip**
 	- ubuntu下：**sudo apt-get install python-pip**
 4. 在windows下安装pip： 在Python安装目录的scirpts目录下运行**easy_install pip**进行安装
+---
+
 ## pip使用
+
 命令行中输入pip，查看帮助说明
 #### 1.默认安装
 ```
