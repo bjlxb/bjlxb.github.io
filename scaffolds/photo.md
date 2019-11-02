@@ -9,6 +9,8 @@ photos:
 ---
 
 <!--more-->
-{% codeblock lang:python %}
 
-{% endcodeblock %}
+```
+
+```
+
