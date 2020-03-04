@@ -2,9 +2,9 @@
 layout: photo
 title: Javascript中atob/btoa
 tags:
-  - Javascript
+  - 前端
 date: 2019-05-01 22:59:36
-categories: Javascript
+categories: 前端
 photos:
 ---
 由于网络通讯协议的限制,必须对原数据进行编码后，才能进行发送。 

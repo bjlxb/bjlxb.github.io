@@ -2,9 +2,9 @@
 layout: photo
 title: location.host与location.hostname的区别
 tags:
-  - JavaScript
+  - 前端
 date: 2019-03-24 23:19:04
-categories: JavaScript
+categories: 前端
 photos:
 ---
 Django项目中使用到了验证码库，需要用AJax调用刷新，请求固定的URL

@@ -2,9 +2,9 @@
 layout: photo
 title: JavaScript倒计时
 tags:
-  - JavaScript
+  - 前端
 date: 2019-03-16 22:34:27
-categories: JavaScript
+categories: 前端
 photos:
 ---
 记录一下之前项目中用到的倒计时功能。

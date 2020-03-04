@@ -2,13 +2,14 @@
 layout: photo
 title: JavaScript获取时间戳
 tags:
-  - Javascript
+  - 前端
 date: 2019-06-29 23:24:16
-categories:Javascript
+categories: 前端
 photos:
 ---
 Javascript三种获取时间戳方式。
 <!--more-->
+
 ```Javascript
 Date.now();
 

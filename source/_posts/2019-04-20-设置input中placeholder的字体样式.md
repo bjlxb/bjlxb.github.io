@@ -2,9 +2,9 @@
 layout: photo
 title: 设置input中placeholder的字体样式
 tags:
-  - css
+  - 前端
 date: 2019-04-20 21:10:33
-categories: css
+categories: 前端
 photos:
 ---
 项目中遇到需要修改input的placeholder样式
