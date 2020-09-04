@@ -10,7 +10,5 @@ photos:
 
 <!--more-->
 
-```
-
-```
+<img src="/image/">
 
