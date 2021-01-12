@@ -98,4 +98,3 @@ deploy:
   type: git
   repository: https://github.com/bjlxb/bjlxb.github.io.git
   branch: master
-  token: 203d736bf821b69a75a6887ec1bbc960b0609378
