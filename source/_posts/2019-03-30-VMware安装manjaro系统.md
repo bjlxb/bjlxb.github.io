@@ -2,9 +2,9 @@
 layout: photo
 title: VMware安装manjaro系统
 tags:
-  - Other
+  - Tool
 date: 2019-03-30 23:12:06
-categories: Other
+categories: Tool
 photos:
 ---
 周末折腾安装manjaro系统,折腾了一天,踩了许多坑,记录一下!

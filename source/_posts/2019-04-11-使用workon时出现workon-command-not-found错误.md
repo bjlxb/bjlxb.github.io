@@ -2,9 +2,9 @@
 layout: photo
 title: '使用workon时出现workon: command not found错误'
 tags:
-  - Other
+  - Tool
 date: 2019-04-11 22:51:00
-categories: Other
+categories: Tool
 photos:
 ---
 安装了oh-my-zsh，发现workon命令不起作用，报错zsh: command not found: workon

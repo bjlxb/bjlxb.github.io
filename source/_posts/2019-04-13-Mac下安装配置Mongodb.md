@@ -2,9 +2,9 @@
 layout: photo
 title: Mac下安装配置Mongodb
 tags:
-  - null
+  - MAC
 date: 2019-04-13 23:36:06
-categories:
+categories: MAC
 photos:
 ---
 MongoDB作为著名的Nosql数据库,在许多方面都有很大的作用,可以快速搭建一个登录注册系统.

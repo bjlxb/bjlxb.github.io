@@ -2,9 +2,9 @@
 layout: photo
 title: 'Error: The following directories are not writable by your user'
 tags:
-  - Other
+  - MAC
 date: 2019-04-11 22:41:19
-categories: Other
+categories: MAC
 photos:
 ---
 使用Homebrew安装应用安装应用出现 'Error: The following directories are not writable by your user'错误.
