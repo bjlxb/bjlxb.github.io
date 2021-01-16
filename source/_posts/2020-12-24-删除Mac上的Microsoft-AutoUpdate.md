@@ -2,9 +2,9 @@
 layout: photo
 title: 删除Mac上的Microsoft AutoUpdate
 tags:
-  - Tool
+  - MAC
 date: 2020-12-24 11:54:37
-categories: Tool
+categories: MAC
 photos:
 ---
 mac上总是弹出来很烦，删除掉，记录一下方法！

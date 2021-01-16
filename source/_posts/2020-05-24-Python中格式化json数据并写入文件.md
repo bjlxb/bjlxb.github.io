@@ -21,4 +21,3 @@ import json
 
 json.dump(file_info, fp, indent=4, sort_keys=True)
 ```
-

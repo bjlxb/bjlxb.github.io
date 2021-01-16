@@ -2,9 +2,9 @@
 layout: photo
 title: ERROR：Public Key Retrieval is not allowed
 tags:
-  - Other
+  - Java
 date: 2019-05-23 23:18:35
-categories: Other
+categories: Java
 photos:
 ---
 Spring+Mybatis项目中连接Mysql数据库报错Public Key Retrieval is not allowed。

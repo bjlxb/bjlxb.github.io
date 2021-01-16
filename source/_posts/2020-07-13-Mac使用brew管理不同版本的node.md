@@ -2,9 +2,9 @@
 layout: photo
 title: Mac使用brew管理不同版本的node
 tags:
-  - Other
+  - Tool
 date: 2020-07-13 22:30:15
-categories: Other
+categories: Tool
 photos:
 ---
 在使用hexo做博客时，出现nodejs版本过高，无法同步到github的情况，需要切换nodejs版本，记录下mac下切换过程！
