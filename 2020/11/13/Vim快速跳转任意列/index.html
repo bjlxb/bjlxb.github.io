@@ -12,17 +12,18 @@
   
   <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
   
-  <meta name="keywords" content="Tool">
+  <meta name="description" content="记录vim中简单的跳转操作">
+<meta name="keywords" content="Tool">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vim快速跳转任意列">
 <meta property="og:url" content="http://https://bjlxb.github.io/2020/11/13/Vim快速跳转任意列/index.html">
 <meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="记录vim中简单的跳转操作">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://https/image/">
-<meta property="og:updated_time" content="2021-01-16T05:21:51.301Z">
+<meta property="og:updated_time" content="2021-01-16T05:29:32.830Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vim快速跳转任意列">
-<meta name="twitter:image" content="http://https/image/">
+<meta name="twitter:description" content="记录vim中简单的跳转操作">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -94,8 +95,13 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <a id="more"></a>
-<p><img src="/image/"></p>
+        <p>记录vim中简单的跳转操作<br><a id="more"></a></p>
+<h2 id="1-跳转到行首"><a href="#1-跳转到行首" class="headerlink" title="1 跳转到行首"></a><strong>1 跳转到行首</strong></h2><p>vim普通模式下，使用命令 <code>0</code> 或 <code>|</code> 可跳转光标到当前行的行首。</p>
+<p><strong>注</strong>：<code>|</code> 英文名叫 bar，是<strong>vim普通模式</strong>下用于跳转到当前行某一列的一个命令 (To screen column [count] in the current line)，<code>|</code> 表示当前行的第0列 (行首)</p>
+<h2 id="2-跳转到行尾"><a href="#2-跳转到行尾" class="headerlink" title="2 跳转到行尾"></a><strong>2 跳转到行尾</strong></h2><p>vim普通模式下，使用命令 <code>$</code> 跳转光标到当前行的行尾</p>
+<h2 id="3-跳转任意列"><a href="#3-跳转任意列" class="headerlink" title="3 跳转任意列"></a><strong>3 跳转任意列</strong></h2><p>vim普通模式下，可使用以下vim命令 <code>0nl</code> 或 <code>n|</code> 跳转到当前行的第 n 列。</p>
+<p><strong>注</strong>：</p>
+<p><code>0nl</code> 表示先用命令 <code>0</code> 将光标移动到行首，<code>nl</code> 表示执行 n 次向右移动光标操作<code>n|</code> 表示使用 <strong>|</strong> 命令跳转到当前行的第 n 列</p>
 
       
     </div>
