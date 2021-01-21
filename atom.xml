@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://https://bjlxb.github.io/"/>
-  <updated>2021-01-07T02:32:32.000Z</updated>
+  <updated>2021-01-21T11:38:30.973Z</updated>
   <id>http://https://bjlxb.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML基础</title>
+    <link href="http://https://bjlxb.github.io/2021/01/21/HTML%E5%9F%BA%E7%A1%80/"/>
+    <id>http://https://bjlxb.github.io/2021/01/21/HTML基础/</id>
+    <published>2021-01-21T11:37:52.000Z</published>
+    <updated>2021-01-21T11:38:30.973Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前端基础&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://https://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://https://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac上Golang的环境配置</title>
@@ -400,26 +420,6 @@
     
     
       <category term="Tool" scheme="http://https://bjlxb.github.io/tags/Tool/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Tornado中使用cookie</title>
-    <link href="http://https://bjlxb.github.io/2020/09/02/Tornado%E4%B8%AD%E4%BD%BF%E7%94%A8cookie/"/>
-    <id>http://https://bjlxb.github.io/2020/09/02/Tornado中使用cookie/</id>
-    <published>2020-09-02T12:15:49.000Z</published>
-    <updated>2021-01-12T12:42:48.954Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;记录下Tornado中cookie的使用&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Django" scheme="http://https://bjlxb.github.io/categories/Django/"/>
-    
-    
-      <category term="Django" scheme="http://https://bjlxb.github.io/tags/Django/"/>
     
   </entry>
   
