@@ -5,25 +5,25 @@
   
 
   
-  <title>Django常用响应(HttpResponse、render、redirect) | 个人小站</title>
+  <title>JMeter聚合报告中90%响应时间解读 | 个人小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
   
-  <meta name="description" content="列举Django常用的响应。">
-<meta name="keywords" content="Django">
+  <meta name="description" content="Jmeter报告中90%的响应时间理解">
+<meta name="keywords" content="测试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Django常用响应(HttpResponse、render、redirect)">
-<meta property="og:url" content="http://https://bjlxb.github.io/2019/03/18/Django基础-HttpResponse、render、redirect/index.html">
+<meta property="og:title" content="JMeter聚合报告中90%响应时间解读">
+<meta property="og:url" content="http://https://bjlxb.github.io/2021/01/22/JMeter聚合报告中90-响应时间解读/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="列举Django常用的响应。">
+<meta property="og:description" content="Jmeter报告中90%的响应时间理解">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-01-12T12:42:48.918Z">
+<meta property="og:updated_time" content="2021-01-22T09:09:25.190Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Django常用响应(HttpResponse、render、redirect)">
-<meta name="twitter:description" content="列举Django常用的响应。">
+<meta name="twitter:title" content="JMeter聚合报告中90%响应时间解读">
+<meta name="twitter:description" content="Jmeter报告中90%的响应时间理解">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -60,29 +60,29 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="photo-Django基础-HttpResponse、render、redirect" class="article global-container article-type-photo" itemscope itemprop="blogPost">
+        <section id="main"><article id="photo-JMeter聚合报告中90-响应时间解读" class="article global-container article-type-photo" itemscope itemprop="blogPost">
   
     <header class="article-header">
       
   
     <h1 class="article-title" itemprop="name">
-      Django常用响应(HttpResponse、render、redirect)
+      JMeter聚合报告中90%响应时间解读
     </h1>
   
 
     </header>
   
   <div class="article-meta">
-    <a href="/2019/03/18/Django基础-HttpResponse、render、redirect/" class="article-date">
-  <time datetime="2019-03-18T14:39:00.000Z" itemprop="datePublished">2019-03-18</time>
+    <a href="/2021/01/22/JMeter聚合报告中90-响应时间解读/" class="article-date">
+  <time datetime="2021-01-22T08:56:26.000Z" itemprop="datePublished">2021-01-22</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Django/">Django</a>
+    <a class="article-category-link" href="/categories/测试/">测试</a>
   </div>
 
     
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Django/">Django</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试/">测试</a></li></ul>
 
   </div>
   
@@ -95,14 +95,10 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p>列举Django常用的响应。<br><a id="more"></a></p>
-<h2 id="HttpResponse"><a href="#HttpResponse" class="headerlink" title="HttpResponse"></a>HttpResponse</h2><p>将字符串参数返回给浏览器<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="DJANGO"><figure class="iseeu highlight /django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">from django.shortcuts import HttpResponse</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">def index(request):</span></span><br><span class="line"><span class="xml">	# 业务逻辑</span></span><br><span class="line"><span class="xml">    return HttpResponse("OK")</span></span><br></pre></td></tr></table></figure></div></p>
-<h2 id="JsonResponse"><a href="#JsonResponse" class="headerlink" title="JsonResponse"></a>JsonResponse</h2><p>JsonResponse是HttpResponse的子类。<br>JsonResponse是将数据转换为json字符串后再返回给客户端<br>JsonResponse自动设置响应头Content-Type为application/json<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="DJANGO"><figure class="iseeu highlight /django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">from django.http import JsonResponse</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">def index(request):</span></span><br><span class="line"><span class="xml">	# 业务逻辑</span></span><br><span class="line"><span class="xml">    return JsonResponse(&#123;"key":value&#125;)</span></span><br></pre></td></tr></table></figure></div></p>
-<p>JsonResponse接受非字典类型的数据，需要指定safe=False<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="DJANGO"><figure class="iseeu highlight /django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">from django.http import JsonResponse</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">def index(request):</span></span><br><span class="line"><span class="xml">	# 业务逻辑</span></span><br><span class="line"><span class="xml">    return JsonResponse(数字、字符串、列表等,safe=False)</span></span><br></pre></td></tr></table></figure></div></p>
-<h2 id="render"><a href="#render" class="headerlink" title="render"></a>render</h2><p>from django.shortcuts import render</p>
-<p>render三个参数，第一个参数request，第二个参数需要渲染的模板，第三个参数需要返回的数据，以字典的形式。<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="DJANGO"><figure class="iseeu highlight /django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">def index(request):</span></span><br><span class="line"><span class="xml">	# 业务逻辑代码</span></span><br><span class="line"><span class="xml">	return render(request, "index.html", &#123;&#125;)</span></span><br></pre></td></tr></table></figure></div></p>
-<h2 id="render-to-response"><a href="#render-to-response" class="headerlink" title="render_to_response"></a>render_to_response</h2><p>render_to_response与render相似，但只需要两个参数，第一个参数需要渲染的模板，第二个参数需要返回的数据，以字典的形式。<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="DJANGO"><figure class="iseeu highlight /django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">from django.shortcuts import render_to_response</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">def index(request):</span></span><br><span class="line"><span class="xml">	# 业务逻辑代码</span></span><br><span class="line"><span class="xml">	return render(request, "index.html", &#123;&#125;)</span></span><br><span class="line"><span class="xml">​```from django.shortcuts import render_to_response</span></span><br><span class="line"><span class="xml">## redirect</span></span><br><span class="line"><span class="xml">参数为URL，表示让浏览器重定向到指定网址。</span></span><br><span class="line"><span class="xml">​```django</span></span><br><span class="line"><span class="xml">from django.shortcuts import redirect</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">def index(request):</span></span><br><span class="line"><span class="xml">	# 业务逻辑代码</span></span><br><span class="line"><span class="xml">	return redirect("URL")</span></span><br></pre></td></tr></table></figure></div></p>
-<h2 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h2><p>可以重定向到其他方法中<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="DJANGO"><figure class="iseeu highlight /django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">from django.http import HttpResponseRedirect</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">def index(request):</span></span><br><span class="line"><span class="xml">	# 业务逻辑代码</span></span><br><span class="line"><span class="xml">	return HttpResponseRedirect("redirecturl")</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">from django.core.urlresolvers import reverse  </span></span><br><span class="line"><span class="xml">from django.shortcuts import redirect  </span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">def index(request):</span></span><br><span class="line"><span class="xml">	# 业务逻辑代码</span></span><br><span class="line"><span class="xml">	return redirect(reverse('方法', args=参数))</span></span><br></pre></td></tr></table></figure></div></p>
+        <p>Jmeter报告中90%的响应时间理解<br><a id="more"></a></p>
+<h2 id="官方解释："><a href="#官方解释：" class="headerlink" title="官方解释："></a>官方解释：</h2><pre><code>90% Line - 90% of the samples took no more than this time. The remaining samples at least as long as this.
+</code></pre><h2 id="通俗解释："><a href="#通俗解释：" class="headerlink" title="通俗解释："></a>通俗解释：</h2><p>有10个请求，将响应时间由小到大排列，求它的第90%百分位，排在第九位的响应时间，那么他的90%Line 就是第九位的响应时间。</p>
+<p>一组数由小到大进行排列，找到他的第90%个数（假如是12），那么这个数组中有90%的数将小于等于12 ，也就是90%请求响应时间不会超过12 秒。</p>
 
       
     </div>
@@ -117,20 +113,11 @@
 <nav id="article-nav">
   <div class="article-nav-block">
     
-      <a href="/2019/03/19/Python列表中的字典排序/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            Python列表中的字典排序
-          
-        </div>
-      </a>
-    
   </div>
   <div class="article-nav-block">
     
-      <a href="/2019/03/17/MAC中Pycharm的快捷键/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">MAC中Pycharm的快捷键</div>
+      <a href="/2021/01/21/HTML基础/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">HTML基础</div>
         <strong class="article-nav-caption"></strong>
       </a>
     

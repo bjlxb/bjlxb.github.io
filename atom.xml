@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://https://bjlxb.github.io/"/>
-  <updated>2021-01-21T11:38:30.973Z</updated>
+  <updated>2021-01-22T09:09:25.190Z</updated>
   <id>http://https://bjlxb.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JMeter聚合报告中90%响应时间解读</title>
+    <link href="http://https://bjlxb.github.io/2021/01/22/JMeter%E8%81%9A%E5%90%88%E6%8A%A5%E5%91%8A%E4%B8%AD90-%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4%E8%A7%A3%E8%AF%BB/"/>
+    <id>http://https://bjlxb.github.io/2021/01/22/JMeter聚合报告中90-响应时间解读/</id>
+    <published>2021-01-22T08:56:26.000Z</published>
+    <updated>2021-01-22T09:09:25.190Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Jmeter报告中90%的响应时间理解&lt;br&gt;
+    
+    </summary>
+    
+      <category term="测试" scheme="http://https://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="测试" scheme="http://https://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>HTML基础</title>
@@ -393,26 +413,6 @@
     <summary type="html">
     
       &lt;p&gt;记录下PowerShell提示无法加载文件的解决方案！&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Tool" scheme="http://https://bjlxb.github.io/categories/Tool/"/>
-    
-    
-      <category term="Tool" scheme="http://https://bjlxb.github.io/tags/Tool/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux中top命令详解</title>
-    <link href="http://https://bjlxb.github.io/2020/09/03/Linux%E4%B8%ADtop%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://https://bjlxb.github.io/2020/09/03/Linux中top命令详解/</id>
-    <published>2020-09-03T15:55:31.000Z</published>
-    <updated>2021-01-12T12:42:48.955Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;top命令是Linux下常用的性能分析工具，能够实时显示系统中各个进程的资源占用状况，类似于Windows的任务管理器。&lt;br&gt;
     
     </summary>
     
