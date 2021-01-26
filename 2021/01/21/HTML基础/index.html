@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="前端基础">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-01-25T11:03:53.840Z">
+<meta property="og:updated_time" content="2021-01-26T12:13:10.947Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML基础">
 <meta name="twitter:description" content="前端基础">
@@ -175,12 +175,50 @@
 <li><p>嵌套关系父子级包含关系</p>
 </li>
 <li><p>并列关系兄弟级并列关系</p>
-</li>
-<li><ul>
+<ul>
 <li>如果两个标签之间的关系是嵌套关系，子元素最好缩进一个tab键的身位（一个tab是4个空格）。如果是并列关系，最好上下对齐。</li>
 </ul>
 </li>
 </ul>
+<h3 id="文档类型-lt-DOCTYPE-gt"><a href="#文档类型-lt-DOCTYPE-gt" class="headerlink" title="文档类型&lt;!DOCTYPE &gt;"></a>文档类型&lt;!DOCTYPE &gt;</h3><p><strong>「文档类型」</strong>用来说明你用的XHTML或者HTML是什么版本。&lt;!DOCTYPE html&gt;告诉浏览器按照HTML5标准解析页面。</p>
+<h3 id="页面语言lang"><a href="#页面语言lang" class="headerlink" title="页面语言lang"></a>页面语言lang</h3><p>lang指定该html标签内容所用的语言</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span>  </span><br><span class="line">en 定义语言为英语 zh-CN定义语言为中文</span><br></pre></td></tr></table></figure></div>
+<p><strong>「lang的作用」</strong></p>
+<ul>
+<li>根据根据lang属性来设定不同语言的css样式，或者字体</li>
+<li>告诉搜索引擎做精确的识别</li>
+<li>让语法检查程序做语言识别</li>
+<li>帮助翻译工具做识别</li>
+<li>帮助网页阅读程序做识别</li>
+</ul>
+<h3 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h3><p><strong>「字符集」</strong>(Character set)是多个字符的集合,计算机要准确的处理各种字符集文字，需要进行字符编码，以便计算机能够识别和存储各种文字。</p>
+<ul>
+<li>UTF-8是目前最常用的字符集编码方式</li>
+<li>让 html 文件是以 UTF-8 编码保存的， 浏览器根据编码去解码对应的html内容。</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br></pre></td></tr></table></figure></div>
+<p><strong>「meta viewport的用法」</strong><br>  通常viewport是指视窗、视口。浏览器上(也可能是一个app中的webview)用来显示网页的那部分区域。在移动端和pc端视口是不同的，pc端的视口是浏览器窗口区域，而在移动端有三个不同的视口概念：布局视口、视觉视口、理想视口</p>
+<p>  meta有两个属性name 和 http-equiv</p>
+<p><strong>name属性的取值</strong></p>
+<ul>
+<li>keywords(关键字) 告诉搜索引擎，该网页的关键字</li>
+<li>description(网站内容描述) 用于告诉搜索引擎，你网站的主要内容。</li>
+<li>viewport(移动端的窗口)</li>
+<li>robots(定义搜索引擎爬虫的索引方式) robots用来告诉爬虫哪些页面需要索引，哪些页面不需要索引</li>
+<li>author(作者)</li>
+<li>generator(网页制作软件）</li>
+<li>copyright(版权)</li>
+</ul>
+<p><strong>http-equiv有以下参数</strong></p>
+<p>http-equiv相当于http的文件头作用，它可以向浏览器传回一些有用的信息，以帮助正确和精确地显示网页内容</p>
+<ul>
+<li>content-Type 设定网页字符集(Html4用法，不推荐)</li>
+<li>Expires(期限) ,可以用于设定网页的到期时间。一旦网页过期，必须到服务器上重新传输。</li>
+<li>Pragma(cache模式),是用于设定禁止浏览器从本地机的缓存中调阅页面内容，设定后一旦离开网页就无法从Cache中再调出</li>
+<li>Refresh(刷新),自动刷新并指向新页面。</li>
+<li>cache-control（请求和响应遵循的缓存机制）</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
 
       
     </div>
