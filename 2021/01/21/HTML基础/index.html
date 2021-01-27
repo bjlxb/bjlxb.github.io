@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="前端基础">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-01-26T12:13:10.947Z">
+<meta property="og:updated_time" content="2021-01-26T12:14:44.146Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML基础">
 <meta name="twitter:description" content="前端基础">
@@ -219,7 +219,13 @@
 <li>cache-control（请求和响应遵循的缓存机制）</li>
 </ul>
 <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
-
+<h3 id="HTML标签的语义化"><a href="#HTML标签的语义化" class="headerlink" title="HTML标签的语义化"></a>HTML标签的语义化</h3><ul>
+<li>方便代码的阅读和维护，样式丢失的时候能让页面呈现清晰的结构。</li>
+<li>有利于SEO，搜索引擎根据标签来确定上下文和各个关键字的权重。</li>
+<li>方便其他设备解析，如盲人阅读器根据语义渲染网页</li>
+</ul>
+<p><strong>「拓展」</strong> 标签：规定页面上所有链接的默认 URL 和设置整体链接的打开状态</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">base</span> <span class="attr">href</span>=<span class="string">"http://www.baidu.com"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">base</span> <span class="attr">target</span>=<span class="string">"_self"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>测试<span class="tag">&lt;/<span class="name">a</span>&gt;</span> 跳转到 百度</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
       
     </div>
     
@@ -337,6 +343,10 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
+            <a href="/2021/01/27/CSS3基础/">CSS3基础</a>
+          </li>
+        
+          <li>
             <a href="/2021/01/22/JMeter聚合报告中90-响应时间解读/">JMeter聚合报告中90%响应时间解读</a>
           </li>
         
@@ -350,10 +360,6 @@ gitment.render('gitmentContainer')
         
           <li>
             <a href="/2020/12/30/MySQL中substring-index函数使用详解/">MySQL中substring_index函数使用详解</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/28/Homebrew命令合集/">Homebrew命令合集</a>
           </li>
         
       </ul>
