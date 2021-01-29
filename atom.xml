@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://https://bjlxb.github.io/"/>
-  <updated>2021-01-27T08:27:25.573Z</updated>
+  <updated>2021-01-29T11:46:25.113Z</updated>
   <id>http://https://bjlxb.github.io/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>rsync用法教程</title>
+    <link href="http://https://bjlxb.github.io/2021/01/29/rsync%E7%94%A8%E6%B3%95%E6%95%99%E7%A8%8B/"/>
+    <id>http://https://bjlxb.github.io/2021/01/29/rsync用法教程/</id>
+    <published>2021-01-29T11:45:58.000Z</published>
+    <updated>2021-01-29T11:46:25.113Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="Tool" scheme="http://https://bjlxb.github.io/categories/Tool/"/>
+    
+    
+      <category term="Tool" scheme="http://https://bjlxb.github.io/tags/Tool/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS中redis相关操作</title>
+    <link href="http://https://bjlxb.github.io/2021/01/29/CentOS%E4%B8%ADredis%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/"/>
+    <id>http://https://bjlxb.github.io/2021/01/29/CentOS中redis相关操作/</id>
+    <published>2021-01-29T08:04:34.000Z</published>
+    <updated>2021-01-29T08:05:09.879Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="DB" scheme="http://https://bjlxb.github.io/categories/DB/"/>
+    
+    
+      <category term="DB" scheme="http://https://bjlxb.github.io/tags/DB/"/>
+    
+  </entry>
   
   <entry>
     <title>CSS3基础</title>
@@ -380,53 +433,6 @@
     
     
       <category term="Tool" scheme="http://https://bjlxb.github.io/tags/Tool/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript中this使用</title>
-    <link href="http://https://bjlxb.github.io/2020/09/16/JavaScript%E4%B8%ADthis%E4%BD%BF%E7%94%A8/"/>
-    <id>http://https://bjlxb.github.io/2020/09/16/JavaScript中this使用/</id>
-    <published>2020-09-16T14:23:49.000Z</published>
-    <updated>2021-01-12T12:42:48.955Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;学习下JavaScript中this关键词&lt;br&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="http://https://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="前端" scheme="http://https://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python中datetime格式化</title>
-    <link href="http://https://bjlxb.github.io/2020/09/08/Python%E4%B8%ADdatetime%E6%A0%BC%E5%BC%8F%E5%8C%96/"/>
-    <id>http://https://bjlxb.github.io/2020/09/08/Python中datetime格式化/</id>
-    <published>2020-09-08T14:55:31.000Z</published>
-    <updated>2021-01-12T12:42:48.955Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;&lt;strong&gt;获取当前时间&lt;/strong&gt;&lt;br&gt;&lt;div class=&quot;highlight-box&quot;autocomplete=&quot;off&quot; autocorrect=&quot;off&quot; autocapitalize=&quot;off&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Python" scheme="http://https://bjlxb.github.io/categories/Python/"/>
-    
-    
-      <category term="Python" scheme="http://https://bjlxb.github.io/tags/Python/"/>
     
   </entry>
   
