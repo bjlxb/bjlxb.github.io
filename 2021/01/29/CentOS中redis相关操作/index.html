@@ -12,15 +12,18 @@
   
   <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
   
-  <meta name="keywords" content="DB">
+  <meta name="description" content="CentOS中redis的使用">
+<meta name="keywords" content="DB">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CentOS中redis相关操作">
 <meta property="og:url" content="http://https://bjlxb.github.io/2021/01/29/CentOS中redis相关操作/index.html">
 <meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="CentOS中redis的使用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-01-29T08:05:09.879Z">
+<meta property="og:updated_time" content="2021-01-30T09:34:32.556Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS中redis相关操作">
+<meta name="twitter:description" content="CentOS中redis的使用">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -92,7 +95,12 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <a id="more"></a>
+        <p>CentOS中redis的使用<br><a id="more"></a></p>
+<h2 id="安装redis"><a href="#安装redis" class="headerlink" title="安装redis"></a>安装redis</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install redis</span><br></pre></td></tr></table></figure></div>
+<h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><p>为了能让redis在后台启动，需要修改配置文件中一个参数<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/redis.conf</span><br><span class="line"><span class="comment"># 找到 daemonize 属性</span></span><br><span class="line">daemonize no</span><br><span class="line"><span class="comment"># 将no改为yes</span></span><br><span class="line">daemonize yes</span><br></pre></td></tr></table></figure></div></p>
+<h2 id="后台启动"><a href="#后台启动" class="headerlink" title="后台启动"></a>后台启动</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server /etc/redis.conf &amp;</span><br></pre></td></tr></table></figure></div>
+<h2 id="停止redis"><a href="#停止redis" class="headerlink" title="停止redis"></a>停止redis</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-cli shutdown</span><br></pre></td></tr></table></figure></div>
+<h2 id="redis命令合集"><a href="#redis命令合集" class="headerlink" title="redis命令合集"></a>redis命令合集</h2><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">redis执行了make install后，redis的课执行文件都会自动复制到 /usr/<span class="built_in">local</span>/bin 目录</span><br><span class="line">redis-server        redis服务器</span><br><span class="line">redis-cli            redis命令行客户端</span><br><span class="line">redis-benchmark        redis性能测试工具</span><br><span class="line">redis-check-aof        aof文件修复工具</span><br><span class="line">redis-check-dump    rdb文件检查工具</span><br></pre></td></tr></table></figure></div>
 
       
     </div>
