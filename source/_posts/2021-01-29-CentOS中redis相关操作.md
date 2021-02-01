@@ -39,4 +39,14 @@ redis-benchmark        redis性能测试工具
 redis-check-aof        aof文件修复工具
 redis-check-dump    rdb文件检查工具
 ```
+## redis命令行客户端
+```bash
+# 1. 发送命令
+redis-cli shutdown
+# 2. 交互模式，默认是127.0.0.1和6379端口,只要使用这种模式！
+redis-cli -h 127.0.0.1 -p 6379
+# 命令返回值
+127.0.0.1:6379> ping
+PONG #表示可用
+```
 
