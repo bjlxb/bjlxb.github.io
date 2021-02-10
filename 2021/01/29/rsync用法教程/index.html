@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="记录下sync的常见用法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-02-07T10:08:16.669Z">
+<meta property="og:updated_time" content="2021-02-08T02:42:02.078Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="rsync用法教程">
 <meta name="twitter:description" content="记录下sync的常见用法">
@@ -105,6 +105,14 @@
 <p>-r表示递归，即包含子目录。<br>-r是必须的，否则 rsync 运行不会成功。</p>
 <p>1.2 多个文件或目录同步<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync -r source1 source2 destination</span><br></pre></td></tr></table></figure></div></p>
 <p>source1、source2都会被同步到destination目录。</p>
+<h6 id="2-a-参数"><a href="#2-a-参数" class="headerlink" title="2. -a 参数"></a>2. -a 参数</h6><p>-a参数可以替代-r，除了可以递归同步以外，还可以同步元信息（比如修改时间、权限等）。<br>由于 rsync 默认使用文件大小和修改时间决定文件是否需要更新，所以-a比-r更有用。<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync -a source destination</span><br></pre></td></tr></table></figure></div></p>
+<p>目标目录destination如果不存在，rsync 会自动创建。<br>执行上面的命令后，源目录source被完整地复制到了目标目录destination下面，即形成了destination/source的目录结构。</p>
+<p>只想同步源目录source里面的内容到目标目录destination，则需要在源目录后面加上斜杠。<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync -a source/ destination</span><br></pre></td></tr></table></figure></div></p>
+<p>source目录里面的内容，就都被复制到了destination目录里面，并不会在destination下面创建一个source子目录。</p>
+<h6 id="3-n-参数"><a href="#3-n-参数" class="headerlink" title="3. -n 参数"></a>3. -n 参数</h6><p>不确定 rsync 执行后会产生什么结果，可以先用-n或–dry-run参数模拟执行的结果。<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync -anv source/ destination</span><br></pre></td></tr></table></figure></div></p>
+<p>-n参数模拟命令执行的结果，并不真的执行命令。<br>-v参数则是将结果输出到终端，这样就可以看到哪些内容会被同步。</p>
+<h6 id="4-–delete-参数"><a href="#4-–delete-参数" class="headerlink" title="4. –delete 参数"></a>4. –delete 参数</h6><p>默认情况下，rsync 只确保源目录的所有内容（明确排除的文件除外）都复制到目标目录。<br>它不会使两个目录保持相同，并且不会删除文件。<br>如果要使得目标目录成为源目录的镜像副本，则必须使用–delete参数，这将删除只存在于目标目录、不存在于源目录的文件。<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rsync -av --delete source/ destination</span><br></pre></td></tr></table></figure></div></p>
+<p>–delete参数会使得destination成为source的一个镜像。</p>
 <h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a href="http://www.ruanyifeng.com/blog/2020/08/rsync.html" target="_blank" rel="noopener">阮一峰-rsync 用法教程</a></p>
 
       
