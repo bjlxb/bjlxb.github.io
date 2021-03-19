@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://https://bjlxb.github.io/"/>
-  <updated>2021-03-16T12:11:09.737Z</updated>
+  <updated>2021-03-19T10:52:19.725Z</updated>
   <id>http://https://bjlxb.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jmeter从CSV文件中随机取数据</title>
+    <link href="http://https://bjlxb.github.io/2021/03/19/Jmeter%E4%BB%8ECSV%E6%96%87%E4%BB%B6%E4%B8%AD%E9%9A%8F%E6%9C%BA%E5%8F%96%E6%95%B0%E6%8D%AE/"/>
+    <id>http://https://bjlxb.github.io/2021/03/19/Jmeter从CSV文件中随机取数据/</id>
+    <published>2021-03-19T08:31:51.000Z</published>
+    <updated>2021-03-19T10:52:19.725Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;ol&gt;
+&lt;li&gt;下载jmeter-plugins-manager插件，插件保存在Jmeter安装目录的lib/ext下&lt;br&gt;&lt;img src=&quot;/image/JMeter/JMeter-9.png&quot;&gt;&lt;/li&gt;
+&lt;li&gt;安装Random
+        
+      
+    
+    </summary>
+    
+      <category term="测试" scheme="http://https://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="测试" scheme="http://https://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript基础</title>
@@ -393,26 +422,6 @@
     
     
       <category term="Tool" scheme="http://https://bjlxb.github.io/tags/Tool/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>npm使用淘宝源</title>
-    <link href="http://https://bjlxb.github.io/2020/10/06/npm%E4%BD%BF%E7%94%A8%E6%B7%98%E5%AE%9D%E6%BA%90/"/>
-    <id>http://https://bjlxb.github.io/2020/10/06/npm使用淘宝源/</id>
-    <published>2020-10-06T14:06:47.000Z</published>
-    <updated>2021-01-12T12:42:48.956Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;记录一下如何临时使用淘宝源&lt;br&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="http://https://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="前端" scheme="http://https://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
