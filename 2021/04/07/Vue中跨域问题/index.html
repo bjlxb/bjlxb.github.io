@@ -20,12 +20,10 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="记录一下vue中跨域问题的解决方案！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://https/image/">
-<meta property="og:updated_time" content="2021-04-07T08:07:07.292Z">
+<meta property="og:updated_time" content="2021-04-08T06:42:16.008Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue中跨域问题">
 <meta name="twitter:description" content="记录一下vue中跨域问题的解决方案！">
-<meta name="twitter:image" content="http://https/image/">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -97,8 +95,10 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p>记录一下vue中跨域问题的解决方案！<br><a id="more"></a></p>
-<p><img src="/image/"></p>
+        <p>记录一下vue中跨域问题的解决方案！<br><a id="more"></a><br>报错信息:<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Access to XMLHttpRequest at &apos;http://localhost:8000/test&apos; from origin &apos;http://localhost:8080&apos; has been </span><br><span class="line">blocked by CORS policy: No &apos;Access-Control-Allow-Origin&apos; header is present on the requested resource.</span><br></pre></td></tr></table></figure></div></p>
+<p>请求的url：<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url: &apos;http://localhost:8000/test&apos;</span><br></pre></td></tr></table></figure></div></p>
+<p>解决方案：<br>修改vue.config.js中参数<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">devServer: &#123;</span><br><span class="line">	proxy: &#123;</span><br><span class="line">		&apos;/api&apos;: &#123;</span><br><span class="line">			target: &apos;http://ip:port&apos;,</span><br><span class="line">			changeOrigin: true,</span><br><span class="line">			pathRewrite: &#123;</span><br><span class="line">				&apos;/api&apos;: &apos;&apos;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div></p>
+<p>js中请求的url需修改为：<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url: &apos;/api/实际要请求的地址&apos;</span><br></pre></td></tr></table></figure></div></p>
 
       
     </div>
