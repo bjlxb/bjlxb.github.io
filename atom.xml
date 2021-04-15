@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://https://bjlxb.github.io/"/>
-  <updated>2021-04-13T06:16:38.815Z</updated>
+  <updated>2021-04-15T11:49:23.762Z</updated>
   <id>http://https://bjlxb.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue列表循环指定下标</title>
+    <link href="http://https://bjlxb.github.io/2021/04/15/vue%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF%E6%8C%87%E5%AE%9A%E4%B8%8B%E6%A0%87/"/>
+    <id>http://https://bjlxb.github.io/2021/04/15/vue列表循环指定下标/</id>
+    <published>2021-04-15T11:46:54.000Z</published>
+    <updated>2021-04-15T11:49:23.762Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;vue项目中v-for循环有指定下标的需求。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://https://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://https://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>iview框架中i-table数据处理</title>
@@ -393,26 +413,6 @@
     
     
       <category term="Tool" scheme="http://https://bjlxb.github.io/tags/Tool/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mysql自定义排序</title>
-    <link href="http://https://bjlxb.github.io/2020/11/06/Mysql%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8E%92%E5%BA%8F/"/>
-    <id>http://https://bjlxb.github.io/2020/11/06/Mysql自定义排序/</id>
-    <published>2020-11-06T14:44:05.000Z</published>
-    <updated>2021-01-16T05:21:40.770Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;mysql对结果集进行排序操作时，可以进行常规的递增递减排序也可以进行自定义排序，记录一下自定义排序使用到的方法！&lt;br&gt;
-    
-    </summary>
-    
-      <category term="DB" scheme="http://https://bjlxb.github.io/categories/DB/"/>
-    
-    
-      <category term="DB" scheme="http://https://bjlxb.github.io/tags/DB/"/>
     
   </entry>
   
