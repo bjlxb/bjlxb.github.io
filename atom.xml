@@ -5,9 +5,9 @@
   <subtitle>Stay Hungry, Stay Foolish</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://https://bjlxb.github.io/"/>
-  <updated>2021-04-16T13:29:23.567Z</updated>
-  <id>http://https://bjlxb.github.io/</id>
+  <link href="http://bjlxb.github.io/"/>
+  <updated>2021-04-20T11:10:07.887Z</updated>
+  <id>http://bjlxb.github.io/</id>
   
   <author>
     <name>新波</name>
@@ -17,9 +17,49 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>less-loader因为版本导致的问题</title>
+    <link href="http://bjlxb.github.io/2021/04/20/less-loader%E5%9B%A0%E4%B8%BA%E7%89%88%E6%9C%AC%E5%AF%BC%E8%87%B4%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://bjlxb.github.io/2021/04/20/less-loader因为版本导致的问题/</id>
+    <published>2021-04-20T11:06:09.000Z</published>
+    <updated>2021-04-20T11:10:07.887Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;升级less-loader后因为版本过高报错！&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue ui命令没反应</title>
+    <link href="http://bjlxb.github.io/2021/04/18/vue-ui%E5%91%BD%E4%BB%A4%E6%B2%A1%E5%8F%8D%E5%BA%94/"/>
+    <id>http://bjlxb.github.io/2021/04/18/vue-ui命令没反应/</id>
+    <published>2021-04-18T12:15:09.000Z</published>
+    <updated>2021-04-20T01:41:46.064Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;安装完vue和vue-cli后，使用vue ui命令后没反应解决方案&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>vue列表循环指定下标</title>
-    <link href="http://https://bjlxb.github.io/2021/04/15/vue%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF%E6%8C%87%E5%AE%9A%E4%B8%8B%E6%A0%87/"/>
-    <id>http://https://bjlxb.github.io/2021/04/15/vue列表循环指定下标/</id>
+    <link href="http://bjlxb.github.io/2021/04/15/vue%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF%E6%8C%87%E5%AE%9A%E4%B8%8B%E6%A0%87/"/>
+    <id>http://bjlxb.github.io/2021/04/15/vue列表循环指定下标/</id>
     <published>2021-04-15T11:46:54.000Z</published>
     <updated>2021-04-16T13:29:23.567Z</updated>
     
@@ -29,17 +69,17 @@
     
     </summary>
     
-      <category term="前端" scheme="http://https://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="http://https://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>iview框架中i-table数据处理</title>
-    <link href="http://https://bjlxb.github.io/2021/04/12/iview%E6%A1%86%E6%9E%B6%E4%B8%ADi-table%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
-    <id>http://https://bjlxb.github.io/2021/04/12/iview框架中i-table数据处理/</id>
+    <link href="http://bjlxb.github.io/2021/04/12/iview%E6%A1%86%E6%9E%B6%E4%B8%ADi-table%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
+    <id>http://bjlxb.github.io/2021/04/12/iview框架中i-table数据处理/</id>
     <published>2021-04-12T07:11:36.000Z</published>
     <updated>2021-04-13T06:16:38.815Z</updated>
     
@@ -49,17 +89,17 @@
     
     </summary>
     
-      <category term="前端" scheme="http://https://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="http://https://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>js中const,var,let区别</title>
-    <link href="http://https://bjlxb.github.io/2021/04/09/js%E4%B8%ADconst-var-let%E5%8C%BA%E5%88%AB/"/>
-    <id>http://https://bjlxb.github.io/2021/04/09/js中const-var-let区别/</id>
+    <link href="http://bjlxb.github.io/2021/04/09/js%E4%B8%ADconst-var-let%E5%8C%BA%E5%88%AB/"/>
+    <id>http://bjlxb.github.io/2021/04/09/js中const-var-let区别/</id>
     <published>2021-04-09T02:32:58.000Z</published>
     <updated>2021-04-09T02:43:18.681Z</updated>
     
@@ -69,17 +109,17 @@
     
     </summary>
     
-      <category term="前端" scheme="http://https://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="http://https://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>Vue中跨域问题</title>
-    <link href="http://https://bjlxb.github.io/2021/04/07/Vue%E4%B8%AD%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/"/>
-    <id>http://https://bjlxb.github.io/2021/04/07/Vue中跨域问题/</id>
+    <link href="http://bjlxb.github.io/2021/04/07/Vue%E4%B8%AD%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/"/>
+    <id>http://bjlxb.github.io/2021/04/07/Vue中跨域问题/</id>
     <published>2021-04-07T08:06:13.000Z</published>
     <updated>2021-04-14T12:11:00.996Z</updated>
     
@@ -89,17 +129,17 @@
     
     </summary>
     
-      <category term="前端" scheme="http://https://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="http://https://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>Python中subprocess模块</title>
-    <link href="http://https://bjlxb.github.io/2021/03/25/Python%E4%B8%ADsubprocess%E6%A8%A1%E5%9D%97/"/>
-    <id>http://https://bjlxb.github.io/2021/03/25/Python中subprocess模块/</id>
+    <link href="http://bjlxb.github.io/2021/03/25/Python%E4%B8%ADsubprocess%E6%A8%A1%E5%9D%97/"/>
+    <id>http://bjlxb.github.io/2021/03/25/Python中subprocess模块/</id>
     <published>2021-03-25T07:52:09.000Z</published>
     <updated>2021-04-06T09:08:53.141Z</updated>
     
@@ -109,17 +149,17 @@
     
     </summary>
     
-      <category term="Python" scheme="http://https://bjlxb.github.io/categories/Python/"/>
+      <category term="Python" scheme="http://bjlxb.github.io/categories/Python/"/>
     
     
-      <category term="Python" scheme="http://https://bjlxb.github.io/tags/Python/"/>
+      <category term="Python" scheme="http://bjlxb.github.io/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Jmeter从CSV文件中随机取数据</title>
-    <link href="http://https://bjlxb.github.io/2021/03/19/Jmeter%E4%BB%8ECSV%E6%96%87%E4%BB%B6%E4%B8%AD%E9%9A%8F%E6%9C%BA%E5%8F%96%E6%95%B0%E6%8D%AE/"/>
-    <id>http://https://bjlxb.github.io/2021/03/19/Jmeter从CSV文件中随机取数据/</id>
+    <link href="http://bjlxb.github.io/2021/03/19/Jmeter%E4%BB%8ECSV%E6%96%87%E4%BB%B6%E4%B8%AD%E9%9A%8F%E6%9C%BA%E5%8F%96%E6%95%B0%E6%8D%AE/"/>
+    <id>http://bjlxb.github.io/2021/03/19/Jmeter从CSV文件中随机取数据/</id>
     <published>2021-03-19T08:31:51.000Z</published>
     <updated>2021-03-25T07:55:00.372Z</updated>
     
@@ -129,17 +169,17 @@
     
     </summary>
     
-      <category term="测试" scheme="http://https://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
     
     
-      <category term="测试" scheme="http://https://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript基础</title>
-    <link href="http://https://bjlxb.github.io/2021/02/27/JavaScript%E5%9F%BA%E7%A1%80/"/>
-    <id>http://https://bjlxb.github.io/2021/02/27/JavaScript基础/</id>
+    <link href="http://bjlxb.github.io/2021/02/27/JavaScript%E5%9F%BA%E7%A1%80/"/>
+    <id>http://bjlxb.github.io/2021/02/27/JavaScript基础/</id>
     <published>2021-02-27T05:56:50.000Z</published>
     <updated>2021-03-16T12:11:09.737Z</updated>
     
@@ -149,17 +189,17 @@
     
     </summary>
     
-      <category term="前端" scheme="http://https://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="http://https://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>rsync用法教程</title>
-    <link href="http://https://bjlxb.github.io/2021/01/29/rsync%E7%94%A8%E6%B3%95%E6%95%99%E7%A8%8B/"/>
-    <id>http://https://bjlxb.github.io/2021/01/29/rsync用法教程/</id>
+    <link href="http://bjlxb.github.io/2021/01/29/rsync%E7%94%A8%E6%B3%95%E6%95%99%E7%A8%8B/"/>
+    <id>http://bjlxb.github.io/2021/01/29/rsync用法教程/</id>
     <published>2021-01-29T11:45:58.000Z</published>
     <updated>2021-02-08T02:42:02.078Z</updated>
     
@@ -169,17 +209,17 @@
     
     </summary>
     
-      <category term="Tool" scheme="http://https://bjlxb.github.io/categories/Tool/"/>
+      <category term="Tool" scheme="http://bjlxb.github.io/categories/Tool/"/>
     
     
-      <category term="Tool" scheme="http://https://bjlxb.github.io/tags/Tool/"/>
+      <category term="Tool" scheme="http://bjlxb.github.io/tags/Tool/"/>
     
   </entry>
   
   <entry>
     <title>CentOS中redis相关操作</title>
-    <link href="http://https://bjlxb.github.io/2021/01/29/CentOS%E4%B8%ADredis%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/"/>
-    <id>http://https://bjlxb.github.io/2021/01/29/CentOS中redis相关操作/</id>
+    <link href="http://bjlxb.github.io/2021/01/29/CentOS%E4%B8%ADredis%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/"/>
+    <id>http://bjlxb.github.io/2021/01/29/CentOS中redis相关操作/</id>
     <published>2021-01-29T08:04:34.000Z</published>
     <updated>2021-02-01T12:00:18.209Z</updated>
     
@@ -189,17 +229,17 @@
     
     </summary>
     
-      <category term="DB" scheme="http://https://bjlxb.github.io/categories/DB/"/>
+      <category term="DB" scheme="http://bjlxb.github.io/categories/DB/"/>
     
     
-      <category term="DB" scheme="http://https://bjlxb.github.io/tags/DB/"/>
+      <category term="DB" scheme="http://bjlxb.github.io/tags/DB/"/>
     
   </entry>
   
   <entry>
     <title>CSS3基础</title>
-    <link href="http://https://bjlxb.github.io/2021/01/27/CSS3%E5%9F%BA%E7%A1%80/"/>
-    <id>http://https://bjlxb.github.io/2021/01/27/CSS3基础/</id>
+    <link href="http://bjlxb.github.io/2021/01/27/CSS3%E5%9F%BA%E7%A1%80/"/>
+    <id>http://bjlxb.github.io/2021/01/27/CSS3基础/</id>
     <published>2021-01-27T08:27:09.000Z</published>
     <updated>2021-03-16T12:11:28.510Z</updated>
     
@@ -209,17 +249,17 @@
     
     </summary>
     
-      <category term="前端" scheme="http://https://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="http://https://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>JMeter聚合报告中90%响应时间解读</title>
-    <link href="http://https://bjlxb.github.io/2021/01/22/JMeter%E8%81%9A%E5%90%88%E6%8A%A5%E5%91%8A%E4%B8%AD90-%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4%E8%A7%A3%E8%AF%BB/"/>
-    <id>http://https://bjlxb.github.io/2021/01/22/JMeter聚合报告中90-响应时间解读/</id>
+    <link href="http://bjlxb.github.io/2021/01/22/JMeter%E8%81%9A%E5%90%88%E6%8A%A5%E5%91%8A%E4%B8%AD90-%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4%E8%A7%A3%E8%AF%BB/"/>
+    <id>http://bjlxb.github.io/2021/01/22/JMeter聚合报告中90-响应时间解读/</id>
     <published>2021-01-22T08:56:26.000Z</published>
     <updated>2021-01-22T09:09:25.190Z</updated>
     
@@ -229,17 +269,17 @@
     
     </summary>
     
-      <category term="测试" scheme="http://https://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
     
     
-      <category term="测试" scheme="http://https://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
   <entry>
     <title>HTML基础</title>
-    <link href="http://https://bjlxb.github.io/2021/01/21/HTML%E5%9F%BA%E7%A1%80/"/>
-    <id>http://https://bjlxb.github.io/2021/01/21/HTML基础/</id>
+    <link href="http://bjlxb.github.io/2021/01/21/HTML%E5%9F%BA%E7%A1%80/"/>
+    <id>http://bjlxb.github.io/2021/01/21/HTML基础/</id>
     <published>2021-01-21T11:37:52.000Z</published>
     <updated>2021-04-09T12:16:58.767Z</updated>
     
@@ -249,17 +289,17 @@
     
     </summary>
     
-      <category term="前端" scheme="http://https://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="http://https://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>Mac上Golang的环境配置</title>
-    <link href="http://https://bjlxb.github.io/2021/01/04/Mac%E4%B8%8AGolang%E7%9A%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    <id>http://https://bjlxb.github.io/2021/01/04/Mac上Golang的环境配置/</id>
+    <link href="http://bjlxb.github.io/2021/01/04/Mac%E4%B8%8AGolang%E7%9A%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>http://bjlxb.github.io/2021/01/04/Mac上Golang的环境配置/</id>
     <published>2021-01-04T02:39:18.000Z</published>
     <updated>2021-01-07T02:32:32.000Z</updated>
     
@@ -269,17 +309,17 @@
     
     </summary>
     
-      <category term="Golang" scheme="http://https://bjlxb.github.io/categories/Golang/"/>
+      <category term="Golang" scheme="http://bjlxb.github.io/categories/Golang/"/>
     
     
-      <category term="Golang" scheme="http://https://bjlxb.github.io/tags/Golang/"/>
+      <category term="Golang" scheme="http://bjlxb.github.io/tags/Golang/"/>
     
   </entry>
   
   <entry>
     <title>MySQL中substring_index函数使用详解</title>
-    <link href="http://https://bjlxb.github.io/2020/12/30/MySQL%E4%B8%ADsubstring-index%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://https://bjlxb.github.io/2020/12/30/MySQL中substring-index函数使用详解/</id>
+    <link href="http://bjlxb.github.io/2020/12/30/MySQL%E4%B8%ADsubstring-index%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://bjlxb.github.io/2020/12/30/MySQL中substring-index函数使用详解/</id>
     <published>2020-12-30T11:40:49.000Z</published>
     <updated>2021-01-08T10:18:46.000Z</updated>
     
@@ -289,17 +329,17 @@
     
     </summary>
     
-      <category term="DB" scheme="http://https://bjlxb.github.io/categories/DB/"/>
+      <category term="DB" scheme="http://bjlxb.github.io/categories/DB/"/>
     
     
-      <category term="DB" scheme="http://https://bjlxb.github.io/tags/DB/"/>
+      <category term="DB" scheme="http://bjlxb.github.io/tags/DB/"/>
     
   </entry>
   
   <entry>
     <title>Homebrew命令合集</title>
-    <link href="http://https://bjlxb.github.io/2020/12/28/Homebrew%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/"/>
-    <id>http://https://bjlxb.github.io/2020/12/28/Homebrew命令合集/</id>
+    <link href="http://bjlxb.github.io/2020/12/28/Homebrew%E5%91%BD%E4%BB%A4%E5%90%88%E9%9B%86/"/>
+    <id>http://bjlxb.github.io/2020/12/28/Homebrew命令合集/</id>
     <published>2020-12-28T11:49:31.000Z</published>
     <updated>2021-01-16T05:22:55.244Z</updated>
     
@@ -309,17 +349,17 @@
     
     </summary>
     
-      <category term="MAC" scheme="http://https://bjlxb.github.io/categories/MAC/"/>
+      <category term="MAC" scheme="http://bjlxb.github.io/categories/MAC/"/>
     
     
-      <category term="MAC" scheme="http://https://bjlxb.github.io/tags/MAC/"/>
+      <category term="MAC" scheme="http://bjlxb.github.io/tags/MAC/"/>
     
   </entry>
   
   <entry>
     <title>删除Mac上的Microsoft AutoUpdate</title>
-    <link href="http://https://bjlxb.github.io/2020/12/24/%E5%88%A0%E9%99%A4Mac%E4%B8%8A%E7%9A%84Microsoft-AutoUpdate/"/>
-    <id>http://https://bjlxb.github.io/2020/12/24/删除Mac上的Microsoft-AutoUpdate/</id>
+    <link href="http://bjlxb.github.io/2020/12/24/%E5%88%A0%E9%99%A4Mac%E4%B8%8A%E7%9A%84Microsoft-AutoUpdate/"/>
+    <id>http://bjlxb.github.io/2020/12/24/删除Mac上的Microsoft-AutoUpdate/</id>
     <published>2020-12-24T03:54:37.000Z</published>
     <updated>2021-01-16T05:22:35.926Z</updated>
     
@@ -329,17 +369,17 @@
     
     </summary>
     
-      <category term="MAC" scheme="http://https://bjlxb.github.io/categories/MAC/"/>
+      <category term="MAC" scheme="http://bjlxb.github.io/categories/MAC/"/>
     
     
-      <category term="MAC" scheme="http://https://bjlxb.github.io/tags/MAC/"/>
+      <category term="MAC" scheme="http://bjlxb.github.io/tags/MAC/"/>
     
   </entry>
   
   <entry>
     <title>nrm安装与配置</title>
-    <link href="http://https://bjlxb.github.io/2020/12/13/nrm%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
-    <id>http://https://bjlxb.github.io/2020/12/13/nrm安装与配置/</id>
+    <link href="http://bjlxb.github.io/2020/12/13/nrm%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
+    <id>http://bjlxb.github.io/2020/12/13/nrm安装与配置/</id>
     <published>2020-12-13T14:32:00.000Z</published>
     <updated>2020-12-22T15:04:58.000Z</updated>
     
@@ -349,17 +389,17 @@
     
     </summary>
     
-      <category term="前端" scheme="http://https://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="http://https://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>WEB API</title>
-    <link href="http://https://bjlxb.github.io/2020/11/22/WEB-API/"/>
-    <id>http://https://bjlxb.github.io/2020/11/22/WEB-API/</id>
+    <link href="http://bjlxb.github.io/2020/11/22/WEB-API/"/>
+    <id>http://bjlxb.github.io/2020/11/22/WEB-API/</id>
     <published>2020-11-22T14:41:22.000Z</published>
     <updated>2021-01-18T07:57:37.060Z</updated>
     
@@ -369,50 +409,10 @@
     
     </summary>
     
-      <category term="前端" scheme="http://https://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="http://https://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mac中nvm安装使用</title>
-    <link href="http://https://bjlxb.github.io/2020/11/15/mac%E4%B8%ADnvm%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8/"/>
-    <id>http://https://bjlxb.github.io/2020/11/15/mac中nvm安装使用/</id>
-    <published>2020-11-15T13:13:37.000Z</published>
-    <updated>2020-11-23T14:23:34.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;使用nvm对node进行版本控制&lt;br&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="http://https://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="前端" scheme="http://https://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vim快速跳转任意列</title>
-    <link href="http://https://bjlxb.github.io/2020/11/13/Vim%E5%BF%AB%E9%80%9F%E8%B7%B3%E8%BD%AC%E4%BB%BB%E6%84%8F%E5%88%97/"/>
-    <id>http://https://bjlxb.github.io/2020/11/13/Vim快速跳转任意列/</id>
-    <published>2020-11-13T14:21:26.000Z</published>
-    <updated>2021-01-16T05:29:32.830Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;记录vim中简单的跳转操作&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Tool" scheme="http://https://bjlxb.github.io/categories/Tool/"/>
-    
-    
-      <category term="Tool" scheme="http://https://bjlxb.github.io/tags/Tool/"/>
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   

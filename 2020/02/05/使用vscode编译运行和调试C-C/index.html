@@ -16,22 +16,22 @@
 <meta name="keywords" content="C&#x2F;C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用vscode编译运行和调试C&#x2F;C++">
-<meta property="og:url" content="http://https://bjlxb.github.io/2020/02/05/使用vscode编译运行和调试C-C/index.html">
+<meta property="og:url" content="http://bjlxb.github.io/2020/02/05/使用vscode编译运行和调试C-C/index.html">
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="记录一下vscode编译运行和调试C/C++的过程！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://https/image/vscode-C/vscode-1.png">
-<meta property="og:image" content="http://https/image/vscode-C/vscode-2.png">
-<meta property="og:image" content="http://https/image/vscode-C/vscode-3.png">
-<meta property="og:image" content="http://https/image/vscode-C/vscode-4.png">
-<meta property="og:image" content="http://https/image/vscode-C/vscode-5.png">
-<meta property="og:image" content="http://https/image/vscode-C/vscode-6.png">
-<meta property="og:image" content="http://https/image/vscode-C/vscode-7.png">
+<meta property="og:image" content="http://bjlxb.github.io/image/vscode-C/vscode-1.png">
+<meta property="og:image" content="http://bjlxb.github.io/image/vscode-C/vscode-2.png">
+<meta property="og:image" content="http://bjlxb.github.io/image/vscode-C/vscode-3.png">
+<meta property="og:image" content="http://bjlxb.github.io/image/vscode-C/vscode-4.png">
+<meta property="og:image" content="http://bjlxb.github.io/image/vscode-C/vscode-5.png">
+<meta property="og:image" content="http://bjlxb.github.io/image/vscode-C/vscode-6.png">
+<meta property="og:image" content="http://bjlxb.github.io/image/vscode-C/vscode-7.png">
 <meta property="og:updated_time" content="2021-01-12T12:42:48.938Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用vscode编译运行和调试C&#x2F;C++">
 <meta name="twitter:description" content="记录一下vscode编译运行和调试C/C++的过程！">
-<meta name="twitter:image" content="http://https/image/vscode-C/vscode-1.png">
+<meta name="twitter:image" content="http://bjlxb.github.io/image/vscode-C/vscode-1.png">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -109,7 +109,7 @@
 <h4 id="2-安装解压软件"><a href="#2-安装解压软件" class="headerlink" title="2. 安装解压软件"></a>2. 安装解压软件</h4><p>   推荐开源压缩软件<a href="https://www.7-zip.org/" target="_blank" rel="noopener">7-Zip</a>，虽然界面不是很美观，但是功能还是很强大的！</p>
 <h4 id="3-下载C-C-编译器"><a href="#3-下载C-C-编译器" class="headerlink" title="3. 下载C/C++编译器"></a>3. 下载C/C++编译器</h4><p>​    因为vscode只是一个代码编译器，并没有集成C/C++的编译器，需要下载一个C/C++的编译器，推荐<code>mingw</code>系列（<a href="https://sourceforge.net/projects/mingw/files/MinGW/" target="_blank" rel="noopener">mingw</a>或者<a href="https://sourceforge.net/projects/mingw-w64/files/mingw-w64/" target="_blank" rel="noopener">mingw-w64</a>，<code>mingw-w64</code>比<code>mingw</code>功能更强大），因为中国环境问题mingw-w64难以下载，推荐<a href="https://sourceforge.net/projects/mingw-w64/files/Toolchains targetting Win64/Personal Builds/mingw-builds/8.1.0/threads-posix/seh/x86_64-8.1.0-release-posix-seh-rt_v6-rev0.7z" target="_blank" rel="noopener">离线下载</a>，但是需要手动添加环境变量！</p>
 <h4 id="4-配置mingw-w64"><a href="#4-配置mingw-w64" class="headerlink" title="4. 配置mingw-w64"></a>4. 配置mingw-w64</h4><p>​    具体细节可以查看另一篇文章内容：</p>
-<p>​        <a href="https://bjlxb.github.io/2020/02/06/windows%E5%AE%89%E8%A3%85MinGW-w64/#more" target="_blank" rel="noopener">直达链接</a></p>
+<p>​        <a href="https://bjlxb.github.io/2020/02/06/windows%E5%AE%89%E8%A3%85MinGW-w64/#more">直达链接</a></p>
 <h4 id="5-验证mingw可用"><a href="#5-验证mingw可用" class="headerlink" title="5. 验证mingw可用"></a>5. 验证mingw可用</h4><p>​    打开cmd或Windows PowerShell输入gcc -v，若出现版本信息就表明mingw配置成功，如果未出现版本信息表明配置有问题，需要查找原因。</p>
 <h4 id="6-安装插件"><a href="#6-安装插件" class="headerlink" title="6. 安装插件"></a>6. 安装插件</h4><p>  依次安装下方三个插件</p>
 <ul>
@@ -267,6 +267,14 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
+            <a href="/2021/04/20/less-loader因为版本导致的问题/">less-loader因为版本导致的问题</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/18/vue-ui命令没反应/">vue ui命令没反应</a>
+          </li>
+        
+          <li>
             <a href="/2021/04/15/vue列表循环指定下标/">vue列表循环指定下标</a>
           </li>
         
@@ -276,14 +284,6 @@ gitment.render('gitmentContainer')
         
           <li>
             <a href="/2021/04/09/js中const-var-let区别/">js中const,var,let区别</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/07/Vue中跨域问题/">Vue中跨域问题</a>
-          </li>
-        
-          <li>
-            <a href="/2021/03/25/Python中subprocess模块/">Python中subprocess模块</a>
           </li>
         
       </ul>
