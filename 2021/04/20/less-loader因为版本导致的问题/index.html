@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="升级less-loader后因为版本过高报错！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-04-20T11:10:07.887Z">
+<meta property="og:updated_time" content="2021-04-22T09:51:43.863Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="less-loader因为版本导致的问题">
 <meta name="twitter:description" content="升级less-loader后因为版本过高报错！">
@@ -96,14 +96,14 @@
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
         <p>升级less-loader后因为版本过高报错！<br><a id="more"></a></p>
-<h4 id="报错信息"><a href="#报错信息" class="headerlink" title="报错信息"></a>报错信息</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Syntax Error: TypeError: this.getOptions is not a function</span><br></pre></td></tr></table></figure></div>
-<h4 id="场景重现"><a href="#场景重现" class="headerlink" title="场景重现"></a>场景重现</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -D less-loader less</span><br></pre></td></tr></table></figure></div>
+<h4 id="报错信息"><a href="#报错信息" class="headerlink" title="报错信息"></a>报错信息</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Syntax <span class="built_in">Error</span>: <span class="built_in">TypeError</span>: <span class="keyword">this</span>.getOptions is not a <span class="function"><span class="keyword">function</span></span></span><br></pre></td></tr></table></figure></div>
+<h4 id="场景重现"><a href="#场景重现" class="headerlink" title="场景重现"></a>场景重现</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -D less-loader less</span><br></pre></td></tr></table></figure></div>
 <h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><ol>
 <li><p>卸载 less-loader</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall --save less-loader</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall --save less-loader</span><br></pre></td></tr></table></figure></div>
 </li>
 <li><p>安装低版本的less-loader</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -D less-loader@7.3.0</span><br></pre></td></tr></table></figure></div>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -D less-loader@<span class="number">7.3</span><span class="number">.0</span></span><br></pre></td></tr></table></figure></div>
 </li>
 </ol>
 <p>经查询资料版本为7.3.0以下目前是没有问题</p>
@@ -120,6 +120,15 @@
     
 <nav id="article-nav">
   <div class="article-nav-block">
+    
+      <a href="/2021/04/22/JavaScript截取数组/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            JavaScript截取数组
+          
+        </div>
+      </a>
     
   </div>
   <div class="article-nav-block">
@@ -216,6 +225,10 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
+            <a href="/2021/04/22/JavaScript截取数组/">JavaScript截取数组</a>
+          </li>
+        
+          <li>
             <a href="/2021/04/20/less-loader因为版本导致的问题/">less-loader因为版本导致的问题</a>
           </li>
         
@@ -229,10 +242,6 @@ gitment.render('gitmentContainer')
         
           <li>
             <a href="/2021/04/12/iview框架中i-table数据处理/">iview框架中i-table数据处理</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/09/js中const-var-let区别/">js中const,var,let区别</a>
           </li>
         
       </ul>

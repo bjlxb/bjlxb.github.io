@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bjlxb.github.io/"/>
-  <updated>2021-04-20T11:10:07.887Z</updated>
+  <updated>2021-04-22T09:52:24.566Z</updated>
   <id>http://bjlxb.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>JavaScript截取数组</title>
+    <link href="http://bjlxb.github.io/2021/04/22/JavaScript%E6%88%AA%E5%8F%96%E6%95%B0%E7%BB%84/"/>
+    <id>http://bjlxb.github.io/2021/04/22/JavaScript截取数组/</id>
+    <published>2021-04-22T09:52:06.000Z</published>
+    <updated>2021-04-22T09:52:24.566Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>less-loader因为版本导致的问题</title>
     <link href="http://bjlxb.github.io/2021/04/20/less-loader%E5%9B%A0%E4%B8%BA%E7%89%88%E6%9C%AC%E5%AF%BC%E8%87%B4%E7%9A%84%E9%97%AE%E9%A2%98/"/>
     <id>http://bjlxb.github.io/2021/04/20/less-loader因为版本导致的问题/</id>
     <published>2021-04-20T11:06:09.000Z</published>
-    <updated>2021-04-20T11:10:07.887Z</updated>
+    <updated>2021-04-22T09:51:43.863Z</updated>
     
     <summary type="html">
     
@@ -386,26 +412,6 @@
     <summary type="html">
     
       &lt;p&gt;nrm(npm registry manager )是npm的镜像源管理工具，可以快速切换npm的源。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WEB API</title>
-    <link href="http://bjlxb.github.io/2020/11/22/WEB-API/"/>
-    <id>http://bjlxb.github.io/2020/11/22/WEB-API/</id>
-    <published>2020-11-22T14:41:22.000Z</published>
-    <updated>2021-01-18T07:57:37.060Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;记录一下常用的web api&lt;br&gt;
     
     </summary>
     
