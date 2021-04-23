@@ -12,15 +12,18 @@
   
   <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
   
-  <meta name="keywords" content="前端">
+  <meta name="description" content="记录一下JavaScript中截取数组函数slice">
+<meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript截取数组">
 <meta property="og:url" content="http://bjlxb.github.io/2021/04/22/JavaScript截取数组/index.html">
 <meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="记录一下JavaScript中截取数组函数slice">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-04-22T09:52:24.566Z">
+<meta property="og:updated_time" content="2021-04-23T08:33:16.094Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript截取数组">
+<meta name="twitter:description" content="记录一下JavaScript中截取数组函数slice">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -92,8 +95,33 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <a id="more"></a>
-
+        <p>记录一下JavaScript中截取数组函数slice<br><a id="more"></a></p>
+<h3 id="slice定义和用法"><a href="#slice定义和用法" class="headerlink" title="slice定义和用法"></a>slice定义和用法</h3><p>slice() 可从已有的数组中返回选定的元素。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><p>arrayObject.slice(start,end)</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">参数</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">start</td>
+<td style="text-align:left">必需。规定从何处开始选取。如果是负数，那么它规定从数组尾部开始算起的位置。也就是说，-1 指最后一个元素，-2 指倒数第二个元素，以此类推。</td>
+</tr>
+<tr>
+<td style="text-align:left">end</td>
+<td style="text-align:left">可选。规定从何处结束选取。该参数是数组片断结束处的数组下标。如果没有指定该参数，那么切分的数组包含从 start 到数组结束的所有元素。如果这个参数是负数，那么它规定的是从数组尾部开始算起的元素。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>返回一个新的数组，包含从 start 到 end （不包括该元素）的 arrayObject 中的元素。</p>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><p>该方法不能修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice()。</p>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>使用负值从数组的尾部选取元素。<br>如果 end 未被规定，那么 slice() 方法会选取从 start 到数组结尾的所有元素。</p>
+<h3 id="案例1"><a href="#案例1" class="headerlink" title="案例1"></a>案例1</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"> </span><br><span class="line">var arr = new Array(3)</span><br><span class="line">arr[0] = &quot;张三&quot;</span><br><span class="line">arr[1] = &quot;李四&quot;</span><br><span class="line">arr[2] = &quot;王五&quot;</span><br><span class="line"> </span><br><span class="line">console.log(arr)</span><br><span class="line">console.log(arr.slice(1))</span><br><span class="line">console.log(arr)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">[&quot;张三&quot;, &quot;李四&quot;, &quot;王五&quot;]</span><br><span class="line">[&quot;李四&quot;, &quot;王五&quot;]</span><br><span class="line">[&quot;张三&quot;, &quot;李四&quot;, &quot;王五&quot;]</span><br></pre></td></tr></table></figure></div>
+<h3 id="案例2"><a href="#案例2" class="headerlink" title="案例2"></a>案例2</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line"> </span><br><span class="line">var arr = new Array(6)</span><br><span class="line">arr[0] = &quot;张三&quot;</span><br><span class="line">arr[1] = &quot;李四&quot;</span><br><span class="line">arr[2] = &quot;王五&quot;</span><br><span class="line">arr[3] = &quot;赵六&quot;</span><br><span class="line">arr[4] = &quot;孙七&quot;</span><br><span class="line">arr[5] = &quot;周八&quot;</span><br><span class="line"> </span><br><span class="line">console.log(arr)</span><br><span class="line">console.log(arr.slice(2,4))</span><br><span class="line">console.log(arr)</span><br><span class="line"> </span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">[&quot;张三&quot;, &quot;李四&quot;, &quot;王五&quot;, &quot;赵六&quot;, &quot;孙七&quot;, &quot;周八&quot;]</span><br><span class="line">[&quot;王五&quot;, &quot;赵六&quot;]</span><br><span class="line">[&quot;张三&quot;, &quot;李四&quot;, &quot;王五&quot;, &quot;赵六&quot;, &quot;孙七&quot;, &quot;周八&quot;]</span><br></pre></td></tr></table></figure></div>
+<h3 id="案例3"><a href="#案例3" class="headerlink" title="案例3"></a>案例3</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">//JS Array.slice 截取数组</span><br><span class="line">//在JavaScript中，Array对象的slice(start[,end])方法返回数组从下标[start,end)的部分（不包含下标为end的元素）如果没有指定end参数，则从start开始到数组结尾的部分，slice()方法不改变原数组，如果要删除数组的一部分，可以使用splice()方法。</span><br><span class="line">//参数：</span><br><span class="line">//（1）start:开始截取的数组下标，如果start是负数，表明从数组尾部开始计算。</span><br><span class="line">//（2）end:结束截取的数组下标，如果end是负数，表明从数组尾部开始计算。</span><br><span class="line">//例1：</span><br><span class="line"> </span><br><span class="line">var arr = [1,2,3,4,5,6,7,8,9];</span><br><span class="line">    // [0,1,2,3,4,5,6,7,8]</span><br><span class="line">  // [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1]</span><br><span class="line">   </span><br><span class="line">document.writeln(arr.slice(5)); // 输出：6,7,8,9</span><br><span class="line">document.writeln(arr.slice(-5)); // 输出：5,6,7,8,9</span><br><span class="line">document.writeln(arr.slice(0,3)); // 输出：1,2,3</span><br><span class="line">document.writeln(arr.slice(1,2)); // 输出：2</span><br><span class="line">document.writeln(arr.slice(3,-2)); // 输出：4,5,6,7</span><br><span class="line">document.writeln(arr.slice(1,9999)); // 输出：2,3,4,5,6,7,8,9</span><br><span class="line">//==================================================================================================</span><br><span class="line">//JS Array.splice(start,delete_count,value,...) 插入、删除、替换数组</span><br><span class="line">//参数：</span><br><span class="line">//（1）start:开始插入和（或）删除的数组元素的下标。</span><br><span class="line">//（2）delete_count:结束截取的数组下标，如果end是负数，表明从数组尾部开始计算。</span><br><span class="line">//（3）value,...：要插入数组的元素。</span><br><span class="line">//返回：如果从数组中删除了元素，则返回的是被删除的元素的数组</span><br><span class="line">//</span><br><span class="line">//例1：</span><br><span class="line">document.write(&quot;&lt;hr&gt;&quot;);</span><br><span class="line">//</span><br><span class="line">var arr = [1,2,3,4,5,6,7,8,9];</span><br><span class="line">document.writeln(&quot;arr=&quot; + arr); // 输出：arr=1,2,3,4,5,6,7,8,9</span><br><span class="line">document.writeln(&quot;arr.splice(5)=&quot; + arr.splice(5)); // 输出：arr.splice(5)=6,7,8,9</span><br><span class="line">document.writeln(&quot;arr=&quot; + arr); // 输出：arr=1,2,3,4,5</span><br><span class="line">document.write(&quot;&lt;br&gt;&quot;);</span><br><span class="line">//</span><br><span class="line">var arr = [1,2,3,4,5,6,7,8,9];</span><br><span class="line">document.writeln(&quot;arr=&quot; + arr); // 输出：arr=1,2,3,4,5,6,7,8,9</span><br><span class="line">document.writeln(&quot;arr.splice(5,1,99,100)=&quot; + arr.splice(5,1,99,100)); // 输出：arr.splice(5,1,99,100)=6</span><br><span class="line">document.writeln(&quot;arr=&quot; + arr); // 输出：arr=1,2,3,4,5,99,100,7,8,9</span><br><span class="line">document.write(&quot;&lt;br&gt;&quot;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></div>
       
     </div>
     
