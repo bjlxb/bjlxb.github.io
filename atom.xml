@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bjlxb.github.io/"/>
-  <updated>2021-04-24T05:59:04.940Z</updated>
+  <updated>2021-04-28T03:54:01.948Z</updated>
   <id>http://bjlxb.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Tornado框架Session封装</title>
+    <link href="http://bjlxb.github.io/2021/04/28/tornado%E6%A1%86%E6%9E%B6Session%E5%B0%81%E8%A3%85/"/>
+    <id>http://bjlxb.github.io/2021/04/28/tornado框架Session封装/</id>
+    <published>2021-04-28T03:49:18.000Z</published>
+    <updated>2021-04-28T03:54:01.948Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Tornado框架官方没有提供Session相关方案，看到一个简单的封装，记录一下！&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Django" scheme="http://bjlxb.github.io/categories/Django/"/>
+    
+    
+      <category term="Django" scheme="http://bjlxb.github.io/tags/Django/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript截取数组</title>
@@ -393,26 +413,6 @@
     
     
       <category term="MAC" scheme="http://bjlxb.github.io/tags/MAC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>nrm安装与配置</title>
-    <link href="http://bjlxb.github.io/2020/12/13/nrm%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/"/>
-    <id>http://bjlxb.github.io/2020/12/13/nrm安装与配置/</id>
-    <published>2020-12-13T14:32:00.000Z</published>
-    <updated>2020-12-22T15:04:58.000Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;nrm(npm registry manager )是npm的镜像源管理工具，可以快速切换npm的源。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   

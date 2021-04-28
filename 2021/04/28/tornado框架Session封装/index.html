@@ -5,25 +5,25 @@
   
 
   
-  <title>Python反转列表 | 个人小站</title>
+  <title>Tornado框架Session封装 | 个人小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
   
-  <meta name="description" content="Python反转列表的几种方式!">
-<meta name="keywords" content="Python">
+  <meta name="description" content="Tornado框架官方没有提供Session相关方案，看到一个简单的封装，记录一下！">
+<meta name="keywords" content="Django">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python反转列表">
-<meta property="og:url" content="http://bjlxb.github.io/2019/05/09/Python反转列表/index.html">
+<meta property="og:title" content="Tornado框架Session封装">
+<meta property="og:url" content="http://bjlxb.github.io/2021/04/28/tornado框架Session封装/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="Python反转列表的几种方式!">
+<meta property="og:description" content="Tornado框架官方没有提供Session相关方案，看到一个简单的封装，记录一下！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-01-12T12:42:48.931Z">
+<meta property="og:updated_time" content="2021-04-28T03:54:01.948Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python反转列表">
-<meta name="twitter:description" content="Python反转列表的几种方式!">
+<meta name="twitter:title" content="Tornado框架Session封装">
+<meta name="twitter:description" content="Tornado框架官方没有提供Session相关方案，看到一个简单的封装，记录一下！">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -60,29 +60,29 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="photo-Python反转列表" class="article global-container article-type-photo" itemscope itemprop="blogPost">
+        <section id="main"><article id="photo-tornado框架Session封装" class="article global-container article-type-photo" itemscope itemprop="blogPost">
   
     <header class="article-header">
       
   
     <h1 class="article-title" itemprop="name">
-      Python反转列表
+      Tornado框架Session封装
     </h1>
   
 
     </header>
   
   <div class="article-meta">
-    <a href="/2019/05/09/Python反转列表/" class="article-date">
-  <time datetime="2019-05-09T14:35:00.000Z" itemprop="datePublished">2019-05-09</time>
+    <a href="/2021/04/28/tornado框架Session封装/" class="article-date">
+  <time datetime="2021-04-28T03:49:18.000Z" itemprop="datePublished">2021-04-28</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Python/">Python</a>
+    <a class="article-category-link" href="/categories/Django/">Django</a>
   </div>
 
     
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Django/">Django</a></li></ul>
 
   </div>
   
@@ -95,14 +95,9 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p>Python反转列表的几种方式!<br><a id="more"></a></p>
-<h5 id="1-reversed"><a href="#1-reversed" class="headerlink" title="1.reversed()"></a>1.reversed()</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">li =[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>]</span><br><span class="line">re_li = list(reversed(li))</span><br><span class="line"><span class="keyword">print</span> (re_li) <span class="comment"># [7, 6, 5, 4, 3, 2, 1]</span></span><br></pre></td></tr></table></figure></div>
-<p>注：reversed()函数返回的是一个迭代器，而不是一个List，所以需要list函数转换一下</p>
-<h5 id="1-reversed-1"><a href="#1-reversed-1" class="headerlink" title="1.reversed()"></a>1.reversed()</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">li = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>]</span><br><span class="line">re_li = list(reversed(li))</span><br><span class="line">print(re_li) <span class="comment"># [7, 6, 5, 4, 3, 2, 1]</span></span><br></pre></td></tr></table></figure></div>
-<h5 id="2-sorted"><a href="#2-sorted" class="headerlink" title="2.sorted()"></a>2.sorted()</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sorted(iterable[, cmp[, key[, reverse]]])</span><br><span class="line">li = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>] </span><br><span class="line">re_li = sorted(a, reverse=<span class="literal">True</span>) </span><br><span class="line">print(re_li) <span class="comment"># [7, 6, 5, 4, 3, 2, 1]</span></span><br><span class="line"><span class="comment"># 注意：sorted()按降序排列，对于反转内容不是顺序排列的无效。</span></span><br></pre></td></tr></table></figure></div>
-<p>参数说明：<br>    iterable – 可迭代对象。<br>    cmp – 比较的函数，这个具有两个参数，参数的值都是从可迭代对象中取出，此函数必须遵守的规则为，大于则返回1，小于则返回-1，等于则返回0。<br>    key – 主要是用来进行比较的元素，只有一个参数，具体的函数的参数就是取自于可迭代对象中，指定可迭代对象中的一个元素来进行排序。<br>    reverse – 排序规则，reverse = True 降序 ， reverse = False 升序（默认）。</p>
-<h5 id="3-切片"><a href="#3-切片" class="headerlink" title="3.切片"></a>3.切片</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">li = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>] </span><br><span class="line">re_li = li[::<span class="number">-1</span>] </span><br><span class="line">print(re_li) <span class="comment"># [7, 6, 5, 4, 3, 2, 1]</span></span><br></pre></td></tr></table></figure></div>
-<p>注：[::-1]表示从后向前取值，步值为1.</p>
+        <p>Tornado框架官方没有提供Session相关方案，看到一个简单的封装，记录一下！<br><a id="more"></a></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Session</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="comment">#request_handler_obj为当前RequestHandler对象的self参数#</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, request_handler_obj)</span>:</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 先判断用户的session_id是否存在</span></span><br><span class="line">        self._request_handler = request_handler_obj</span><br><span class="line">        self.session_id = request_handler_obj.get_secure_cookie(<span class="string">"session_id"</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 如果不存在session_id,生成session_id</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> self.session_id:</span><br><span class="line">            self.session_id = uuid.uuid4().hex</span><br><span class="line">            self.data = &#123;&#125;</span><br><span class="line">            request_handler_obj.set_secure_cookie(<span class="string">"session_id"</span>, self.session_id)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 如果存在session_id, 去redis中取出data</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                json_data = request_handler_obj.redis.get(<span class="string">"sess_%s"</span> % self.session_id)</span><br><span class="line">            <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">                logging.error(e)</span><br><span class="line">                <span class="keyword">raise</span> e</span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">not</span> json_data:</span><br><span class="line">                self.data = &#123;&#125;</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                self.data = json.loads(json_data)</span><br><span class="line">    <span class="comment">#在需要存储数据的地方调用save方法#</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">save</span><span class="params">(self)</span>:</span></span><br><span class="line">        json_data = json.dumps(self.data)</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            self._request_handler.redis.setex(<span class="string">"sess_%s"</span> % self.session_id,</span><br><span class="line">                                             SESSION_EXPIRES_SECONDS, json_data)</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            logging.error(e)</span><br><span class="line">            <span class="keyword">raise</span> e</span><br><span class="line">    <span class="comment">#清除redis中的session_id#</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">clear</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            self._request_handler.redis.delete(<span class="string">"sess_%s"</span> % self.session_id)</span><br><span class="line">        <span class="keyword">except</span> Exception <span class="keyword">as</span> e:</span><br><span class="line">            logging.error(e)</span><br><span class="line">        self._request_handler.clear_cookie(<span class="string">"session_id"</span>)</span><br></pre></td></tr></table></figure></div>
+<p><a href="https://blog.csdn.net/pengxuan3507/article/details/80431492" target="_blank" rel="noopener">代码参考链接</a></p>
 
       
     </div>
@@ -117,20 +112,11 @@
 <nav id="article-nav">
   <div class="article-nav-block">
     
-      <a href="/2019/05/14/Mac下端口占用情况及处理方式/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            Mac下端口占用情况及处理方式
-          
-        </div>
-      </a>
-    
   </div>
   <div class="article-nav-block">
     
-      <a href="/2019/05/07/Python的format函数/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">Python的format函数</div>
+      <a href="/2021/04/22/JavaScript截取数组/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">JavaScript截取数组</div>
         <strong class="article-nav-caption"></strong>
       </a>
     
