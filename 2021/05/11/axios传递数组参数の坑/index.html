@@ -12,15 +12,18 @@
   
   <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
   
-  <meta name="keywords" content="前端">
+  <meta name="description" content="使用axios发送请求时，当参数中有数组，参数的键值会带上[]。">
+<meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="axios传递数组参数の坑">
 <meta property="og:url" content="http://bjlxb.github.io/2021/05/11/axios传递数组参数の坑/index.html">
 <meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="使用axios发送请求时，当参数中有数组，参数的键值会带上[]。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-05-11T12:54:26.986Z">
+<meta property="og:updated_time" content="2021-05-14T11:19:58.496Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="axios传递数组参数の坑">
+<meta name="twitter:description" content="使用axios发送请求时，当参数中有数组，参数的键值会带上[]。">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -92,7 +95,9 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <a id="more"></a>
+        <p>使用axios发送请求时，当参数中有数组，参数的键值会带上[]。<br><a id="more"></a><br>引入js：<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import axios from &apos;axios&apos;</span><br><span class="line">import qs from &apos;qs&apos;</span><br></pre></td></tr></table></figure></div></p>
+<p>get / delete请求方式解决方式如下<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">axios.get(url, &#123;</span><br><span class="line">    params: &#123;</span><br><span class="line">     ids: [1,2,3]</span><br><span class="line">    &#125;,</span><br><span class="line">    paramsSerializer: params =&gt; &#123;</span><br><span class="line">      return qs.stringify(params, &#123; indices: false &#125;)</span><br><span class="line">&#125;&#125;)</span><br><span class="line"></span><br><span class="line">axios.delete(url, &#123;</span><br><span class="line">     params: &#123;</span><br><span class="line">     ids: [1,2,3]</span><br><span class="line">    &#125;,</span><br><span class="line">    paramsSerializer: params =&gt; &#123;</span><br><span class="line">      return qs.stringify(params, &#123; indices: false &#125;)</span><br><span class="line">&#125;&#125;)</span><br></pre></td></tr></table></figure></div></p>
+<p>post / put 请求方式解决方式如下<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">axios.post(url, qs.stringify(</span><br><span class="line">    params: &#123;</span><br><span class="line">     ids: [1,2,3]</span><br><span class="line">&#125;, &#123; indices: false &#125;))</span><br><span class="line"></span><br><span class="line"> axios.put(url, qs.stringify(params: &#123;</span><br><span class="line">     ids: [1,2,3]</span><br><span class="line">&#125;, &#123; indices: false &#125;))</span><br></pre></td></tr></table></figure></div></p>
 
       
     </div>
