@@ -26,7 +26,10 @@
 <meta property="og:image" content="http://bjlxb.github.io/image/Charles/Charles-9.jpg">
 <meta property="og:image" content="http://bjlxb.github.io/image/Charles/Charles-10.jpg">
 <meta property="og:image" content="http://bjlxb.github.io/image/Charles/Charles-11.jpg">
-<meta property="og:updated_time" content="2021-01-12T12:42:48.946Z">
+<meta property="og:image" content="http://bjlxb.github.io/image/Charles/Charles-20.jpeg">
+<meta property="og:image" content="http://bjlxb.github.io/image/Charles/Charles-21.jpeg">
+<meta property="og:image" content="http://bjlxb.github.io/image/Charles/Charles-22.jpeg">
+<meta property="og:updated_time" content="2021-05-20T12:03:19.162Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Charles手机抓包教程二">
 <meta name="twitter:description" content="很多时候因为链接是https的，导致抓包内容是加密的无法获取，记录一下怎么抓取https。">
@@ -112,16 +115,32 @@
 </ol>
 <p>安卓系统：</p>
 <ol>
-<li>按照提示，首先连接到Charles</li>
-<li>在浏览器输入网址：chls.pro/ssl</li>
-<li>下载证书</li>
-<li>安装正式</li>
-<li>理论上安装完成后可以直接使用。<br>苹果系统：</li>
-<li>按照提示，首先连接到Charles</li>
-<li>在Safari中输入网址：chls.pro/ssl</li>
-<li>会跳转到安装描述文件页面，点击安装，输入密码后，会有一个警告，继续安装完成。<br><img src="/image/Charles/Charles-9.jpg"><br><img src="/image/Charles/Charles-10.jpg"><br><img src="/image/Charles/Charles-11.jpg"></li>
-<li>打开设置–》通用–》描述文件，可以看到刚刚安装的描述文件</li>
-<li>打开一个HTTPS的网站，看是否可以抓包成功。</li>
+<li><p>按照提示，首先连接到Charles</p>
+</li>
+<li><p>在浏览器输入网址：chls.pro/ssl</p>
+</li>
+<li><p>下载证书</p>
+</li>
+<li><p>安装正式</p>
+</li>
+<li><p>理论上安装完成后可以直接使用。<br>苹果系统：</p>
+</li>
+<li><p>按照提示，首先连接到Charles</p>
+</li>
+<li><p>在Safari中输入网址：chls.pro/ssl</p>
+</li>
+<li><p>会跳转到安装描述文件页面，点击安装，输入密码后，会有一个警告，继续安装完成。<br><img src="/image/Charles/Charles-9.jpg"><br><img src="/image/Charles/Charles-10.jpg"><br><img src="/image/Charles/Charles-11.jpg"></p>
+</li>
+<li><p>打开设置–》通用–》描述文件，可以看到刚刚安装的描述文件</p>
+</li>
+<li><p>信任新安装的证书</p>
+<p>设置-通用-关于本机-证书信任设置-Charles…证书开启信任</p>
+<p><img src="/image/Charles/Charles-20.jpeg"></p>
+<p><img src="/image/Charles/Charles-21.jpeg"></p>
+<p><img src="/image/Charles/Charles-22.jpeg"></p>
+</li>
+<li><p>打开一个HTTPS的网站，看是否可以抓包成功。</p>
+</li>
 </ol>
 
       
@@ -241,6 +260,10 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
+            <a href="/2021/05/20/Charles抓包异常排查/">Charles抓包异常排查</a>
+          </li>
+        
+          <li>
             <a href="/2021/05/11/axios传递数组参数の坑/">axios传递数组参数の坑</a>
           </li>
         
@@ -254,10 +277,6 @@ gitment.render('gitmentContainer')
         
           <li>
             <a href="/2021/04/22/JavaScript截取数组/">JavaScript截取数组</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/20/less-loader因为版本导致的问题/">less-loader因为版本导致的问题</a>
           </li>
         
       </ul>
