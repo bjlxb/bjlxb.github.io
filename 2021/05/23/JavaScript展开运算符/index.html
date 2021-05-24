@@ -20,12 +20,10 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="记录一下展开运算符这个新知识点">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://bjlxb.github.io/image/">
-<meta property="og:updated_time" content="2021-05-23T09:52:28.065Z">
+<meta property="og:updated_time" content="2021-05-24T13:25:56.919Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript展开运算符">
 <meta name="twitter:description" content="记录一下展开运算符这个新知识点">
-<meta name="twitter:image" content="http://bjlxb.github.io/image/">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -98,7 +96,15 @@
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
         <p>记录一下展开运算符这个新知识点<br><a id="more"></a></p>
-<p><img src="/image/"></p>
+<ul>
+<li>ES6 里面号新添加了一个运算符 … ，叫做展开运算符</li>
+<li><p>作用是把数组展开</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="built_in">console</span>.log(...arr);</span><br><span class="line"><span class="comment">// 1 2 3 4 5</span></span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>合并数组</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="keyword">let</span> arr2 = [..arr, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>];</span><br><span class="line"><span class="built_in">console</span>.log(arr2);</span><br></pre></td></tr></table></figure></div>
+</li>
+</ul>
 
       
     </div>
