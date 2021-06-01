@@ -20,12 +20,10 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="记录一下JavaScript中join()的使用！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://bjlxb.github.io/image/">
-<meta property="og:updated_time" content="2021-05-31T12:42:14.875Z">
+<meta property="og:updated_time" content="2021-06-01T02:23:10.313Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScriptのjoin()方法">
 <meta name="twitter:description" content="记录一下JavaScript中join()的使用！">
-<meta name="twitter:image" content="http://bjlxb.github.io/image/">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -98,8 +96,11 @@
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
         <p>记录一下JavaScript中join()的使用！<br><a id="more"></a></p>
-<p><img src="/image/"></p>
-
+<h3 id="定义和用法"><a href="#定义和用法" class="headerlink" title="定义和用法"></a>定义和用法</h3><p>join() 方法将数组中的所有元素拼接为一个字符串。<br>元素可以通过指定的分隔符进行分隔的。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arrayObject.join(separator)</span><br><span class="line"><span class="comment">// separator：可选,指定要使用的分隔符。省略该参数，默认使用逗号作为分隔符。</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3><p>返回一个字符串，通过把arrayObject中的每个元素转换为字符串，然后把这些字符串连接起来，每个元素之间插入separator分隔符。</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><h5 id="例1"><a href="#例1" class="headerlink" title="例1:"></a>例1:</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">3</span>)</span><br><span class="line">arr[<span class="number">0</span>] = <span class="string">"张三"</span></span><br><span class="line">arr[<span class="number">1</span>] = <span class="string">"李四"</span></span><br><span class="line">arr[<span class="number">2</span>] = <span class="string">"王五"</span></span><br><span class="line"><span class="built_in">console</span>.log(arr.join())</span><br><span class="line"></span><br><span class="line"><span class="comment">// 张三,李四,王五</span></span><br></pre></td></tr></table></figure></div>
+<h5 id="例2"><a href="#例2" class="headerlink" title="例2:"></a>例2:</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="JAVASCRIPT"><figure class="iseeu highlight /javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">3</span>)</span><br><span class="line">arr[<span class="number">0</span>] = <span class="string">"山东省"</span></span><br><span class="line">arr[<span class="number">1</span>] = <span class="string">"烟台市"</span></span><br><span class="line">arr[<span class="number">2</span>] = <span class="string">"莱山区"</span></span><br><span class="line"><span class="built_in">console</span>.log(arr.join(<span class="string">"."</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">// 山东省.烟台市.莱山区</span></span><br></pre></td></tr></table></figure></div>
       
     </div>
     
