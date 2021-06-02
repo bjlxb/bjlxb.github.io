@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bjlxb.github.io/"/>
-  <updated>2021-06-01T02:23:10.313Z</updated>
+  <updated>2021-06-02T11:08:33.375Z</updated>
   <id>http://bjlxb.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>axios超时时间设置</title>
+    <link href="http://bjlxb.github.io/2021/06/02/axios%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4%E8%AE%BE%E7%BD%AE/"/>
+    <id>http://bjlxb.github.io/2021/06/02/axios超时时间设置/</id>
+    <published>2021-06-02T11:07:16.000Z</published>
+    <updated>2021-06-02T11:08:33.375Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;后端某个接口运行时间长，需要单独对接口设置超时时间！&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScriptのjoin()方法</title>
@@ -393,26 +413,6 @@
     
     
       <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JMeter聚合报告中90%响应时间解读</title>
-    <link href="http://bjlxb.github.io/2021/01/22/JMeter%E8%81%9A%E5%90%88%E6%8A%A5%E5%91%8A%E4%B8%AD90-%E5%93%8D%E5%BA%94%E6%97%B6%E9%97%B4%E8%A7%A3%E8%AF%BB/"/>
-    <id>http://bjlxb.github.io/2021/01/22/JMeter聚合报告中90-响应时间解读/</id>
-    <published>2021-01-22T08:56:26.000Z</published>
-    <updated>2021-01-22T09:09:25.190Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Jmeter报告中90%的响应时间理解&lt;br&gt;
-    
-    </summary>
-    
-      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
     
   </entry>
   
