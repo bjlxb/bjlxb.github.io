@@ -20,12 +20,10 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="后端某个接口运行时间长，需要单独对接口设置超时时间！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://bjlxb.github.io/image/">
-<meta property="og:updated_time" content="2021-06-02T11:08:33.375Z">
+<meta property="og:updated_time" content="2021-06-03T13:08:51.728Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="axios超时时间设置">
 <meta name="twitter:description" content="后端某个接口运行时间长，需要单独对接口设置超时时间！">
-<meta name="twitter:image" content="http://bjlxb.github.io/image/">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -98,7 +96,8 @@
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
         <p>后端某个接口运行时间长，需要单独对接口设置超时时间！<br><a id="more"></a></p>
-<p><img src="/image/"></p>
+<h3 id="全局设置网络超时："><a href="#全局设置网络超时：" class="headerlink" title="全局设置网络超时："></a>全局设置网络超时：</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">axios.defaults.timeout = 30000;</span><br></pre></td></tr></table></figure></div>
+<h3 id="某个请求单独设置网络超时："><a href="#某个请求单独设置网络超时：" class="headerlink" title="某个请求单独设置网络超时："></a>某个请求单独设置网络超时：</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">let timeout = parseInt(30000);</span><br><span class="line">this.$ajax.post(url, params, &#123;timeout: timeout&#125;)</span><br><span class="line">  .then(res =&gt; &#123;</span><br><span class="line">    console.log(&apos;response=&apos;+response);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(reason =&gt; &#123;</span><br><span class="line">    console.log(&apos;reason&apos;+reason);</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></div>
 
       
     </div>
