@@ -5,25 +5,25 @@
   
 
   
-  <title>MySQL获取时间戳 | 个人小站</title>
+  <title>Git生成SSH公钥 | 个人小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
   
-  <meta name="description" content="有时在使用查询sql时会使用到时间戳，这里记录下where语句使用时间戳。">
-<meta name="keywords" content="Tool">
+  <meta name="description" content="记录一下Git生成SSH公钥的命令！">
+<meta name="keywords" content="Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL获取时间戳">
-<meta property="og:url" content="http://bjlxb.github.io/2020/10/23/MySQL获取时间戳/index.html">
+<meta property="og:title" content="Git生成SSH公钥">
+<meta property="og:url" content="http://bjlxb.github.io/2021/06/09/Git生成SSH公钥/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="有时在使用查询sql时会使用到时间戳，这里记录下where语句使用时间戳。">
+<meta property="og:description" content="记录一下Git生成SSH公钥的命令！">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-01-16T05:28:19.994Z">
+<meta property="og:updated_time" content="2021-06-09T02:17:13.697Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL获取时间戳">
-<meta name="twitter:description" content="有时在使用查询sql时会使用到时间戳，这里记录下where语句使用时间戳。">
+<meta name="twitter:title" content="Git生成SSH公钥">
+<meta name="twitter:description" content="记录一下Git生成SSH公钥的命令！">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -60,29 +60,29 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="photo-MySQL获取时间戳" class="article global-container article-type-photo" itemscope itemprop="blogPost">
+        <section id="main"><article id="photo-Git生成SSH公钥" class="article global-container article-type-photo" itemscope itemprop="blogPost">
   
     <header class="article-header">
       
   
     <h1 class="article-title" itemprop="name">
-      MySQL获取时间戳
+      Git生成SSH公钥
     </h1>
   
 
     </header>
   
   <div class="article-meta">
-    <a href="/2020/10/23/MySQL获取时间戳/" class="article-date">
-  <time datetime="2020-10-23T14:42:05.000Z" itemprop="datePublished">2020-10-23</time>
+    <a href="/2021/06/09/Git生成SSH公钥/" class="article-date">
+  <time datetime="2021-06-09T02:06:40.000Z" itemprop="datePublished">2021-06-09</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Tool/">Tool</a>
+    <a class="article-category-link" href="/categories/Git/">Git</a>
   </div>
 
     
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tool/">Tool</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
 
   </div>
   
@@ -95,8 +95,16 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p>有时在使用查询sql时会使用到时间戳，这里记录下where语句使用时间戳。<br><a id="more"></a><br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unix_timestamp(now())</span><br></pre></td></tr></table></figure></div></p>
-
+        <p>记录一下Git生成SSH公钥的命令！<br><a id="more"></a></p>
+<h3 id="1-查看本机是否已经存在SSH公钥"><a href="#1-查看本机是否已经存在SSH公钥" class="headerlink" title="1. 查看本机是否已经存在SSH公钥"></a>1. 查看本机是否已经存在SSH公钥</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 查看根目录是否有.ssh文件</span><br><span class="line">ls ~/</span><br><span class="line">// 查看SSH公钥文件是否有内容</span><br><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></div>
+<h3 id="2-生成SSH公钥"><a href="#2-生成SSH公钥" class="headerlink" title="2. 生成SSH公钥"></a>2. 生成SSH公钥</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 自动生成名称</span><br><span class="line">ssh-keygen -o</span><br><span class="line">// 指定名称生成</span><br><span class="line">ssh-keygen -t rsa -C &quot;xxxxx@xxxxx.com&quot;</span><br></pre></td></tr></table></figure></div>
+<p>注意：</p>
+<ul>
+<li>这里的 <a href="mailto:xxxxx@xxxxx.com" target="_blank" rel="noopener">xxxxx@xxxxx.com</a> 只是生成的 sshkey 的名称，并不约束或要求具体命名为某个邮箱。</li>
+<li>现网的大部分教程均讲解的使用邮箱生成，其一开始的初衷仅仅是为了便于辨识所以使用了邮箱。</li>
+</ul>
+<p>首先 ssh-keygen 会确认密钥的存储位置（默认是 .ssh/id_rsa），然后它会要求你输入两次密钥口令。 如果你不想在使用密钥时输入口令，将其留空即可。 然而，如果你使用了密码，那么请确保添加了 -o 选项，它会以比默认格式更能抗暴力破解的格式保存私钥。 你也可以用 ssh-agent 工具来避免每次都要输入密码。</p>
+<h3 id="3-查看生成的SSH公钥"><a href="#3-查看生成的SSH公钥" class="headerlink" title="3. 查看生成的SSH公钥"></a>3. 查看生成的SSH公钥</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></div>
       
     </div>
     
@@ -110,20 +118,11 @@
 <nav id="article-nav">
   <div class="article-nav-block">
     
-      <a href="/2020/11/01/Jmeter控制压测吞吐量上限/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            Jmeter控制压测吞吐量上限
-          
-        </div>
-      </a>
-    
   </div>
   <div class="article-nav-block">
     
-      <a href="/2020/10/14/Linux中防火墙端口白名单/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">Linux中防火墙端口白名单</div>
+      <a href="/2021/06/02/axios超时时间设置/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">axios超时时间设置</div>
         <strong class="article-nav-caption"></strong>
       </a>
     
