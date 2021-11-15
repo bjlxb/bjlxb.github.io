@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Python的format函数 | 个人小站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
+  
+  <meta name="description" content="平时工作中我们经常会使用到format来格式化字符串">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python的format函数">
+<meta property="og:url" content="http://bjlxb.github.io/2019/05/07/Python的format函数/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="平时工作中我们经常会使用到format来格式化字符串">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-11-15T13:04:53.521Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python的format函数">
+<meta name="twitter:description" content="平时工作中我们经常会使用到format来格式化字符串">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="photo-Python的format函数" class="article global-container article-type-photo" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Python的format函数
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/05/07/Python的format函数/" class="article-date">
+  <time datetime="2019-05-07T15:06:29.000Z" itemprop="datePublished">2019-05-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Python/">Python</a>
+  </div>
+
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>平时工作中我们经常会使用到format来格式化字符串<br><a id="more"></a><br>str.format()在Python2.6开始才新增了一种格式化字符串的函数,该方法加强了字符串格式化.<br>format 函数可以接受不限个参数，位置可以不按顺序。<br>1.不设置参数<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"><span class="string">'&#123;&#125; &#123;&#125;'</span>.format(<span class="string">"hello"</span>, <span class="string">"world"</span>)    <span class="comment"># 不设置指定位置，按默认顺序</span></span><br><span class="line"><span class="string">'hello world'</span></span><br><span class="line"></span><br><span class="line"><span class="string">'&#123;0&#125; &#123;1&#125;'</span>.format(<span class="string">"hello"</span>, <span class="string">"world"</span>)  <span class="comment"># 设置指定位置</span></span><br><span class="line"><span class="string">'hello world'</span></span><br><span class="line"></span><br><span class="line"><span class="string">'&#123;1&#125; &#123;0&#125; &#123;1&#125;'</span>.format(<span class="string">"hello"</span>, <span class="string">"world"</span>)  <span class="comment"># 设置指定位置</span></span><br><span class="line"><span class="string">'world hello world'</span></span><br></pre></td></tr></table></figure></div></p>
+<p>2.设置参数<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"></span><br><span class="line"><span class="string">'名字:&#123;name&#125;, 年龄:&#123;age&#125;'</span>.format(name=<span class="string">'张三'</span>, age=<span class="number">18</span>)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 通过字典设置参数</span></span><br><span class="line">site = &#123;<span class="string">'name'</span>: <span class="string">'李四'</span>, <span class="string">'age'</span>: <span class="number">18</span>&#125;</span><br><span class="line"><span class="string">'姓名:&#123;name&#125;, 年龄:&#123;age&#125;'</span>.format(**site)</span><br><span class="line"> </span><br><span class="line"><span class="comment"># 通过列表索引设置参数</span></span><br><span class="line">li 数字格式化= [<span class="string">'王五'</span>, <span class="number">18</span>]</span><br><span class="line">print(<span class="string">"姓名:&#123;0[0]&#125;, 年龄:&#123;0[1]&#125;"</span>.format(li))  <span class="comment"># "0" 是必须的</span></span><br></pre></td></tr></table></figure></div></p>
+<p>3.传入对象<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: UTF-8 -*-</span></span><br><span class="line"><span class="comment">#!/usr/bin/python</span></span><br></pre></td></tr></table></figure></div></p>
+<p>4.数字格式化</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">数字</th>
+<th style="text-align:left">格式</th>
+<th style="text-align:left">输出</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">3.1415926</td>
+<td style="text-align:left">{:.2f}</td>
+<td style="text-align:left">3.14</td>
+<td style="text-align:left">保留小数点后两位</td>
+</tr>
+<tr>
+<td style="text-align:left">3.1415926</td>
+<td style="text-align:left">{:+.2f}</td>
+<td style="text-align:left">+3.14</td>
+<td style="text-align:left">带符号保留小数点后两位</td>
+</tr>
+<tr>
+<td style="text-align:left">-1</td>
+<td style="text-align:left">{:+.2f}</td>
+<td style="text-align:left">-1.00</td>
+<td style="text-align:left">带符号保留小数点后两位</td>
+</tr>
+<tr>
+<td style="text-align:left">2.71828</td>
+<td style="text-align:left">{:.0f}</td>
+<td style="text-align:left">3</td>
+<td style="text-align:left">不带小数</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">{:0&gt;2d}</td>
+<td style="text-align:left">05</td>
+<td style="text-align:left">数字补零 (填充左边, 宽度为2)</td>
+</tr>
+<tr>
+<td style="text-align:left">5</td>
+<td style="text-align:left">{:x&lt;4d}</td>
+<td style="text-align:left">5xxx</td>
+<td style="text-align:left">数字补x (填充右边, 宽度为4)</td>
+</tr>
+<tr>
+<td style="text-align:left">10</td>
+<td style="text-align:left">{:x&lt;4d}</td>
+<td style="text-align:left">10xx</td>
+<td style="text-align:left">数字补x (填充右边, 宽度为4)</td>
+</tr>
+<tr>
+<td style="text-align:left">1000000</td>
+<td style="text-align:left">{:,}</td>
+<td style="text-align:left">1,000,000</td>
+<td style="text-align:left">以逗号分隔的数字格式</td>
+</tr>
+<tr>
+<td style="text-align:left">0.25</td>
+<td style="text-align:left">{:.2%}</td>
+<td style="text-align:left">25.00%</td>
+<td style="text-align:left">百分比格式</td>
+</tr>
+<tr>
+<td style="text-align:left">1000000000</td>
+<td style="text-align:left">{:.2e}</td>
+<td style="text-align:left">1.00e+09</td>
+<td style="text-align:left">指数记法</td>
+</tr>
+<tr>
+<td style="text-align:left">13</td>
+<td style="text-align:left">{:10d}</td>
+<td style="text-align:left">13</td>
+<td style="text-align:left">右对齐 (默认, 宽度为10)</td>
+</tr>
+<tr>
+<td style="text-align:left">13</td>
+<td style="text-align:left">{:&lt;10d}</td>
+<td style="text-align:left">13</td>
+<td style="text-align:left">左对齐 (宽度为10)</td>
+</tr>
+<tr>
+<td style="text-align:left">13</td>
+<td style="text-align:left">{:^10d}</td>
+<td style="text-align:left">13</td>
+<td style="text-align:left">中间对齐 (宽度为10)</td>
+</tr>
+<tr>
+<td style="text-align:left">11</td>
+<td style="text-align:left"><code>&#39;{:b}&#39;.format(11) &#39;{:d}&#39;.format(11) &#39;{:o}&#39;.format(11) &#39;{:x}&#39;.format(11) &#39;{:#x}&#39;.format(11) &#39;{:#X}&#39;.format(11)</code></td>
+<td style="text-align:left"><code>1011 11 13 b 0xb 0XB</code></td>
+<td style="text-align:left">进制</td>
+</tr>
+</tbody>
+</table>
+<p><strong>^</strong>, <strong>&lt;</strong>, <strong>&gt;</strong> 分别是居中、左对齐、右对齐，后面带宽度， <strong>:</strong> 号后面带填充的字符，只能是一个字符，不指定则默认是用空格填充。</p>
+<p><strong>+</strong> 表示在正数前显示 <strong>+</strong>，负数前显示 <strong>-</strong>；  （空格）表示在正数前加空格</p>
+<p>b、d、o、x 分别是二进制、十进制、八进制、十六进制。</p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/05/09/Python反转列表/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            Python反转列表
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/05/05/python中获得前几天的日期/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Python中获得前几天的日期</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        宁静致远
+      
+    </h3>
+    <p class="avatar-slogan">
+      个人小站，记录一些日常零碎的日常！
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-C/">C/C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DB/">DB</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Django/">Django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Golang/">Golang</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MAC/">MAC</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/小程序/">小程序</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试题/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/">C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DB/">DB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Django/">Django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MAC/">MAC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tool/">Tool</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小程序/">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试题/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C-C/" style="font-size: 14px;">C/C++</a> <a href="/tags/DB/" style="font-size: 15px;">DB</a> <a href="/tags/Django/" style="font-size: 17px;">Django</a> <a href="/tags/Git/" style="font-size: 12px;">Git</a> <a href="/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/tags/Java/" style="font-size: 11px;">Java</a> <a href="/tags/MAC/" style="font-size: 15px;">MAC</a> <a href="/tags/Python/" style="font-size: 18px;">Python</a> <a href="/tags/Tool/" style="font-size: 19px;">Tool</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/小程序/" style="font-size: 13px;">小程序</a> <a href="/tags/测试/" style="font-size: 16px;">测试</a> <a href="/tags/面试题/" style="font-size: 11px;">面试题</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/06/02/axios超时时间设置/">axios超时时间设置</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/31/JavaScriptのjoin()方法/">JavaScriptのjoin()方法</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/23/JavaScript展开运算符/">JavaScript展开运算符</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/20/Charles抓包异常排查/">Charles抓包异常排查</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/11/axios传递数组参数の坑/">axios传递数组参数の坑</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://yiluyanxia.github.io/" title target='_blank'
+        >一路烟霞</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2021 新波 &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Mac安装mysql | 个人小站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
+  
+  <meta name="description" content="Mac使用homebrew安装配置mysql">
+<meta name="keywords" content="MAC">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac安装mysql">
+<meta property="og:url" content="http://bjlxb.github.io/2019/05/18/Mac安装mysql/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="Mac使用homebrew安装配置mysql">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://github.com/bjlxb/image/blob/master/screenshot/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/mysql%E5%B8%B8%E8%A7%84%E8%BF%9E%E6%8E%A5%E6%96%B9%E5%BC%8F.jpg?raw=true">
+<meta property="og:image" content="https://github.com/bjlxb/image/blob/master/screenshot/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/mysql%E7%AE%80%E4%BE%BF%E8%BF%9E%E6%8E%A5%E6%96%B9%E5%BC%8F.jpg?raw=true">
+<meta property="og:updated_time" content="2021-11-15T13:04:53.522Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mac安装mysql">
+<meta name="twitter:description" content="Mac使用homebrew安装配置mysql">
+<meta name="twitter:image" content="https://github.com/bjlxb/image/blob/master/screenshot/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/mysql%E5%B8%B8%E8%A7%84%E8%BF%9E%E6%8E%A5%E6%96%B9%E5%BC%8F.jpg?raw=true">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="photo-Mac安装mysql" class="article global-container article-type-photo" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Mac安装mysql
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/05/18/Mac安装mysql/" class="article-date">
+  <time datetime="2019-05-18T14:11:45.000Z" itemprop="datePublished">2019-05-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/MAC/">MAC</a>
+  </div>
+
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MAC/">MAC</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>Mac使用homebrew安装配置mysql<br><a id="more"></a></p>
+<h3 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a>安装mysql</h3><h5 id="一、安装homebrew"><a href="#一、安装homebrew" class="headerlink" title="一、安装homebrew"></a>一、安装homebrew</h5><p>使用如下命令安装homebrew<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span><br></pre></td></tr></table></figure></p>
+<p>homebrew官网：  <a href="https://brew.sh/index_zh-cn.html" target="_blank" rel="noopener">https://brew.sh/index_zh-cn.html</a></p>
+<h5 id="二、安装mysql"><a href="#二、安装mysql" class="headerlink" title="二、安装mysql"></a>二、安装mysql</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">brew install mysql</span><br><span class="line"></span><br><span class="line">==&gt; Downloading https://homebrew.bintray.com/bottles/mysql-8.0.16.mojave.bottle.</span><br><span class="line">==&gt; Downloading from https://akamai.bintray.com/65/65e6629740ca75ceaae575b4cc68f</span><br><span class="line">######################################################################## 100.0%</span><br><span class="line">==&gt; Pouring mysql-8.0.16.mojave.bottle.tar.gz</span><br><span class="line">==&gt; /usr/local/Cellar/mysql/8.0.16/bin/mysqld --initialize-insecure --user=liuxi</span><br><span class="line">==&gt; Caveats</span><br><span class="line">We've installed your MySQL database without a root password. To secure it run:</span><br><span class="line">    mysql_secure_installation</span><br><span class="line"></span><br><span class="line">MySQL is configured to only allow connections from localhost by default</span><br><span class="line"></span><br><span class="line">To connect run:</span><br><span class="line">    mysql -uroot</span><br><span class="line"></span><br><span class="line">To have launchd start mysql now and restart at login:</span><br><span class="line">  brew services start mysql</span><br><span class="line">Or, if you don't want/need a background service you can just run:</span><br><span class="line">  mysql.server start</span><br><span class="line">==&gt; Summary</span><br><span class="line">🍺  /usr/local/Cellar/mysql/8.0.16: 275 files, 269.8MB</span><br><span class="line">==&gt; `brew cleanup` has not been run in 30 days, running now...</span><br></pre></td></tr></table></figure>
+<h5 id="三、配置自启动"><a href="#三、配置自启动" class="headerlink" title="三、配置自启动"></a>三、配置自启动</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p ~/Library/LaunchAgents</span><br><span class="line"></span><br><span class="line">ln -sfv /usr/local/opt/mysql/*.plist ~/Library/LaunchAgents</span><br><span class="line"></span><br><span class="line">find /usr/local/Cellar/mysql/ -name "homebrew.mxcl.mysql.plist" -exec cp &#123;&#125; ~/Library/LaunchAgents/ \;</span><br><span class="line"></span><br><span class="line">launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist</span><br></pre></td></tr></table></figure>
+<h5 id="四、启动mysql服务"><a href="#四、启动mysql服务" class="headerlink" title="四、启动mysql服务"></a>四、启动mysql服务</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql.server start</span><br><span class="line"></span><br><span class="line">Starting MySQL</span><br><span class="line">. SUCCESS!</span><br></pre></td></tr></table></figure>
+<h5 id="五、初始化mysql配置"><a href="#五、初始化mysql配置" class="headerlink" title="五、初始化mysql配置"></a>五、初始化mysql配置</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="C"><figure class="iseeu highlight /c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">mysql_secure_installation</span><br><span class="line"></span><br><span class="line">Securing the MySQL server deployment.</span><br><span class="line"></span><br><span class="line">Connecting to MySQL <span class="keyword">using</span> a blank password.</span><br><span class="line"></span><br><span class="line">VALIDATE PASSWORD COMPONENT can be used to test passwords</span><br><span class="line"><span class="keyword">and</span> improve security. It checks the strength of password</span><br><span class="line"><span class="keyword">and</span> allows the users to <span class="built_in">set</span> only those passwords which are</span><br><span class="line">secure enough. Would you like to setup VALIDATE PASSWORD component?</span><br><span class="line"></span><br><span class="line">Press y|Y <span class="keyword">for</span> Yes, any other key <span class="keyword">for</span> No: n <span class="comment">// 这个选yes的话密码长度就必须要设置为8位以上，但我只想要6位的</span></span><br><span class="line">Please <span class="built_in">set</span> the password <span class="keyword">for</span> root here.</span><br><span class="line"></span><br><span class="line">New password: <span class="comment">// 设置密码</span></span><br><span class="line"></span><br><span class="line">Re-enter <span class="keyword">new</span> password: <span class="comment">// 再一次确认密码</span></span><br><span class="line">By <span class="keyword">default</span>, a MySQL installation has an anonymous user,</span><br><span class="line">allowing anyone to <span class="built_in">log</span> into MySQL without having to have</span><br><span class="line">a user account created <span class="keyword">for</span> them. This is intended only <span class="keyword">for</span></span><br><span class="line">testing, <span class="keyword">and</span> to make the installation go a bit smoother.</span><br><span class="line">You should remove them before moving into a production</span><br><span class="line">environment.</span><br><span class="line"></span><br><span class="line">Remove anonymous users? (Press y|Y <span class="keyword">for</span> Yes, any other key <span class="keyword">for</span> No) : y <span class="comment">// 移除不用密码的那个账户</span></span><br><span class="line">Success.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Normally, root should only be allowed to connect from</span><br><span class="line">'localhost'. This ensures that someone cannot guess at</span><br><span class="line">the root password from the network.</span><br><span class="line"></span><br><span class="line">Disallow root login remotely? (Press y|Y <span class="keyword">for</span> Yes, any other key <span class="keyword">for</span> No) : n <span class="comment">//不接受root远程登录账号</span></span><br><span class="line"></span><br><span class="line"> ... skipping.</span><br><span class="line">By default, MySQL comes with a database named 'test' that</span><br><span class="line">anyone can access. This is also intended only <span class="keyword">for</span> testing,</span><br><span class="line"><span class="keyword">and</span> should be removed before moving into a production</span><br><span class="line">environment.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Remove test database <span class="keyword">and</span> access to it? (Press y|Y <span class="keyword">for</span> Yes, any other key <span class="keyword">for</span> No) : y  <span class="comment">//删除text数据库</span></span><br><span class="line"> - Dropping test database...</span><br><span class="line">Success.</span><br><span class="line"></span><br><span class="line"> - Removing privileges on test database...</span><br><span class="line">Success.参考链接</span><br><span class="line"></span><br><span class="line">Reloading the privilege tables will ensure that all changes</span><br><span class="line">made so far will take effect immediately.</span><br><span class="line"></span><br><span class="line">Reload privilege tables now? (Press y|Y <span class="keyword">for</span> Yes, any other key <span class="keyword">for</span> No) : y</span><br><span class="line">Success.</span><br><span class="line"></span><br><span class="line">All done!</span><br></pre></td></tr></table></figure></div>
+<p><a href="https://www.cnblogs.com/walkerr/p/7289388.html" target="_blank" rel="noopener">参考链接</a></p>
+<h2 id="命令行链接mysql"><a href="#命令行链接mysql" class="headerlink" title="命令行链接mysql"></a>命令行链接mysql</h2><h4 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h4><h6 id="标准启动方式"><a href="#标准启动方式" class="headerlink" title="标准启动方式"></a>标准启动方式</h6><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql  -h  主机名(ip)  -u  用户名 -P 端口 -p </span><br><span class="line"></span><br><span class="line">说明:</span><br><span class="line"></span><br><span class="line">-h: 主机名，表示要连接的数据库的主机名或者IP</span><br><span class="line">-u: 用户名，表示连接数据库的用户名</span><br><span class="line">-P: 端口，表示要连接的数据库的端口，默认是3306，可以不写，但是如果端口不是默认端口，就必须指明端口号</span><br><span class="line">-p: 表示要连接的数据库的密码，-p后面可以直接输入密码，但是这样密码就会明文输入不太安全，所以建议输入-p回车，换行输入密码</span><br></pre></td></tr></table></figure>
+<p><img src="https://github.com/bjlxb/image/blob/master/screenshot/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/mysql%E5%B8%B8%E8%A7%84%E8%BF%9E%E6%8E%A5%E6%96%B9%E5%BC%8F.jpg?raw=true" alt="mysql标准启动方式截图"></p>
+<h6 id="简洁启动方式："><a href="#简洁启动方式：" class="headerlink" title="简洁启动方式："></a>简洁启动方式：</h6><p>前提：<br>1.MySQL安装在本机<br>2.端口是默认端口3306<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u  root -p</span><br></pre></td></tr></table></figure></p>
+<p><img src="https://github.com/bjlxb/image/blob/master/screenshot/%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87/mysql%E7%AE%80%E4%BE%BF%E8%BF%9E%E6%8E%A5%E6%96%B9%E5%BC%8F.jpg?raw=true" alt="mysql简洁启动方式截图"></p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/05/23/ERROR：Public Key Retrieval is not allowed/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            ERROR：Public Key Retrieval is not allowed
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/05/18/Mac显示隐藏文件/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Mac显示隐藏文件</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        宁静致远
+      
+    </h3>
+    <p class="avatar-slogan">
+      个人小站，记录一些日常零碎的日常！
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-C/">C/C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DB/">DB</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Django/">Django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Golang/">Golang</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MAC/">MAC</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/小程序/">小程序</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试题/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/">C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DB/">DB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Django/">Django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MAC/">MAC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tool/">Tool</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小程序/">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试题/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C-C/" style="font-size: 14px;">C/C++</a> <a href="/tags/DB/" style="font-size: 15px;">DB</a> <a href="/tags/Django/" style="font-size: 17px;">Django</a> <a href="/tags/Git/" style="font-size: 12px;">Git</a> <a href="/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/tags/Java/" style="font-size: 11px;">Java</a> <a href="/tags/MAC/" style="font-size: 15px;">MAC</a> <a href="/tags/Python/" style="font-size: 18px;">Python</a> <a href="/tags/Tool/" style="font-size: 19px;">Tool</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/小程序/" style="font-size: 13px;">小程序</a> <a href="/tags/测试/" style="font-size: 16px;">测试</a> <a href="/tags/面试题/" style="font-size: 11px;">面试题</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/06/02/axios超时时间设置/">axios超时时间设置</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/31/JavaScriptのjoin()方法/">JavaScriptのjoin()方法</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/23/JavaScript展开运算符/">JavaScript展开运算符</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/20/Charles抓包异常排查/">Charles抓包异常排查</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/11/axios传递数组参数の坑/">axios传递数组参数の坑</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://yiluyanxia.github.io/" title target='_blank'
+        >一路烟霞</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2021 新波 &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

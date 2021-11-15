@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>redis学习笔记一 | 个人小站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
+  
+  <meta name="description" content="记录一下日常用到的常用redis操作。">
+<meta name="keywords" content="DB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="redis学习笔记一">
+<meta property="og:url" content="http://bjlxb.github.io/2020/02/26/redis学习笔记一/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="记录一下日常用到的常用redis操作。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-11-15T13:04:53.528Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="redis学习笔记一">
+<meta name="twitter:description" content="记录一下日常用到的常用redis操作。">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="photo-redis学习笔记一" class="article global-container article-type-photo" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      redis学习笔记一
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2020/02/26/redis学习笔记一/" class="article-date">
+  <time datetime="2020-02-26T15:33:50.000Z" itemprop="datePublished">2020-02-26</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/DB/">DB</a>
+  </div>
+
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DB/">DB</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>记录一下日常用到的常用redis操作。<br><a id="more"></a></p>
+<h4 id="一、redis介绍"><a href="#一、redis介绍" class="headerlink" title="一、redis介绍"></a>一、redis介绍</h4><h5 id="Nosql-基本概念"><a href="#Nosql-基本概念" class="headerlink" title="Nosql 基本概念"></a>Nosql 基本概念</h5><p>  redis数据库是一种NoSql，叫非关系型数据库，它的全名Not only sql。<br>  NoSql为了解决高并发、高可用、高可扩展，大数据存储等一系列问题而产生的数据库解决方案。<br>  它不能替代关系型数据库，只能作为关系型数据库的一个良好补充。</p>
+<h5 id="Nosql-分类"><a href="#Nosql-分类" class="headerlink" title="Nosql 分类"></a>Nosql 分类</h5><p> 1 列存储（Hbase、Cassandra、Hypertable）<br>  顾名思义，是按列存储数据的。最大的特点是方便存储结构化和半结构化数据，方便做数据压缩，对针对某一列或者某几列的查询有非常大的IO优势。<br> 2 文档存储（MongoDB、CouchDB）<br>  文档存储一般用类似json的格式存储，存储的内容是文档型的。这样也就有机会对某些字段建立索引，实现关系数据库的某些功能。<br> 3 key-value存储（Tokyo Cabinet / Tyrant、Berkeley DB、MemcacheDB、Redis）<br>  可以通过key快速查询到其value。一般来说，存储不管value的格式，照单全收。（Redis包含了其他功能）<br> 4 图存储（Neo4J、FlockDB）<br>  图形关系的最佳存储。使用传统关系数据库来解决的话性能低下，而且设计使用不方便。<br> 5 对象存储（db4o、Versant）<br>  通过类似面向对象语言的语法操作数据库，通过对象的方式存取数据。<br> 6 xml数据库（Berkeley DB XML、BaseX）<br>  高效的存储XML数据，并支持XML的内部查询语法，比如XQuery,Xpath。</p>
+<p> Redis是使用c语言开发的一个高性能键值数据库。<br> Redis可以通过一些键值类型来存储数据。<br> 键值类型：<br>  String字符类型<br>  map散列类型<br>  list列表类型<br>  set集合类型<br>  sortedset有序集合类型</p>
+<h5 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h5><ul>
+<li><p>缓存（数据查询、短连接、新闻内容、商品内容等等）</p>
+</li>
+<li><p>分布式集群架构中的session分离。</p>
+</li>
+<li><p>聊天室的在线好友列表。 </p>
+</li>
+<li><p>任务队列（秒杀、抢购、12306等等） 。</p>
+</li>
+<li><p>应用排行榜。</p>
+</li>
+<li><p>网站访问统计。 </p>
+</li>
+<li><p>数据过期处理（可以精确到毫秒）<br>二、Redis 安装</p>
+<p><a href="http://redis.io/" target="_blank" rel="noopener">官网</a>下载<br>linux系统安装：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Ubuntu安装redis</span></span><br><span class="line"><span class="comment">#安装Redis服务器端</span></span><br><span class="line">sudo apt-get install redis-server</span><br><span class="line"></span><br><span class="line"><span class="comment"># Centos安装</span></span><br><span class="line"><span class="comment"># 1.首先安装epel源</span></span><br><span class="line">yum install epel-release</span><br><span class="line"><span class="comment"># 2.安装redis</span></span><br><span class="line">yum install redis</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 命令启动redis服务</span></span><br><span class="line"><span class="comment"># 启动redis</span></span><br><span class="line">service redis start</span><br><span class="line"><span class="comment"># 停止redis</span></span><br><span class="line">service redis stop</span><br><span class="line"><span class="comment"># 查看redis运行状态</span></span><br><span class="line">service redis status</span><br><span class="line"><span class="comment"># 查看redis进程</span></span><br><span class="line">ps -ef | grep redis</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4.设置redis为开机自动启动</span></span><br><span class="line">chkconfig redis on</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5.redis-cli进入redis服务</span></span><br><span class="line"><span class="comment"># 进入本机redis</span></span><br><span class="line">redis-cli</span><br><span class="line"><span class="comment"># 列出所有key</span></span><br><span class="line">keys *</span><br><span class="line"></span><br><span class="line"><span class="comment"># 6.打开配置文件，修改密码，IP等</span></span><br><span class="line">vi /etc/redis.conf</span><br><span class="line"><span class="comment"># 可以修改端口（默认为6379）</span></span><br><span class="line">port 6179</span><br><span class="line"><span class="comment"># 可以修改密码</span></span><br><span class="line">requirepass 111</span><br><span class="line"><span class="comment"># 修改允许远程登录</span></span><br><span class="line"><span class="comment"># 1.默认只允许本机登录</span></span><br><span class="line"><span class="built_in">bind</span> 127.0.0.1</span><br><span class="line"><span class="comment"># 2.可以指定IP登录（指定ip，多个ip之间使用空格分隔）</span></span><br><span class="line"><span class="built_in">bind</span> 127.0.0.1 192.168.3.3</span><br><span class="line"><span class="comment"># 3.允许所有IP登录（不安全）</span></span><br><span class="line"><span class="built_in">bind</span> 0.0.0.0</span><br><span class="line"></span><br><span class="line"><span class="comment"># 7.修改完配置文件后，使配置文件生效</span></span><br><span class="line">redis-server /etc/redis.conf &amp;</span><br><span class="line"><span class="comment"># 停止redis</span></span><br><span class="line">service redis stop</span><br><span class="line"><span class="comment"># 启动redis</span></span><br><span class="line">service redis start</span><br><span class="line"></span><br><span class="line"><span class="comment"># 8.远程登录redis</span></span><br><span class="line">redis-cli -h 127.0.0.1 -p 6379</span><br><span class="line"></span><br><span class="line">systemctl start redis.service    <span class="comment">#启动redis服务</span></span><br><span class="line">systemctl stop redis.service     <span class="comment">#停止redis服务</span></span><br><span class="line">systemctl restart redis.service  <span class="comment">#重新启动服务</span></span><br><span class="line">systemctl status redis.service   <span class="comment">#查看服务当前状态</span></span><br><span class="line">systemctl <span class="built_in">enable</span> redis.service   <span class="comment">#设置开机自启动</span></span><br><span class="line">systemctl <span class="built_in">disable</span> redis.service  <span class="comment">#停止开机自启动</span></span><br></pre></td></tr></table></figure></div>
+</li>
+</ul>
+<h5 id="开源的图形化Redis客户端管理软件"><a href="#开源的图形化Redis客户端管理软件" class="headerlink" title="开源的图形化Redis客户端管理软件"></a>开源的图形化Redis客户端管理软件</h5><ol>
+<li><p>Redis Desktop Manager<br> 一款基于Qt5的跨平台Redis桌面管理软件<br> 支持：Windows 7+, Mac OS X 10.10+, Ubuntu 14+<br> 特点：C++ 编写，响应迅速，性能好。但不支持数据库备份与恢复。<br> 项目地址：<a href="https://github.com/uglide/RedisDesktopManager" target="_blank" rel="noopener">https://github.com/uglide/RedisDesktopManager</a></p>
+</li>
+<li><p>Redis Client<br> 使用Java编写，功能丰富，缺点是性能稍差，网络不好时，会不时断线。<br> 支持：Windows, Mac OS X, Linux<br> 项目地址：<a href="https://github.com/caoxinyu/RedisClient" target="_blank" rel="noopener">https://github.com/caoxinyu/RedisClient</a></p>
+<pre><code>https://github.com/caoxinyu/RedisClient/tree/linux
+https://github.com/caoxinyu/RedisClient/tree/OSX
+</code></pre></li>
+<li><p>Redis Studio<br> C++编写的redis管理工具。<br> 支持：仅支持Windows平台，Windows xp+。<br> 项目地址： <a href="https://github.com/cinience/RedisStudio" target="_blank" rel="noopener">https://github.com/cinience/RedisStudio</a></p>
+</li>
+<li><p>Another Redis DeskTop Manager<br> 一个稳定的Redis桌面管理器，加载大量密钥时它不会崩溃。<br> 支持：Windows, Mac OS X, Linux<br> 项目地址：<a href="https://github.com/qishibo/AnotherRedisDesktopManager" target="_blank" rel="noopener">https://github.com/qishibo/AnotherRedisDesktopManager</a></p>
+</li>
+</ol>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2020/02/27/redis中SWAPDB使用/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            redis中SWAPDB使用
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2020/02/23/C-中int与string的相互转换/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">C++中int与string的相互转换</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        宁静致远
+      
+    </h3>
+    <p class="avatar-slogan">
+      个人小站，记录一些日常零碎的日常！
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-C/">C/C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DB/">DB</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Django/">Django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Golang/">Golang</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MAC/">MAC</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/小程序/">小程序</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试题/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/">C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DB/">DB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Django/">Django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MAC/">MAC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tool/">Tool</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小程序/">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试题/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C-C/" style="font-size: 14px;">C/C++</a> <a href="/tags/DB/" style="font-size: 15px;">DB</a> <a href="/tags/Django/" style="font-size: 17px;">Django</a> <a href="/tags/Git/" style="font-size: 12px;">Git</a> <a href="/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/tags/Java/" style="font-size: 11px;">Java</a> <a href="/tags/MAC/" style="font-size: 15px;">MAC</a> <a href="/tags/Python/" style="font-size: 18px;">Python</a> <a href="/tags/Tool/" style="font-size: 19px;">Tool</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/小程序/" style="font-size: 13px;">小程序</a> <a href="/tags/测试/" style="font-size: 16px;">测试</a> <a href="/tags/面试题/" style="font-size: 11px;">面试题</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/06/02/axios超时时间设置/">axios超时时间设置</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/31/JavaScriptのjoin()方法/">JavaScriptのjoin()方法</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/23/JavaScript展开运算符/">JavaScript展开运算符</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/20/Charles抓包异常排查/">Charles抓包异常排查</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/11/axios传递数组参数の坑/">axios传递数组参数の坑</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://yiluyanxia.github.io/" title target='_blank'
+        >一路烟霞</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2021 新波 &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

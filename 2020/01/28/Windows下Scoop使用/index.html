@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Windows下Scoop使用 | 个人小站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
+  
+  <meta name="description" content="介绍一下Windows下命令行软件管理工具Scoop">
+<meta name="keywords" content="Tool">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows下Scoop使用">
+<meta property="og:url" content="http://bjlxb.github.io/2020/01/28/Windows下Scoop使用/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="介绍一下Windows下命令行软件管理工具Scoop">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-11-15T13:04:53.525Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Windows下Scoop使用">
+<meta name="twitter:description" content="介绍一下Windows下命令行软件管理工具Scoop">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="photo-Windows下Scoop使用" class="article global-container article-type-photo" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Windows下Scoop使用
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2020/01/28/Windows下Scoop使用/" class="article-date">
+  <time datetime="2020-01-28T11:38:49.000Z" itemprop="datePublished">2020-01-28</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tool/">Tool</a>
+  </div>
+
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tool/">Tool</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>介绍一下Windows下命令行软件管理工具Scoop</p>
+<a id="more"></a>
+<p>主要是为了Windows上安装软件安装繁琐，路径不统一，而且更新卸载麻烦，包管理系统可以完美的解决这些问题！</p>
+<p>目前Windows平台下比较流行的两种包管理平台：</p>
+<ul>
+<li>chocolatey 和 scoop</li>
+</ul>
+<blockquote>
+<p>Chocolatey中软件安装路径默认在C盘<br>scoop自由度高，可以将软件部署到任意盘中</p>
+</blockquote>
+<h4 id="官方信息"><a href="#官方信息" class="headerlink" title="官方信息"></a>官方信息</h4><ul>
+<li>官方网址:<br><a href="https://scoop.sh/" target="_blank" rel="noopener">https://scoop.sh/</a></li>
+<li>官方快速入门:<br><a href="https://github.com/lukesampson/scoop/wiki/Quick-Start" target="_blank" rel="noopener">https://github.com/lukesampson/scoop/wiki/Quick-Start</a></li>
+</ul>
+<h4 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h4><p>操作环境: Windows10 或Windows7<br>确保PowerShell 版本 &gt;= 3. win7或许低于3，需要升级。</p>
+<hr>
+<p>打开PowerShell方式：</p>
+<pre><code>1. win + R 打开运行，输入PowerShell，确定。
+2. cmd中输入PowerShell然后回车。
+3. 在开始菜单中查找。
+4. 开始菜单右键，选择Windows PowerShell或i打开。
+</code></pre><ol>
+<li><p>命令行查看自己的PowerShell 版本</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$psversiontable</span>.psversion.major</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>确保你允许PowerShell执行本地脚本</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> RemoteSigned -Scope CurrentUser</span><br><span class="line"></span><br><span class="line">执行策略更改</span><br><span class="line">执行策略可帮助你防止执行不信任的脚本。更改执行策略可能会产生安全风险，如 https:/go.microsoft.com/fwlink/?LinkID=<span class="number">135170</span></span><br><span class="line">中的 about_Execution_Policies 帮助主题所述。是否要更改执行策略?</span><br><span class="line">[Y] 是(Y)  [A] 全是(A)  [N] 否(N)  [L] 全否(L)  [S] 暂停(S)  [?] 帮助 (默认值为“N”): A</span><br></pre></td></tr></table></figure></div>
+</li>
+</ol>
+<h4 id="安装Scoop"><a href="#安装Scoop" class="headerlink" title="安装Scoop"></a>安装Scoop</h4><ol>
+<li><p>不指定安装路径，使用默认安装路径（将会安装到默认目录C:\Users\user(自己的用户名)\scoop）</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iex (<span class="built_in">new-object</span> net.webclient).downloadstring(<span class="string">'https://get.scoop.sh'</span>)</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>指定安装目录</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[environment]::setEnvironmentVariable(<span class="string">'SCOOP'</span>,<span class="string">'指定安装路径'</span>,<span class="string">'User'</span>)</span><br><span class="line"><span class="variable">$env:SCOOP</span>=<span class="string">'指定安装路径'</span></span><br><span class="line">iex (<span class="built_in">new-object</span> net.webclient).downloadstring(<span class="string">'https://get.scoop.sh'</span>)</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>安装scoop可能遇到的错误：</p>
+</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">使用“<span class="number">1</span>”个参数调用“DownloadString”时发生异常:“基础连接已经关闭: 发送时发生错误。”</span><br><span class="line">所在位置 行:<span class="number">1</span> 字符: <span class="number">1</span></span><br><span class="line">+ iex (<span class="built_in">new-object</span> net.webclient).downloadstring(<span class="string">'https://get.scoop.sh'</span>)</span><br><span class="line">+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</span><br><span class="line">    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException</span><br><span class="line">    + FullyQualifiedErrorId : WebException问</span><br></pre></td></tr></table></figure></div>
+<p>原因：由于墙的原因无法安装<br>解决：确保浏览器在能访问到<a href="https://get.scoop.sh" target="_blank" rel="noopener">https://get.scoop.sh</a> （使用shadowsocks全局代理）</p>
+<h4 id="使用Scoop"><a href="#使用Scoop" class="headerlink" title="使用Scoop"></a>使用Scoop</h4><p>在cmd和PowerShell中输入以下命令均可，因为已经为Scoop自动设置了环境变量</p>
+<h6 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 帮助语法</span></span><br><span class="line">scoop help</span><br><span class="line"><span class="comment"># 安装操作</span></span><br><span class="line">scoop install 软件名</span><br><span class="line"><span class="comment"># 更新操作（此更新操作是对scoop本身以及bucket库的更新）</span></span><br><span class="line">scoop update</span><br><span class="line"><span class="comment"># 更新所有已安装应用</span></span><br><span class="line">scoop update *</span><br><span class="line"><span class="comment"># 移除所有旧版本</span></span><br><span class="line">scoop cleanup *</span><br><span class="line"><span class="comment"># 卸载操作</span></span><br><span class="line">scoop uninstall 软件名</span><br></pre></td></tr></table></figure></div>
+<h6 id="Bucket软件源"><a href="#Bucket软件源" class="headerlink" title="Bucket软件源"></a>Bucket软件源</h6><p>scoop的bucket软件源策略，由社区来维护</p>
+<pre><code>1. 社区地址：
+https://github.com/rasa/scoop-directory/blob/master/by-score.md
+2.    bucket语法：
+scoop bucket add [软件源名字(随意)] [源地址]
+3.bucket源推荐：
+</code></pre><blockquote>
+<pre><code>官方：
+scoop bucket add main # 默认
+scoop bucket add extras # 推荐
+scoop bucket add versions
+scoop bucket add nightlies
+scoop bucket add nirsoft
+scoop bucket add php
+scoop bucket add nerd-fonts
+scoop bucket add nonportable
+scoop bucket add java
+scoop bucket add games
+scoop bucket add jetbrains # 推荐
+国内常用软件：
+微信、QQ、钉钉
+scoop bucket add dorado https://github.com/h404bi/dorado    
+</code></pre></blockquote>
+<pre><code>小新Bucket：
+FSCapture、Shadowsocksrr、UninstallTool、Notepad3、Wechat……
+scoop bucket add dajiu https://github.com/dajiiu/dajiu-scoop
+
+其他：
+scoop bucket add dodorz https://github.com/dodorz/scoop-bucket
+</code></pre><h6 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 01. 7zip：</span></span><br><span class="line">scoop install <span class="number">7</span>zip</span><br><span class="line"><span class="comment"># 02. git：</span></span><br><span class="line">scoop install git</span><br><span class="line"><span class="comment"># 03.aria2：</span></span><br><span class="line">scoop install aria2</span><br><span class="line"><span class="comment">#04.vim：</span></span><br><span class="line">scoop install vim</span><br><span class="line"><span class="comment">#05.wget：</span></span><br><span class="line">scoop install wget</span><br><span class="line"><span class="comment">#06.everything：</span></span><br><span class="line">scoop install everything</span><br><span class="line"><span class="comment">#07.Q-Dir：</span></span><br><span class="line">scoop install q-dir</span><br><span class="line"><span class="comment">#08.chrome：</span></span><br><span class="line">scoop install googlechrome</span><br><span class="line"><span class="comment">#09.firefox：</span></span><br><span class="line">scoop install firefox</span><br><span class="line"><span class="comment">#10.opera：</span></span><br><span class="line">scoop install opera</span><br><span class="line"><span class="comment">#11.vivaldi：</span></span><br><span class="line">scoop install vivaldi</span><br><span class="line"><span class="comment">#12.python：</span></span><br><span class="line">scoop install python</span><br><span class="line"><span class="comment">#13.golang：</span></span><br><span class="line">scoop install go</span><br><span class="line"><span class="comment">#14.notepadplusplus：</span></span><br><span class="line">scoop install notepadplusplus</span><br><span class="line"><span class="comment">#15.sublime-text：</span></span><br><span class="line">scoop install sublime-text</span><br><span class="line"><span class="comment">#16.vscode：</span></span><br><span class="line">scoop install vscode</span><br><span class="line"><span class="comment">#17.idea：</span></span><br><span class="line">scoop install idea</span><br><span class="line"><span class="comment">#18.pycharm：</span></span><br><span class="line">scoop install pycharm</span><br><span class="line"><span class="comment">#19.goland：</span></span><br><span class="line">scoop install goland</span><br><span class="line"><span class="comment">#20.snipaste：</span></span><br><span class="line">scoop install snipaste</span><br><span class="line"><span class="comment">#21.telegram：</span></span><br><span class="line">scoop install telegram</span><br><span class="line"><span class="comment">#22.typora：</span></span><br><span class="line">scoop install typora</span><br></pre></td></tr></table></figure></div>
+<h6 id="导出软件列表"><a href="#导出软件列表" class="headerlink" title="导出软件列表"></a>导出软件列表</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">scoop list &gt; F:/scoop/ScoopAppList.txt</span><br></pre></td></tr></table></figure></div>
+<h6 id="版本切换"><a href="#版本切换" class="headerlink" title="版本切换"></a>版本切换</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="POWERSHELL"><figure class="iseeu highlight /powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scoop reset python</span><br><span class="line">scoop reset python27</span><br></pre></td></tr></table></figure></div>
+<h6 id="提高下载速度"><a href="#提高下载速度" class="headerlink" title="提高下载速度"></a>提高下载速度</h6><ol>
+<li><p>建议安装aria2： scoop install aria2 </p>
+</li>
+<li><p>使用代理(每次进入dos或PowerShell都需设置一遍)： PC端→shadowsocker右键「设置选项」→本地代理下的「允许来自互联网的连接」勾选上 </p>
+</li>
+<li><p>set http_proxy=<a href="http://127.0.0.1:1080" target="_blank" rel="noopener">http://127.0.0.1:1080</a> set https_proxy=<a href="http://127.0.0.1:1080" target="_blank" rel="noopener">http://127.0.0.1:1080</a></p>
+</li>
+</ol>
+<p>或：</p>
+<p>   在scoop 的配置文件（~/.config/scoop/config.json）中添加</p>
+<blockquote>
+<p>scoop config proxy [username:password@]host:port<br>例如 scoop config proxy 127.0.0.1:1080</p>
+</blockquote>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2020/01/29/PyCharm模板详解/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            PyCharm模板详解
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/10/18/HTTP协议请求类型/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">HTTP协议请求类型</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        宁静致远
+      
+    </h3>
+    <p class="avatar-slogan">
+      个人小站，记录一些日常零碎的日常！
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-C/">C/C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DB/">DB</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Django/">Django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Golang/">Golang</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MAC/">MAC</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/小程序/">小程序</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试题/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/">C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DB/">DB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Django/">Django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MAC/">MAC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tool/">Tool</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小程序/">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试题/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C-C/" style="font-size: 14px;">C/C++</a> <a href="/tags/DB/" style="font-size: 15px;">DB</a> <a href="/tags/Django/" style="font-size: 17px;">Django</a> <a href="/tags/Git/" style="font-size: 12px;">Git</a> <a href="/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/tags/Java/" style="font-size: 11px;">Java</a> <a href="/tags/MAC/" style="font-size: 15px;">MAC</a> <a href="/tags/Python/" style="font-size: 18px;">Python</a> <a href="/tags/Tool/" style="font-size: 19px;">Tool</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/小程序/" style="font-size: 13px;">小程序</a> <a href="/tags/测试/" style="font-size: 16px;">测试</a> <a href="/tags/面试题/" style="font-size: 11px;">面试题</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/06/02/axios超时时间设置/">axios超时时间设置</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/31/JavaScriptのjoin()方法/">JavaScriptのjoin()方法</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/23/JavaScript展开运算符/">JavaScript展开运算符</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/20/Charles抓包异常排查/">Charles抓包异常排查</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/11/axios传递数组参数の坑/">axios传递数组参数の坑</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://yiluyanxia.github.io/" title target='_blank'
+        >一路烟霞</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2021 新波 &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

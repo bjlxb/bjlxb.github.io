@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>HTML基础 | 个人小站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
+  
+  <meta name="description" content="前端基础">
+<meta name="keywords" content="前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML基础">
+<meta property="og:url" content="http://bjlxb.github.io/2021/01/21/HTML基础/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="前端基础">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://bjlxb.github.io/image/HTML/HTML常用字符.png">
+<meta property="og:image" content="http://bjlxb.github.io/image/HTML/dl案例.png">
+<meta property="og:updated_time" content="2021-11-15T13:04:53.538Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML基础">
+<meta name="twitter:description" content="前端基础">
+<meta name="twitter:image" content="http://bjlxb.github.io/image/HTML/HTML常用字符.png">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="photo-HTML基础" class="article global-container article-type-photo" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      HTML基础
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2021/01/21/HTML基础/" class="article-date">
+  <time datetime="2021-01-21T11:37:52.000Z" itemprop="datePublished">2021-01-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/前端/">前端</a>
+  </div>
+
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>前端基础<br><a id="more"></a></p>
+<h2 id="一、认识WEB"><a href="#一、认识WEB" class="headerlink" title="一、认识WEB"></a>一、认识WEB</h2><p><strong>「网页」</strong>主要是由<code>文字</code>、<code>图像</code>和<code>超链接</code>等元素构成，当然除了这些元素，网页中还可以包括音频、视频以及Flash等。</p>
+<p><strong>「浏览器」</strong>是网页显示、运行的平台。</p>
+<p><strong>「浏览器内核」</strong>(排版引擎、解释引擎、渲染引擎)</p>
+<blockquote>
+<p>负责读取网页内容，整理讯息，计算网页的显示方式并显示页面。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">浏览器</th>
+<th style="text-align:center">内核</th>
+<th style="text-align:left">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">IE</td>
+<td style="text-align:center">Trident</td>
+<td style="text-align:left">IE、猎豹安全、360极速浏览器、百度浏览器</td>
+</tr>
+<tr>
+<td style="text-align:left">firefox</td>
+<td style="text-align:center">Gecko</td>
+<td style="text-align:left">可惜这几年已经没落了，打开速度慢、升级频繁、猪一样的队友flash、神一样的对手chrome。</td>
+</tr>
+<tr>
+<td style="text-align:left">Safari</td>
+<td style="text-align:center">webkit</td>
+<td style="text-align:left">现在很多人错误地把 webkit 叫做 chrome内核（即使 chrome内核已经是 blink 了）。苹果感觉像被别人抢了媳妇，都哭晕在厕所里面了。</td>
+</tr>
+<tr>
+<td style="text-align:left">chrome</td>
+<td style="text-align:center">Chromium/Blink</td>
+<td style="text-align:left">在 Chromium 项目中研发 Blink 渲染引擎（即浏览器核心），内置于 Chrome 浏览器之中。Blink 其实是 WebKit 的分支。大部分国产浏览器最新版都采用Blink内核。二次开发</td>
+</tr>
+<tr>
+<td style="text-align:left">Opera</td>
+<td style="text-align:center">blink</td>
+<td style="text-align:left">现在跟随chrome用blink内核。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Web标准"><a href="#Web标准" class="headerlink" title="Web标准"></a>Web标准</h3><p><strong>「构成」</strong>👉 <strong>结构标准，表现标准和行为标准</strong></p>
+<ul>
+<li>结构标准用于对网页元素进行整理和分类(HTML)</li>
+<li>表现标准用于设置网页元素的版式、颜色、大小等外观属性(CSS)</li>
+<li>行为标准用于对网页模型的定义及交互的编写(JavaScript)</li>
+</ul>
+<p><strong>「Web标准的优点」</strong>👇</p>
+<ul>
+<li>易于维护：只需更改CSS文件，就可以改变整站的样式</li>
+<li>页面响应快：HTML文档体积变小，响应时间短</li>
+<li>可访问性：语义化的HTML（结构和表现相分离的HTML）编写的网页文件，更容易被屏幕阅读器识别</li>
+<li>设备兼容性：不同的样式表可以让网页在不同的设备上呈现不同的样式</li>
+<li>搜索引擎：语义化的HTML能更容易被搜索引擎解析，提升排名</li>
+</ul>
+<h2 id="二、HTML初识"><a href="#二、HTML初识" class="headerlink" title="二、HTML初识"></a>二、HTML初识</h2><h3 id="HTML初识"><a href="#HTML初识" class="headerlink" title="HTML初识"></a>HTML初识</h3><p><strong>「HTML」</strong>(Hyper Text Markup Language):超文本标记语言</p>
+<p><strong>「所谓超文本，有2层含义：」</strong></p>
+<ul>
+<li>因为它可以加入图片、声音、动画、多媒体等内容（超越文本限制 ）</li>
+<li>不仅如此，它还可以从一个文件跳转到另一个文件，与世界各地主机的文件连接（超级链接文本）。</li>
+</ul>
+<p><strong>「HTML骨架格式」</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 页面中最大的标签 根标签 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 头部标签 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span>     </span><br><span class="line">        <span class="comment">&lt;!-- 标题标签 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 文档的主体 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<p><strong>「团队约定大小写」</strong></p>
+<ul>
+<li>HTML标签名、类名、标签属性和大部分属性值统一用小写</li>
+</ul>
+<p><strong>「HTML元素标签分类」</strong></p>
+<ul>
+<li>常规元素(双标签)</li>
+<li>空元素(单标签)</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">常规元素(双标签)</span><br><span class="line"><span class="tag">&lt;<span class="name">标签名</span>&gt;</span> 内容 <span class="tag">&lt;/<span class="name">标签名</span>&gt;</span>   比如<span class="tag">&lt;<span class="name">body</span>&gt;</span>我是文字<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line">空元素(单标签)</span><br><span class="line"><span class="tag">&lt;<span class="name">标签名</span> /&gt;</span>  比如 <span class="tag">&lt;<span class="name">br</span> /&gt;</span>或<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<p><strong>「HTML标签关系」</strong></p>
+<ul>
+<li><p>嵌套关系父子级包含关系</p>
+</li>
+<li><p>并列关系兄弟级并列关系</p>
+<ul>
+<li>如果两个标签之间的关系是嵌套关系，子元素最好缩进一个tab键的身位（一个tab是4个空格）。如果是并列关系，最好上下对齐。</li>
+</ul>
+</li>
+</ul>
+<h3 id="文档类型-lt-DOCTYPE-gt"><a href="#文档类型-lt-DOCTYPE-gt" class="headerlink" title="文档类型&lt;!DOCTYPE &gt;"></a>文档类型&lt;!DOCTYPE &gt;</h3><p><strong>「文档类型」</strong>用来说明你用的XHTML或者HTML是什么版本。&lt;!DOCTYPE html&gt;告诉浏览器按照HTML5标准解析页面。</p>
+<h3 id="页面语言lang"><a href="#页面语言lang" class="headerlink" title="页面语言lang"></a>页面语言lang</h3><p>lang指定该html标签内容所用的语言</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span>  </span><br><span class="line">en 定义语言为英语 zh-CN定义语言为中文</span><br></pre></td></tr></table></figure></div>
+<p><strong>「lang的作用」</strong></p>
+<ul>
+<li>根据根据lang属性来设定不同语言的css样式，或者字体</li>
+<li>告诉搜索引擎做精确的识别</li>
+<li>让语法检查程序做语言识别</li>
+<li>帮助翻译工具做识别</li>
+<li>帮助网页阅读程序做识别</li>
+</ul>
+<h3 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h3><p><strong>「字符集」</strong>(Character set)是多个字符的集合,计算机要准确的处理各种字符集文字，需要进行字符编码，以便计算机能够识别和存储各种文字。</p>
+<ul>
+<li>UTF-8是目前最常用的字符集编码方式</li>
+<li>让 html 文件是以 UTF-8 编码保存的， 浏览器根据编码去解码对应的html内容。</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br></pre></td></tr></table></figure></div>
+<p><strong>「meta viewport的用法」</strong><br>  通常viewport是指视窗、视口。浏览器上(也可能是一个app中的webview)用来显示网页的那部分区域。在移动端和pc端视口是不同的，pc端的视口是浏览器窗口区域，而在移动端有三个不同的视口概念：布局视口、视觉视口、理想视口</p>
+<p>  meta有两个属性name 和 http-equiv</p>
+<p><strong>name属性的取值</strong></p>
+<ul>
+<li>keywords(关键字) 告诉搜索引擎，该网页的关键字</li>
+<li>description(网站内容描述) 用于告诉搜索引擎，你网站的主要内容。</li>
+<li>viewport(移动端的窗口)</li>
+<li>robots(定义搜索引擎爬虫的索引方式) robots用来告诉爬虫哪些页面需要索引，哪些页面不需要索引</li>
+<li>author(作者)</li>
+<li>generator(网页制作软件）</li>
+<li>copyright(版权)</li>
+</ul>
+<p><strong>http-equiv有以下参数</strong></p>
+<p>http-equiv相当于http的文件头作用，它可以向浏览器传回一些有用的信息，以帮助正确和精确地显示网页内容</p>
+<ul>
+<li>content-Type 设定网页字符集(Html4用法，不推荐)</li>
+<li>Expires(期限) ,可以用于设定网页的到期时间。一旦网页过期，必须到服务器上重新传输。</li>
+<li>Pragma(cache模式),是用于设定禁止浏览器从本地机的缓存中调阅页面内容，设定后一旦离开网页就无法从Cache中再调出</li>
+<li>Refresh(刷新),自动刷新并指向新页面。</li>
+<li>cache-control（请求和响应遵循的缓存机制）</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="HTML标签的语义化"><a href="#HTML标签的语义化" class="headerlink" title="HTML标签的语义化"></a>HTML标签的语义化</h3><ul>
+<li>方便代码的阅读和维护，样式丢失的时候能让页面呈现清晰的结构。</li>
+<li>有利于SEO，搜索引擎根据标签来确定上下文和各个关键字的权重。</li>
+<li>方便其他设备解析，如盲人阅读器根据语义渲染网页</li>
+</ul>
+<p><strong>「拓展」</strong> 标签：规定页面上所有链接的默认 URL 和设置整体链接的打开状态</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">base</span> <span class="attr">href</span>=<span class="string">"http://www.baidu.com"</span> <span class="attr">target</span>=<span class="string">"_blank"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">base</span> <span class="attr">target</span>=<span class="string">"_self"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">""</span>&gt;</span>测试<span class="tag">&lt;/<span class="name">a</span>&gt;</span> 跳转到 百度</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<hr>
+<h2 id="HTML常用标签"><a href="#HTML常用标签" class="headerlink" title="HTML常用标签"></a>HTML常用标签</h2><h3 id="常用标签"><a href="#常用标签" class="headerlink" title="常用标签"></a>常用标签</h3><p><strong>「1. 排版标签」</strong>主要和css搭配使用，显示网页结构的标签，是网页布局最常用的标签。</p>
+<ul>
+<li>标题标签h(h1~h6)</li>
+<li>段落标签p,可以把 HTML 文档分割为若干段落</li>
+<li>水平线标签hr</li>
+<li>换行标签br</li>
+<li>div和span标签:是没有语义的,是我们网页布局最主要的2个盒子。</li>
+</ul>
+<p><strong>「2. 排版标签」</strong></p>
+<ul>
+<li>b和strong 文字以粗体显示</li>
+<li>i和em 文字以斜体显示</li>
+<li>s和del 文字以加删除线显示</li>
+<li>u和ins 文字以加下划线显示</li>
+</ul>
+<p><strong>「3. 标签属性(行内式)」</strong></p>
+<p>使用HTML制作网页时，如果想让HTML标签提供更多的信息，可以使用HTML标签的属性加以设置。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">标签名</span> 属性<span class="attr">1</span>=<span class="string">"属性值1"</span> 属性<span class="attr">2</span>=<span class="string">"属性值2"</span> …&gt;</span> 内容 <span class="tag">&lt;/<span class="name">标签名</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">手机</span> 颜色=<span class="string">"红色"</span> 大小=<span class="string">"5寸"</span>&gt;</span>  <span class="tag">&lt;/<span class="name">手机</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<p><strong>「4. 图像标签img」</strong><br><strong>必需的属性：</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_img_alt.asp" target="_blank" rel="noopener">alt</a></td>
+<td style="text-align:left"><em>text</em></td>
+<td style="text-align:left">规定图像的替代文本。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_img_src.asp" target="_blank" rel="noopener">src</a></td>
+<td style="text-align:left"><em>URL</em></td>
+<td style="text-align:left">规定显示图像的 URL。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>可选的属性：</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_img_align.asp" target="_blank" rel="noopener">align</a></td>
+<td style="text-align:left">top bottom middle left right</td>
+<td style="text-align:left">不推荐使用。规定如何根据周围的文本来排列图像。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_img_border.asp" target="_blank" rel="noopener">border</a></td>
+<td style="text-align:left"><em>pixels</em></td>
+<td style="text-align:left">不推荐使用。定义图像周围的边框。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_img_height-width.asp" target="_blank" rel="noopener">height</a></td>
+<td style="text-align:left"><em>pixels</em> <em>%</em></td>
+<td style="text-align:left">定义图像的高度。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_img_hspace_vspace.asp" target="_blank" rel="noopener">hspace</a></td>
+<td style="text-align:left"><em>pixels</em></td>
+<td style="text-align:left">不推荐使用。定义图像左侧和右侧的空白。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_img_ismap.asp" target="_blank" rel="noopener">ismap</a></td>
+<td style="text-align:left"><em>URL</em></td>
+<td style="text-align:left">将图像定义为服务器端图像映射。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_img_longdesc.asp" target="_blank" rel="noopener">longdesc</a></td>
+<td style="text-align:left"><em>URL</em></td>
+<td style="text-align:left">指向包含长的图像描述文档的 URL。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_img_usemap.asp" target="_blank" rel="noopener">usemap</a></td>
+<td style="text-align:left"><em>URL</em></td>
+<td style="text-align:left">将图像定义为客户器端图像映射。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_img_hspace_vspace.asp" target="_blank" rel="noopener">vspace</a></td>
+<td style="text-align:left"><em>pixels</em></td>
+<td style="text-align:left">不推荐使用。定义图像顶部和底部的空白。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_img_height-width.asp" target="_blank" rel="noopener">width</a></td>
+<td style="text-align:left"><em>pixels</em> <em>%</em></td>
+<td style="text-align:left">设置图像的宽度。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意：</strong></p>
+<ul>
+<li>标签可以拥有多个属性，必须写在开始标签中，位于标签名后面。</li>
+<li>属性之间不分先后顺序，标签名与属性、属性与属性之间均以空格分开。</li>
+<li>采取  键值对 的格式  key=”value”  的格式</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"cz.jpg"</span> <span class="attr">width</span>=<span class="string">"300"</span> <span class="attr">height</span>=<span class="string">"300"</span> <span class="attr">border</span>=<span class="string">"3"</span> <span class="attr">title</span>=<span class="string">"这是个小蒲公英"</span> /&gt;</span></span><br></pre></td></tr></table></figure></div>
+<p><strong>「5. 链接标签(重点)」</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"跳转目标"</span> <span class="attr">target</span>=<span class="string">"目标窗口的弹出方式"</span>&gt;</span>文本或图像<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">target="_self"  默认窗口弹出方式</span><br><span class="line">target="_blank" 新窗口弹出</span><br></pre></td></tr></table></figure></div>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">href</td>
+<td style="text-align:left">用于指定链接目标的url地址，（必须属性）当为标签应用href属性时，它就具有了超链接的功能</td>
+</tr>
+<tr>
+<td style="text-align:left">target</td>
+<td style="text-align:left">用于指定链接页面的打开方式，其取值有_self和_blank两种，其中_self为默认值，_blank为在新窗口中打开方式。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>src 和 href 的区别</strong></p>
+<p>一句话概括:<strong>src 是引入资源的 href 是跳转url的</strong></p>
+<ol>
+<li>src用于替换当前元素，href用于在当前文档和引用资源之间确立联系。</li>
+<li>src是source的缩写，指向外部资源的位置，指向的内容将会嵌入到文档中当前标签所在位置；在请求src资源时会将其指向的资源下载并应用到文档内，例如js脚本，img图片和frame等元素。当浏览器解析到该元素时，会暂停其他资源的下载和处理，直到将该资源加载、编译、执行完毕，图片和框架等元素也如此，类似于将所指向资源嵌入当前标签内。这也是为什么将js脚本放在底部而不是头部。</li>
+<li>href是Hypertext Reference的缩写，指向网络资源所在位置，建立和当前元素（锚点）或当前文档（链接）之间的链接。如果我们在文档中添加那么浏览器会识别该文档为css文件，就会并行下载资源并且不会停止对当前文档的处理。这也是为什么建议使用link方式来加载css，而不是使用@import方式。</li>
+</ol>
+<p><strong>注意：</strong></p>
+<ol>
+<li>外部链接 需要添加 <a href="http://www.baidu.com" target="_blank" rel="noopener">http://www.baidu.com</a></li>
+<li>内部链接 直接链接内部页面名称即可 比如 &lt; a href=”index.html”&gt; 首页</li>
+<li>如果当时没有确定链接目标时，通常将链接标签的href属性值定义为“#”(即href=”#”)，表示该链接暂时为一个空链接。</li>
+<li>不仅可以创建文本超链接，在网页中各种网页元素，如图像、表格、音频、视频等都可以添加超链接。</li>
+</ol>
+<p><strong>锚点定位：通过创建锚点链接，用户能够快速定位到目标内容。</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. 使用相应的id名标注跳转目标的位置。 (找目标)</span><br><span class="line">  <span class="tag">&lt;<span class="name">h3</span> <span class="attr">id</span>=<span class="string">"two"</span>&gt;</span>第2集<span class="tag">&lt;/<span class="name">h3</span>&gt;</span> </span><br><span class="line"></span><br><span class="line">2. 使用<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#id名"</span>&gt;</span>链接文本<span class="tag">&lt;/<span class="name">a</span>&gt;</span>创建链接文本（被点击的） </span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#two"</span>&gt;</span></span><br></pre></td></tr></table></figure></div>
+<p><strong>「6. 注释标签」</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="HTML"><figure class="iseeu highlight /html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 注释语句 --&gt;</span>     </span><br><span class="line"> 快捷键是：    ctrl + /       </span><br><span class="line"> 或者 ctrl +shift + /</span><br></pre></td></tr></table></figure></div>
+<p><strong>团队约定：</strong>注释内容前后各一个空格字符，注释位于要注释代码的上面，单独占一行</p>
+<p><strong>「7. 路径」</strong></p>
+<table>
+<thead>
+<tr>
+<th>路径分类</th>
+<th>符号</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>上一级路径</td>
+<td>../</td>
+<td>文件在HTML文件的上级目录</td>
+</tr>
+<tr>
+<td>同一级路径</td>
+<td></td>
+<td>文件和HTML在同一级目录</td>
+</tr>
+<tr>
+<td>下一级路径</td>
+<td>./</td>
+<td>文件在HTML的子目录中</td>
+</tr>
+<tr>
+<td>项目根路径</td>
+<td>/</td>
+<td>文件在整个项目的根目录中</td>
+</tr>
+</tbody>
+</table>
+<p><strong>「8. 其他知识」</strong></p>
+<p>预格式化文本pre标签元素中的文本通常会保留空格和换行符。而文本也会呈现为等宽字体。格式化文本就是 ，按照我们预先写好的文字格式来显示页面， 保留空格和换行等。</p>
+<p>特殊字符<br><img src="/image/HTML/HTML常用字符.png"></p>
+<p>什么是XHTML</p>
+<ul>
+<li>XHTML 指<strong>「可扩展超文本标签语言」</strong>（EXtensible HyperText Markup Language）。</li>
+<li>XHTML 的目标是取代 HTML。</li>
+<li>XHTML 与 HTML 4.01 几乎是相同的。</li>
+<li>XHTML 是更严格更纯净的 HTML 版本。</li>
+<li>XHTML 是作为一种 XML 应用被重新定义的 HTML,是严格版本的HTML。例如它要求标签必须小写，标签必须被正确关闭，标签顺序必须正确排列，对于属性都必须使用双引号等。</li>
+<li>XHTML 是一个 W3C 标准。</li>
+</ul>
+<p><strong>写HTML代码时应注意什么？</strong></p>
+<ul>
+<li>尽可能少的使用无语义的标签div和span；</li>
+<li>在语义不明显时，既可以使用div或者p时，尽量用p, 因为p在默认情况下有上下间距，对兼容特殊终端有利；</li>
+<li>不要使用纯样式标签，如：b、font、u等，改用css设置。</li>
+<li>需要强调的文本，可以包含在strong或者em标签中（浏览器预设样式，能用CSS指定就不用他们），strong默认样式是加粗（不要用b），em是斜体（不用i）；</li>
+<li>使用表格时，标题要用caption，表头用thead，主体部分用tbody包围，尾部用tfoot包围。表头和一般单元格要区分开，表头用th，单元格用td；</li>
+<li>表单域要用fieldset标签包起来，并用legend标签说明表单的用途；</li>
+<li>每个input标签对应的说明文本都需要使用label标签，并且通过为input设置id属性，在lable标签中设置for来让说明文本和相对应的input关联起来。</li>
+</ul>
+<hr>
+<h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><p><strong>「1. 表格」</strong></p>
+<p>现在还是较为常用的一种标签，但不是用来布局，常见显示、展示表格式数据。因为它可以让数据显示的非常的规整，可读性非常好。特别是后台展示数据的时候表格运用是否熟练就显得很重要，一个清爽简约的表格能够把繁杂的数据表现得很有条理。</p>
+<p><strong>「2. 创建表格」</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">  &lt;tr&gt;</span><br><span class="line">    &lt;td&gt;单元格内的文字&lt;/td&gt;</span><br><span class="line">    ...</span><br><span class="line">  &lt;/tr&gt;</span><br><span class="line">  ...</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure></div>
+<p>table、tr、td，他们是创建表格的基本标签，缺一不可</p>
+<ul>
+<li>table用于定义一个表格标签。</li>
+<li>tr标签 用于定义表格中的行，必须嵌套在 table标签中。</li>
+<li>td 用于定义表格中的单元格，必须嵌套在<tr></tr>标签中。</li>
+<li>字母 td 指表格数据（table data），即数据单元格的内容，现在我们明白，表格最合适的地方就是用来存储数据的。td像一个容器，可以容纳所有的元素。</li>
+</ul>
+<p><strong>表头单元格标签th</strong>:一般表头单元格位于表格的第一行或第一列，并且文本加粗居中,只需用表头标签<th></th>替代相应的单元格标签<td></td>即可。</p>
+<p><strong>表格标题caption</strong>通常这个标题会被居中且显示于表格之上。caption 标签必须紧随 table 标签之后。这个标签只存在 表格里面才有意义。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;</span><br><span class="line">   &lt;caption&gt;我是表格标题&lt;/caption&gt;</span><br><span class="line">&lt;/table&gt;</span><br></pre></td></tr></table></figure></div>
+<p><strong>「3. 表格属性」</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">属性</th>
+<th style="text-align:left">值</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_table_align.asp" target="_blank" rel="noopener">align</a></td>
+<td style="text-align:left">leftcenterright</td>
+<td style="text-align:left">不赞成使用。请使用样式代替。规定表格相对周围元素的对齐方式。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_table_bgcolor.asp" target="_blank" rel="noopener">bgcolor</a></td>
+<td style="text-align:left"><em>rgb(x,x,x)</em> <em>#xxxxxx</em> <em>colorname</em></td>
+<td style="text-align:left">不赞成使用。请使用样式代替。规定表格的背景颜色。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_table_border.asp" target="_blank" rel="noopener">border</a></td>
+<td style="text-align:left"><em>pixels</em></td>
+<td style="text-align:left">规定表格边框的宽度。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_table_cellpadding.asp" target="_blank" rel="noopener">cellpadding</a></td>
+<td style="text-align:left"><em>pixels</em> <em>%</em></td>
+<td style="text-align:left">规定单元边沿与其内容之间的空白。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_table_cellspacing.asp" target="_blank" rel="noopener">cellspacing</a></td>
+<td style="text-align:left"><em>pixels</em> <em>%</em></td>
+<td style="text-align:left">规定单元格之间的空白。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_table_frame.asp" target="_blank" rel="noopener">frame</a></td>
+<td style="text-align:left">voidabovebelowhsideslhsrhsvsidesboxborder</td>
+<td style="text-align:left">规定外侧边框的哪个部分是可见的。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_table_rules.asp" target="_blank" rel="noopener">rules</a></td>
+<td style="text-align:left">nonegroupsrowscolsall</td>
+<td style="text-align:left">规定内侧边框的哪个部分是可见的。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_table_summary.asp" target="_blank" rel="noopener">summary</a></td>
+<td style="text-align:left"><em>text</em></td>
+<td style="text-align:left">规定表格的摘要。</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://www.w3school.com.cn/tags/att_table_width.asp" target="_blank" rel="noopener">width</a></td>
+<td style="text-align:left"><em>%</em> <em>pixels</em></td>
+<td style="text-align:left">规定表格的宽度。</td>
+</tr>
+</tbody>
+</table>
+<p>三参为0，平时开发的我们这三个参数   border  cellpadding  cellspacing 为  0</p>
+<p><strong>「4. 合并单元格」</strong>,合并的顺序我们按照  先上 后下   先左  后右 的顺序 ,合并完之后需要删除多余的单元格。</p>
+<ul>
+<li>跨行合并：rowspan=”合并单元格的个数”</li>
+<li>跨列合并：colspan=”合并单元格的个数”</li>
+</ul>
+<p><strong>「5. 总结表格」</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">标签名</th>
+<th style="text-align:left">定义</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><table></table></td>
+<td style="text-align:left">表格标签</td>
+<td style="text-align:left">就是一个四方的盒子</td>
+</tr>
+<tr>
+<td style="text-align:left"></td></tr><tr></tr>
+<td style="text-align:left">表格行标签</td>
+<td style="text-align:left">行标签要再table标签内部才有意义</td>
+
+<tr>
+<td style="text-align:left"></td><td></td>
+<td style="text-align:left">单元格标签</td>
+<td style="text-align:left">单元格标签是个容器级元素，可以放任何东西</td>
+</tr>
+<tr>
+<td style="text-align:left"><th></th></td>
+<td style="text-align:left">表头单元格标签</td>
+<td style="text-align:left">它还是一个单元格，但是里面的文字会居中且加粗</td>
+</tr>
+<tr>
+<td style="text-align:left"><caption></caption></td>
+<td style="text-align:left">表格标题标签</td>
+<td style="text-align:left">表格的标题，跟着表格一起走，和表格居中对齐</td>
+</tr>
+<tr>
+<td style="text-align:left">clospan 和 rowspan</td>
+<td style="text-align:left">合并属性</td>
+<td style="text-align:left">用来合并单元格的</td>
+</tr>
+</tbody>
+</table>
+<p><strong>「6. 表格划分结构」</strong></p>
+<p>  对于比较复杂的表格，表格的结构也就相对的复杂了，所以又将表格分割成三个部分：题头、正文和脚注。而这三部分分别用:thead,tbody,tfoot来标注， 这样更好的分清表格结构。</p>
+<p><strong>注意：</strong><br>1.<thead></thead>：用于定义表格的头部。用来放标题之类的东西。<thead> 内部必须拥有<tr> 标签！<br>\2. <tbody></tbody>：用于定义表格的主体。放数据本体 。<br>\3. <tfoot></tfoot>放表格的脚注之类。<br>\4. 以上标签都是放到table标签中。</tr></thead></p>
+<hr>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p><strong>「列表ul」</strong>容器里面装载着结构，样式一致的文字或图表的一种形式，叫列表。</p>
+<p>列表最大的特点就是整齐 、整洁、 有序，跟表格类似，但是它可组合自由度会更高。</p>
+<p><strong>「1. 无序列表 ul」</strong></p>
+<ul>
+<li><ul></ul>中只能嵌套</li><li></li>，直接在<ul></ul>标签中输入其他标签或者文字的做法是不被允许的。
+<li></li><li>与</li>之间相当于一个容器，可以容纳所有元素。
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;列表项1&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;列表项2&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;列表项3&lt;/li&gt;</span><br><span class="line">  ......</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure></div>
+<p><strong>「2. 有序列表 ol」</strong></p>
+<ul>
+<li><ol>标签中的type属性值为排序的序列号，不添加type属性时，有序列表默认从数字1开始排序。</ol></li>
+<li>常用的type属性值分别为是1，a，A，i，I</li>
+<li><ol reversed="reversed">中的reversed属性能够让有序列表中的序列倒序排列。</ol></li>
+<li><ol start="3">中的start属性值为3，有序列表中的第一个序列号将从3开始排列。</ol></li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol type=&quot;A&quot;&gt; </span><br><span class="line">  &lt;li&gt;列表项1&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;列表二&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;列表三&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure></div>
+<p><strong>「2. 自定义列表 dl」</strong></p>
+<ul>
+<li>定义列表常用于对术语或名词进行解释和描述，定义列表的列表项前没有任何项目符号。</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;dl&gt;</span><br><span class="line">  &lt;dt&gt;名词1&lt;/dt&gt;</span><br><span class="line">  &lt;dd&gt;名词1解释1&lt;/dd&gt;</span><br><span class="line">  &lt;dd&gt;名词1解释2&lt;/dd&gt;</span><br><span class="line">  ...</span><br><span class="line">  &lt;dt&gt;名词2&lt;/dt&gt;</span><br><span class="line">  &lt;dd&gt;名词2解释1&lt;/dd&gt;</span><br><span class="line">  &lt;dd&gt;名词2解释2&lt;/dd&gt;</span><br><span class="line">  ...</span><br><span class="line">&lt;/dl&gt;</span><br></pre></td></tr></table></figure></div>
+<p><img src="/image/HTML/dl案例.png"></p>
+<hr>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2021/01/22/JMeter聚合报告中90-响应时间解读/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            JMeter聚合报告中90%响应时间解读
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2021/01/04/Mac上Golang的环境配置/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Mac上Golang的环境配置</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        宁静致远
+      
+    </h3>
+    <p class="avatar-slogan">
+      个人小站，记录一些日常零碎的日常！
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-C/">C/C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DB/">DB</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Django/">Django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Golang/">Golang</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MAC/">MAC</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/小程序/">小程序</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试题/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/">C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DB/">DB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Django/">Django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MAC/">MAC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tool/">Tool</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小程序/">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试题/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C-C/" style="font-size: 14px;">C/C++</a> <a href="/tags/DB/" style="font-size: 15px;">DB</a> <a href="/tags/Django/" style="font-size: 17px;">Django</a> <a href="/tags/Git/" style="font-size: 12px;">Git</a> <a href="/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/tags/Java/" style="font-size: 11px;">Java</a> <a href="/tags/MAC/" style="font-size: 15px;">MAC</a> <a href="/tags/Python/" style="font-size: 18px;">Python</a> <a href="/tags/Tool/" style="font-size: 19px;">Tool</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/小程序/" style="font-size: 13px;">小程序</a> <a href="/tags/测试/" style="font-size: 16px;">测试</a> <a href="/tags/面试题/" style="font-size: 11px;">面试题</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/06/02/axios超时时间设置/">axios超时时间设置</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/31/JavaScriptのjoin()方法/">JavaScriptのjoin()方法</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/23/JavaScript展开运算符/">JavaScript展开运算符</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/20/Charles抓包异常排查/">Charles抓包异常排查</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/11/axios传递数组参数の坑/">axios传递数组参数の坑</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://yiluyanxia.github.io/" title target='_blank'
+        >一路烟霞</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2021 新波 &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

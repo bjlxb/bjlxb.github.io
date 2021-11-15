@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Linux中du命令详解 | 个人小站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
+  
+  <meta name="description" content="记录下工作中在Linux系统中使用的du命令。">
+<meta name="keywords" content="Tool">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux中du命令详解">
+<meta property="og:url" content="http://bjlxb.github.io/2020/04/30/Linux中du命令详解/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="记录下工作中在Linux系统中使用的du命令。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-11-15T13:04:53.531Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux中du命令详解">
+<meta name="twitter:description" content="记录下工作中在Linux系统中使用的du命令。">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="photo-Linux中du命令详解" class="article global-container article-type-photo" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Linux中du命令详解
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2020/04/30/Linux中du命令详解/" class="article-date">
+  <time datetime="2020-04-30T15:29:34.000Z" itemprop="datePublished">2020-04-30</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tool/">Tool</a>
+  </div>
+
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tool/">Tool</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>记录下工作中在Linux系统中使用的du命令。<br><a id="more"></a></p>
+<h4 id="du详解"><a href="#du详解" class="headerlink" title="du详解"></a>du详解</h4><p>  du : 显示每个文件和目录的磁盘使用空间<br>命令参数：<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 显示目录中文件的大小，单位：KB </span></span><br><span class="line">-a 或 -all</span><br><span class="line"><span class="comment"># 显示目录中文件的大小，单位：字节byte</span></span><br><span class="line">-b 或 -bytes</span><br><span class="line"><span class="comment"># 除了显示个别目录或文件的大小外，同时也显示所有目录或文件的总和，单位：KB</span></span><br><span class="line">-c 或 --total</span><br><span class="line"><span class="comment"># 显示目录中文件的大小，单位：KB</span></span><br><span class="line">-k 或 --kilobytes</span><br><span class="line"><span class="comment"># 显示目录中文件的大小，单位：MB</span></span><br><span class="line">-m 或 --megabytes</span><br><span class="line"><span class="comment"># 仅显示总计，只列出最后加总的值，单位：KB。</span></span><br><span class="line">-s 或 --summarize</span><br><span class="line"><span class="comment"># K，M，G为单位，提高信息的可读性</span></span><br><span class="line">-h</span><br><span class="line"><span class="comment"># 开始处理时的文件系统为准，若遇上其它不同的文件系统目录则略过</span></span><br><span class="line">-x 或 --one-file-system</span><br><span class="line"><span class="comment"># 显示选项中所指定符号链接的源文件大小</span></span><br><span class="line">-L&lt;符号链接&gt; 或 --dereference&lt;符号链接&gt;</span><br><span class="line"><span class="comment"># 显示个别目录的大小时，并不含其子目录的大小</span></span><br><span class="line">-S 或 --separate-dirs</span><br><span class="line"><span class="comment"># 在&lt;文件&gt;指定目录或文件 </span></span><br><span class="line">-X&lt;文件&gt; 或 --exclude-from=&lt;文件&gt;</span><br><span class="line"><span class="comment"># 略过指定的目录或文件</span></span><br><span class="line">--exclude=&lt;目录或文件&gt;</span><br><span class="line"><span class="comment"># 显示指定符号链接的源文件大小</span></span><br><span class="line">-D 或 --dereference-args</span><br><span class="line"><span class="comment"># 与-h参数相同，但是K，M，G是以1000为换算单位</span></span><br><span class="line">-H 或 --si</span><br><span class="line"><span class="comment"># 重复计算硬件链接的文件</span></span><br><span class="line">-l 或 --count-links</span><br></pre></td></tr></table></figure></div></p>
+<h6 id="显示目录中文件的大小，单位：KB"><a href="#显示目录中文件的大小，单位：KB" class="headerlink" title="显示目录中文件的大小，单位：KB"></a>显示目录中文件的大小，单位：KB</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -a 或 -all</span></span><br><span class="line">root@DESKTOP-8AR33HE:~<span class="comment"># du -a</span></span><br><span class="line">4       ./.bash_history</span><br><span class="line">4       ./.bashrc</span><br><span class="line">0       ./.profile</span><br><span class="line">4       ./.ssh/known_hosts</span><br><span class="line">4       ./.ssh</span><br><span class="line">12      .</span><br></pre></td></tr></table></figure></div>
+<h6 id="显示目录中文件的大小，单位：字节byte"><a href="#显示目录中文件的大小，单位：字节byte" class="headerlink" title="显示目录中文件的大小，单位：字节byte"></a>显示目录中文件的大小，单位：字节byte</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -b 或 -bytes</span></span><br><span class="line">root@DESKTOP-8AR33HE:~<span class="comment"># du -b</span></span><br><span class="line">5424    ./.ssh</span><br><span class="line">13589   .</span><br></pre></td></tr></table></figure></div>
+<h6 id="除了显示个别目录或文件的大小外，同时也显示所有目录或文件的总和，单位：KB"><a href="#除了显示个别目录或文件的大小外，同时也显示所有目录或文件的总和，单位：KB" class="headerlink" title="除了显示个别目录或文件的大小外，同时也显示所有目录或文件的总和，单位：KB"></a>除了显示个别目录或文件的大小外，同时也显示所有目录或文件的总和，单位：KB</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -c 或 --total</span></span><br><span class="line">root@DESKTOP-8AR33HE:~<span class="comment"># du -c</span></span><br><span class="line">4       ./.ssh</span><br><span class="line">12      .</span><br><span class="line">12      total</span><br></pre></td></tr></table></figure></div>
+<h6 id="显示目录中文件的大小，单位：KB-1"><a href="#显示目录中文件的大小，单位：KB-1" class="headerlink" title="显示目录中文件的大小，单位：KB"></a>显示目录中文件的大小，单位：KB</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -k 或 --kilobytes</span></span><br><span class="line">root@DESKTOP-8AR33HE:~<span class="comment"># du -k</span></span><br><span class="line">4       ./.ssh</span><br><span class="line">12      .</span><br></pre></td></tr></table></figure></div>
+<h6 id="显示目录中文件的大小，单位：MB"><a href="#显示目录中文件的大小，单位：MB" class="headerlink" title="显示目录中文件的大小，单位：MB"></a>显示目录中文件的大小，单位：MB</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -m 或 --megabytes</span></span><br><span class="line">root@DESKTOP-8AR33HE:~<span class="comment"># du -m</span></span><br><span class="line">1       ./.ssh</span><br><span class="line">1       .</span><br></pre></td></tr></table></figure></div>
+<h6 id="仅显示总计，只列出最后加总的值，单位：KB。"><a href="#仅显示总计，只列出最后加总的值，单位：KB。" class="headerlink" title="仅显示总计，只列出最后加总的值，单位：KB。"></a>仅显示总计，只列出最后加总的值，单位：KB。</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -s 或 --summarize</span></span><br><span class="line">root@DESKTOP-8AR33HE:~<span class="comment"># du -s</span></span><br><span class="line">12      .</span><br></pre></td></tr></table></figure></div>
+<h6 id="K，M，G为单位，提高信息的可读性"><a href="#K，M，G为单位，提高信息的可读性" class="headerlink" title="K，M，G为单位，提高信息的可读性"></a>K，M，G为单位，提高信息的可读性</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -h 或 --human-readable</span></span><br><span class="line">root@DESKTOP-8AR33HE:~<span class="comment"># du -h</span></span><br><span class="line">4.0K    ./.ssh</span><br><span class="line">12K     .</span><br></pre></td></tr></table></figure></div>
+<h6 id="开始处理时的文件系统为准，若遇上其它不同的文件系统目录则略过"><a href="#开始处理时的文件系统为准，若遇上其它不同的文件系统目录则略过" class="headerlink" title="开始处理时的文件系统为准，若遇上其它不同的文件系统目录则略过"></a>开始处理时的文件系统为准，若遇上其它不同的文件系统目录则略过</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -x 或 --one-file-system</span></span><br><span class="line">root@DESKTOP-8AR33HE:~<span class="comment"># du -x</span></span><br><span class="line">4       ./.ssh</span><br><span class="line">12      .</span><br><span class="line">root@DESKTOP-8AR33HE:~<span class="comment"># du --one-file-system</span></span><br><span class="line">4       ./.ssh</span><br><span class="line">12      .</span><br></pre></td></tr></table></figure></div>
+<h6 id="显示个别目录的大小时，并不含其子目录的大小"><a href="#显示个别目录的大小时，并不含其子目录的大小" class="headerlink" title="显示个别目录的大小时，并不含其子目录的大小"></a>显示个别目录的大小时，并不含其子目录的大小</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -S 或 --separate-dirs</span></span><br><span class="line">root@DESKTOP-8AR33HE:~<span class="comment"># du -S</span></span><br><span class="line">4       ./.ssh</span><br><span class="line">8       .</span><br><span class="line">root@DESKTOP-8AR33HE:~<span class="comment"># du --separate-dirs</span></span><br><span class="line">4       ./.ssh</span><br><span class="line">8       .</span><br></pre></td></tr></table></figure></div>
+<h6 id="在-lt-文件-gt-指定目录或文件"><a href="#在-lt-文件-gt-指定目录或文件" class="headerlink" title="在&lt;文件&gt;指定目录或文件"></a>在&lt;文件&gt;指定目录或文件</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -X &lt;文件&gt; 或 --exclude-from=&lt;文件&gt;</span></span><br><span class="line">root@DESKTOP-8AR33HE:~<span class="comment"># du -X 1.txt</span></span><br><span class="line">4       ./.ssh</span><br><span class="line">16      .</span><br><span class="line">root@DESKTOP-8AR33HE:~<span class="comment"># du --exclude-from=1.txt</span></span><br><span class="line">4       ./.ssh</span><br><span class="line">16      .</span><br></pre></td></tr></table></figure></div>
+<h6 id="查看文件大小和文件内文件大小"><a href="#查看文件大小和文件内文件大小" class="headerlink" title="查看文件大小和文件内文件大小"></a>查看文件大小和文件内文件大小</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">root@DESKTOP-8AR33HE:~<span class="comment"># du -sh /bin/</span></span><br><span class="line">15M     /bin/</span><br><span class="line">root@DESKTOP-8AR33HE:~<span class="comment"># du -sh /bin/*</span></span><br><span class="line">1.1M    /bin/bash</span><br><span class="line">700K    /bin/btrfs</span><br><span class="line">368K    /bin/btrfs-debug-tree</span><br><span class="line">364K    /bin/btrfs-find-root</span><br><span class="line">388K    /bin/btrfs-image</span><br><span class="line">368K    /bin/btrfs-map-logical</span><br><span class="line">364K    /bin/btrfs-select-super</span><br><span class="line">364K    /bin/btrfs-zero-log</span><br></pre></td></tr></table></figure></div>
+<h6 id="Linux-查找占用空间最大的文件与目录"><a href="#Linux-查找占用空间最大的文件与目录" class="headerlink" title="Linux 查找占用空间最大的文件与目录"></a>Linux 查找占用空间最大的文件与目录</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># du -h --max-depth=1</span></span><br><span class="line">root@DESKTOP-8AR33HE:~<span class="comment"># cd /bin/</span></span><br><span class="line">root@DESKTOP-8AR33HE:/bin<span class="comment"># du -h --max-depth=1</span></span><br><span class="line">15M     .</span><br></pre></td></tr></table></figure></div>
+<h6 id="df：显示磁盘分区上可以使用的磁盘空间"><a href="#df：显示磁盘分区上可以使用的磁盘空间" class="headerlink" title="df：显示磁盘分区上可以使用的磁盘空间"></a>df：显示磁盘分区上可以使用的磁盘空间</h6><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看全部文件系统，单位默认KB</span></span><br><span class="line"><span class="comment"># -a</span></span><br><span class="line"></span><br><span class="line">root@DESKTOP-8AR33HE:/<span class="comment"># df -a</span></span><br><span class="line">Filesystem     1K-blocks     Used Available Use% Mounted on</span><br><span class="line">rootfs          83887100 76061200   7825900  91% /</span><br><span class="line">none            83887100 76061200   7825900  91% /dev</span><br><span class="line">sysfs                  0        0         0    - /sys</span><br><span class="line">proc                   0        0         0    - /proc</span><br><span class="line">devpts                 0        0         0    - /dev/pts</span><br><span class="line">none            83887100 76061200   7825900  91% /run</span><br><span class="line">none            83887100 76061200   7825900  91% /run/lock</span><br><span class="line">none            83887100 76061200   7825900  91% /run/shm</span><br><span class="line">none            83887100 76061200   7825900  91% /run/user</span><br><span class="line">binfmt_misc            0        0         0    - /proc/sys/fs/binfmt_misc</span><br><span class="line">cgroup          83887100 76061200   7825900  91% /sys/fs/cgroup</span><br><span class="line">cgroup                 0        0         0    - /sys/fs/cgroup/devices</span><br><span class="line">C:\             83887100 76061200   7825900  91% /mnt/c</span><br><span class="line">D:\            165732676 70237472  95495204  43% /mnt/d</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用-h选项以KB、MB、GB的单位来显示，可读性高</span></span><br><span class="line"><span class="comment"># -h</span></span><br><span class="line"></span><br><span class="line">root@DESKTOP-8AR33HE:/<span class="comment"># df -h</span></span><br><span class="line">Filesystem      Size  Used Avail Use% Mounted on</span><br><span class="line">rootfs           81G   73G  7.5G  91% /</span><br><span class="line">none             81G   73G  7.5G  91% /dev</span><br><span class="line">none             81G   73G  7.5G  91% /run</span><br><span class="line">none             81G   73G  7.5G  91% /run/lock</span><br><span class="line">none             81G   73G  7.5G  91% /run/shm</span><br><span class="line">none             81G   73G  7.5G  91% /run/user</span><br><span class="line">cgroup           81G   73G  7.5G  91% /sys/fs/cgroup</span><br><span class="line">C:\              81G   73G  7.5G  91% /mnt/c</span><br><span class="line">D:\             159G   67G   92G  43% /mnt/d</span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2020/05/01/Charles手机抓包教程二/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            Charles手机抓包教程二
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2020/04/24/Charles手机抓包教程/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Charles手机抓包教程</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        宁静致远
+      
+    </h3>
+    <p class="avatar-slogan">
+      个人小站，记录一些日常零碎的日常！
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-C/">C/C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DB/">DB</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Django/">Django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Golang/">Golang</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MAC/">MAC</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/小程序/">小程序</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试题/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/">C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DB/">DB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Django/">Django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MAC/">MAC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tool/">Tool</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小程序/">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试题/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C-C/" style="font-size: 14px;">C/C++</a> <a href="/tags/DB/" style="font-size: 15px;">DB</a> <a href="/tags/Django/" style="font-size: 17px;">Django</a> <a href="/tags/Git/" style="font-size: 12px;">Git</a> <a href="/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/tags/Java/" style="font-size: 11px;">Java</a> <a href="/tags/MAC/" style="font-size: 15px;">MAC</a> <a href="/tags/Python/" style="font-size: 18px;">Python</a> <a href="/tags/Tool/" style="font-size: 19px;">Tool</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/小程序/" style="font-size: 13px;">小程序</a> <a href="/tags/测试/" style="font-size: 16px;">测试</a> <a href="/tags/面试题/" style="font-size: 11px;">面试题</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/06/02/axios超时时间设置/">axios超时时间设置</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/31/JavaScriptのjoin()方法/">JavaScriptのjoin()方法</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/23/JavaScript展开运算符/">JavaScript展开运算符</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/20/Charles抓包异常排查/">Charles抓包异常排查</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/11/axios传递数组参数の坑/">axios传递数组参数の坑</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://yiluyanxia.github.io/" title target='_blank'
+        >一路烟霞</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2021 新波 &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

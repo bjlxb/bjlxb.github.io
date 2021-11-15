@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Django中的request对象 | 个人小站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
+  
+  <meta name="description" content="Django中经常使用request对象的方法,做一下总结!">
+<meta name="keywords" content="Django">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Django中的request对象">
+<meta property="og:url" content="http://bjlxb.github.io/2019/03/29/django中的request对象/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="Django中经常使用request对象的方法,做一下总结!">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-11-15T13:04:53.516Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Django中的request对象">
+<meta name="twitter:description" content="Django中经常使用request对象的方法,做一下总结!">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="photo-django中的request对象" class="article global-container article-type-photo" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Django中的request对象
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/03/29/django中的request对象/" class="article-date">
+  <time datetime="2019-03-29T14:38:12.000Z" itemprop="datePublished">2019-03-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Django/">Django</a>
+  </div>
+
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Django/">Django</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>Django中经常使用request对象的方法,做一下总结!<br><a id="more"></a><br>HttpRequest对象的属性</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td>表示提交请求页面完整地址的字符串，不包括域名，如 “/music/bands/the_beatles/“。</td>
+</tr>
+<tr>
+<td>path_info</td>
+<td>获取具有 URL 扩展名的资源的附加路径信息。相对于HttpRequest.path，使用该方法便于移植。</td>
+</tr>
+<tr>
+<td>scheme</td>
+<td>请求的协议，一般为http或者https，字符串格式(以下属性中若无特殊指明，均为字符串格式)</td>
+</tr>
+<tr>
+<td>body</td>
+<td>http请求的主体，二进制格式。</td>
+</tr>
+<tr>
+<td>method</td>
+<td>表示提交请求使用的HTTP方法。它总是大写的。例如：if request.method == ‘GET’:    do_something()elif request.method == ‘POST’:    do_something_else()</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>一个类字典对象，包含所有的HTTP的GET参数的信息。见 QueryDict 文档。</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>一个类字典对象，包含所有的HTTP的POST参数的信息。见 QueryDict 文档。通过POST提交的请求有可能包含一个空的 POST 字典，也就是说， 一个通过POST方法提交的表单可能不包含数据。因此，不应该使用 if request.POST 来判断POST方法的使用，而是使用 if request.method == “POST” （见表中的 method 条目）。注意： POST 并 不 包含文件上传信息。见 FILES 。</td>
+</tr>
+<tr>
+<td>REQUEST</td>
+<td>为了方便而创建，这是一个类字典对象，先搜索 POST ，再搜索 GET 。 灵感来自于PHP的 $_REQEUST 。例如， 若 GET = {“name”: “john”} ， POST = {“age”: ‘34’} ，REQUEST[“name”] 会是 “john” ， REQUEST[“age”] 会是 “34” 。强烈建议使用 GET 和 POST ，而不是 REQUEST 。这是为了向前兼容和更清楚的表示。</td>
+</tr>
+<tr>
+<td>COOKIES</td>
+<td>一个标准的Python字典，包含所有cookie。键和值都是字符串。cookie使用的更多信息见第12章。</td>
+</tr>
+<tr>
+<td>FILES</td>
+<td>一个类字典对象，包含所有上传的文件。 FILES 的键来自 <input type="file" name> 中的 name 。 FILES 的值是一个标准的Python字典，包含以下三个键：filename ：字符串，表示上传文件的文件名。content-type ：上传文件的内容类型。content ：上传文件的原始内容。注意 FILES 只在请求的方法是 POST ，并且提交的 <form> 包含enctype=”multipart/form-data” 时才包含数据。否则， FILES 只是一个空的类字典对象。</form></td>
+</tr>
+<tr>
+<td>META</td>
+<td>一个标准的Python字典，包含所有有效的HTTP头信息。有效的头信息与客户端和服务器有关。这里有几个例子：CONTENT_LENGTHCONTENT_TYPEQUERY_STRING ：未解析的原始请求字符串。REMOTE_ADDR ：客户端IP地址。REMOTE_HOST ：客户端主机名。SERVER_NAME ：服务器主机名。SERVER_PORT ：服务器端口号。在 META 中有效的任一HTTP头信息都是带有 HTTP_ 前缀的键，例如：HTTP_ACCEPT_ENCODINGHTTP_ACCEPT_LANGUAGEHTTP_HOST ：客户端发送的 Host 头信息。HTTP_REFERER ：被指向的页面，如果存在的。HTTP_USER_AGENT ：客户端的user-agent字符串。HTTP_X_BENDER ： X-Bender 头信息的值，如果已设的话。</td>
+</tr>
+<tr>
+<td>user</td>
+<td>一个 django.contrib.auth.models.User 对象表示当前登录用户。 若当前用户尚未登录， user 会设为 django.contrib.auth.models.AnonymousUser 的一个实例。可以将它们与 is_authenticated() 区别开：if request.user.is_authenticated():    # Do something for logged-in users.else:    # Do something for anonymous users.user 仅当Django激活 AuthenticationMiddleware 时有效。关于认证和用户的完整细节，见第12章。</td>
+</tr>
+<tr>
+<td>site</td>
+<td>中间件属性</td>
+</tr>
+<tr>
+<td>session</td>
+<td>一个可读写的类字典对象，表示当前session。仅当Django已激活session支持时有效。见第12章。</td>
+</tr>
+<tr>
+<td>raw_post_data</td>
+<td>POST的原始数据。 用于对数据的复杂处理。</td>
+</tr>
+<tr>
+<td>encoding</td>
+<td>获取请求中表单提交数据的编码。</td>
+</tr>
+<tr>
+<td>content_type</td>
+<td>获取请求的MIME类型(从CONTENT_TYPE头部中获取)，django1.10的新特性。</td>
+</tr>
+<tr>
+<td>content_params</td>
+<td>取CONTENT_TYPE中的键值对参数，并以字典的方式表示，django1.10的新特性。</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>HttpRequest 的方法</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>get_host()</td>
+<td>返回请求的源主机。example: 127.0.0.1:8000</td>
+</tr>
+<tr>
+<td>get_port()</td>
+<td>django1.9的新特性。</td>
+</tr>
+<tr>
+<td>bulid_absolute_uri(location)</td>
+<td>返回location的绝对uri，location默认为request.get_full_path()。</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>getitem</strong>(key)</td>
+<td>请求所给键的GET/POST值，先查找POST，然后是GET。若键不存在，则引发异常KeyError 。该方法使用户可以以访问字典的方式来访问一个 HttpRequest 实例。例如， request[“foo”] 和先检查 request.POST[“foo”] 再检查request.GET[“foo”] 一样。</td>
+</tr>
+<tr>
+<td>has_key()</td>
+<td>返回 True 或 False ，标识 request.GET 或 request.POST 是否包含所给的键。</td>
+</tr>
+<tr>
+<td>get_full_path()</td>
+<td>返回 path ，若请求字符串有效，则附加于其后。例如，”/music/bands/the_beatles/?print=true” 。</td>
+</tr>
+<tr>
+<td>is_secure()</td>
+<td>如果请求是安全的，则返回 True 。也就是说，请求是以HTTPS的形式提交的。</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://docs.djangoproject.com/zh-hans/2.1/_modules/django/http/request/" target="_blank" rel="noopener">参考链接1</a></p>
+<p><a href="https://www.cnblogs.com/eric_yi/p/8046586.html" target="_blank" rel="noopener">参考链接2</a></p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/03/30/VMware安装manjaro系统/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            VMware安装manjaro系统
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/03/28/npm的面试题/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">npm的面试题</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        宁静致远
+      
+    </h3>
+    <p class="avatar-slogan">
+      个人小站，记录一些日常零碎的日常！
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-C/">C/C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DB/">DB</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Django/">Django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Golang/">Golang</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MAC/">MAC</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/小程序/">小程序</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试题/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/">C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DB/">DB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Django/">Django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MAC/">MAC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tool/">Tool</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小程序/">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试题/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C-C/" style="font-size: 14px;">C/C++</a> <a href="/tags/DB/" style="font-size: 15px;">DB</a> <a href="/tags/Django/" style="font-size: 17px;">Django</a> <a href="/tags/Git/" style="font-size: 12px;">Git</a> <a href="/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/tags/Java/" style="font-size: 11px;">Java</a> <a href="/tags/MAC/" style="font-size: 15px;">MAC</a> <a href="/tags/Python/" style="font-size: 18px;">Python</a> <a href="/tags/Tool/" style="font-size: 19px;">Tool</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/小程序/" style="font-size: 13px;">小程序</a> <a href="/tags/测试/" style="font-size: 16px;">测试</a> <a href="/tags/面试题/" style="font-size: 11px;">面试题</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/06/02/axios超时时间设置/">axios超时时间设置</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/31/JavaScriptのjoin()方法/">JavaScriptのjoin()方法</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/23/JavaScript展开运算符/">JavaScript展开运算符</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/20/Charles抓包异常排查/">Charles抓包异常排查</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/11/axios传递数组参数の坑/">axios传递数组参数の坑</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://yiluyanxia.github.io/" title target='_blank'
+        >一路烟霞</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2021 新波 &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

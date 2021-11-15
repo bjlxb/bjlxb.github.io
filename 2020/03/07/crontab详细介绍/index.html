@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>crontab详细介绍 | 个人小站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
+  
+  <meta name="description" content="在linux和unix内核系统中经常用到的定时任务，因为经常会用到，这里做一下总结。">
+<meta name="keywords" content="Tool">
+<meta property="og:type" content="article">
+<meta property="og:title" content="crontab详细介绍">
+<meta property="og:url" content="http://bjlxb.github.io/2020/03/07/crontab详细介绍/index.html">
+<meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="在linux和unix内核系统中经常用到的定时任务，因为经常会用到，这里做一下总结。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2021-11-15T13:04:53.528Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="crontab详细介绍">
+<meta name="twitter:description" content="在linux和unix内核系统中经常用到的定时任务，因为经常会用到，这里做一下总结。">
+  
+    <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-crontab详细介绍" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      crontab详细介绍
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2020/03/07/crontab详细介绍/" class="article-date">
+  <time datetime="2020-03-07T14:23:33.000Z" itemprop="datePublished">2020-03-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tool/">Tool</a>
+  </div>
+
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tool/">Tool</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>在linux和unix内核系统中经常用到的定时任务，因为经常会用到，这里做一下总结。<br><a id="more"></a><br>crontab命令常见于Unix或Linux内核的操作系统之中，用于设置周期性执行的指令。<br>Linux系统中任务调度主要分为以下两类：</p>
+<ol>
+<li>系统执行的工作：系统周期性所要执行的工作，如备份系统数据、清理缓存。</li>
+<li>个人执行的工作：用户定期要做的工作，如每十分钟去爬取一次数据，每天去更新一下数据。</li>
+</ol>
+<h4 id="一、和crontab有关的文件介绍"><a href="#一、和crontab有关的文件介绍" class="headerlink" title="一、和crontab有关的文件介绍"></a>一、和crontab有关的文件介绍</h4><p> 1./etc/crontab文件<br>  系统调度的任务一般存放在/etc/crontab这个文件下，里面存放了一些系统运行的调度程序，内容如下：<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SHELL"><figure class="iseeu highlight /shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">SHELL=/bin/bash</span><br><span class="line">PATH=/sbin:/bin:/usr/sbin:/usr/bin</span><br><span class="line">MAILTO=root</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> For details see man 4 crontabs</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Example of job definition:</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> .---------------- minute (0 - 59)</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> |  .------------- hour (0 - 23)</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> |  |  .---------- day of month (1 - 31)</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> |  |  |  |  |</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> *  *  *  *  * user-name  <span class="built_in">command</span> to be executed</span></span><br></pre></td></tr></table></figure></div></p>
+<p> 2./etc/cron.deny文件<br>  指定不能使用crontab 命令的用户<br> 3./etc/cron.allow文件<br>  指定能使用crontab的用户<br> 注：<br>  如果两个文件同时存在，那么/etc/cron.allow 优先。<br>  如果两个文件都不存在，那么只有root用户可以安排作业。</p>
+<h4 id="二、-crontab命令语法及其各个参数含义"><a href="#二、-crontab命令语法及其各个参数含义" class="headerlink" title="二、.crontab命令语法及其各个参数含义"></a>二、.crontab命令语法及其各个参数含义</h4><ol>
+<li><p>crontab语法</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SHELL"><figure class="iseeu highlight /shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab [-e [UserName]|-l [UserName]|-r [UserName]|-v [UserName]|File ]</span><br></pre></td></tr></table></figure></div>
+<p>注：crontab 是用来让使用者在固定时间或固定间隔执行程序，也就是类似使用者的时程表。<br>-u user 是指设定指定 user 的时程表，这个前提是你必须要有其权限(比如说是 root)才能够指定他人的时程表。如果不使用 -u user 的话，就是表示设定自己的时程表。<br>各个参数说明：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SHELL"><figure class="iseeu highlight /shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-e [UserName]: 执行文字编辑器来设定时程表，内定的文字编辑器是 vi</span><br><span class="line">-r [UserName]: 删除目前的时程表</span><br><span class="line">-l [UserName]: 列出目前的时程表</span><br><span class="line">-v [UserName]:列出用户cron作业的状态</span><br></pre></td></tr></table></figure></div>
+</li>
+</ol>
+<h4 id="三、crontab格式"><a href="#三、crontab格式" class="headerlink" title="三、crontab格式"></a>三、crontab格式</h4><p> 1.创建一个任务调度<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SHELL"><figure class="iseeu highlight /shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@liuxin ~]# crontab -e</span><br><span class="line"><span class="meta">#</span><span class="bash"> 默认情况下，系统会编辑当前登录用户的crontab命令集合。</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 编辑其他用户的命令集合，使用如下命令:</span></span><br><span class="line">[root@liuxin ~]# crontab -u username -e</span><br></pre></td></tr></table></figure></div></p>
+<ol start="2">
+<li><p>查看Crontab命令集合</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SHELL"><figure class="iseeu highlight /shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@liuxin ~]# crontab -l</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看其他用户的Crontab命令集合</span></span><br><span class="line">[root@liuxin ~]# crontab -u username -l</span><br></pre></td></tr></table></figure></div>
+<p>crontab调度命令格式如下:</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SHELL"><figure class="iseeu highlight /shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* * * * * command path　</span><br><span class="line">// 前五个字段可以取整数值，指定何时开始工作，第六个域是字符串，即命令字段，其中包括了crontab调度执行的命令。 各个字段之间用spaces和tabs分割。</span><br></pre></td></tr></table></figure></div>
+<p>调度命令的规则：</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>字段名称</th>
+<th>说明</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分钟</td>
+<td>每小时的第几分钟执行</td>
+<td>0-59</td>
+</tr>
+<tr>
+<td>小时</td>
+<td>每日的第几个小时执行</td>
+<td>0-23</td>
+</tr>
+<tr>
+<td>日期</td>
+<td>每月的第几天执行</td>
+<td>1-31</td>
+</tr>
+<tr>
+<td>月历</td>
+<td>每年的第几月执行</td>
+<td>1-12</td>
+</tr>
+<tr>
+<td>星期</td>
+<td>每周的第几天执行</td>
+<td>0-6</td>
+</tr>
+<tr>
+<td>命令名称</td>
+<td>欲执行的命令及参数</td>
+</tr>
+</tbody>
+</table>
+<p>  crontab命令中的一些常用特殊符号：</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td>表示所有可能的值</td>
+</tr>
+<tr>
+<td>,</td>
+<td>表示指定一个列表范围</td>
+</tr>
+<tr>
+<td>－</td>
+<td>表示一段时间范围，如在小时阶段： 1-5，就表示1点到5点</td>
+</tr>
+<tr>
+<td>/n</td>
+<td>表示指定时间的间隔频率，如在小时阶段，*/1, 表示每1小时执行一次。也可写成1-23/1.</td>
+</tr>
+</tbody>
+</table>
+<p>  例：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SHELL"><figure class="iseeu highlight /shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 1.每天 02:00 执行任务</span></span><br><span class="line">0 2 * * * /bin/sh start.sh</span><br><span class="line"><span class="meta">#</span><span class="bash"> 每天凌晨过一分钟。一般用来进行备份的时间，因为此时系统负载不大。</span></span><br><span class="line">0 * * * /bin/sh start.sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 2.每天 5:00和17:00执行任务</span></span><br><span class="line">0 5,17 * * * /bin/sh start.sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 3.每分钟执行一次任务</span></span><br><span class="line">* * * * *  /bin/sh start.sh</span><br><span class="line"><span class="meta">#</span><span class="bash"> 每隔一分钟，将系统的时间写入到/home目录下的date.txt文件里面</span></span><br><span class="line">* * * * * date &gt;&gt; /home/date.txt</span><br><span class="line"><span class="meta">#</span><span class="bash"> &gt;&gt; 命令表示将结果累加到文件后面 &gt; 命令则表示将结果覆盖文件</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 4.每周日 17:00 执行任务</span></span><br><span class="line">0 17 * * sun  /bin/sh start.sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 5.每 10min 执行一次任务</span></span><br><span class="line">*/10 * * * * /bin/sh start.sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 6.在特定的某几个月执行任务</span></span><br><span class="line">* * * jan,may,aug * /bin/sh start.sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 7.在每周五、周日的17点执行任务</span></span><br><span class="line">0 17 * * sun,fri /bin/sh start.sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 8.在某个月的第一个周日执行任务</span></span><br><span class="line">0 2 * * sun  /bin/sh start.sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 9.每四个小时执行一个任务</span></span><br><span class="line">0 */4 * * * /bin/sh start.sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 10.每周一、周日执行任务</span></span><br><span class="line">0 4,17 * * sun,mon /bin/sh start.sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 11.每个30秒执行一次任务</span></span><br><span class="line">我们没有办法直接通过上诉类似的例子去执行，因为最小的是1min。</span><br><span class="line">但是我们可以通过如下的方法。</span><br><span class="line">* * * * * /bin/sh start.sh</span><br><span class="line">* * * * *  sleep 30; /bin/sh start.sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 12.多个任务在一条命令中配置</span></span><br><span class="line">* * * * * /bin/sh start1.sh; /bin/sh start2.sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 13.每年执行一次任务</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> @yearly 类似于“0 0 1 1 *”。</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 它会在每年的第一分钟内执行。</span></span><br><span class="line">@yearly /scripts/script.sh</span><br><span class="line">0 0 1 1 * /scripts/script.sh</span><br><span class="line"></span><br><span class="line">14.系统重启时执行</span><br><span class="line">@reboot /scripts/script.sh</span><br></pre></td></tr></table></figure></div>
+<h4 id="四、crontab系统命令"><a href="#四、crontab系统命令" class="headerlink" title="四、crontab系统命令"></a>四、crontab系统命令</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SHELL"><figure class="iseeu highlight /shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 启动服务</span></span><br><span class="line">service crond start</span><br><span class="line"><span class="meta">#</span><span class="bash"> 关闭服务</span></span><br><span class="line">service crond stop</span><br><span class="line"><span class="meta">#</span><span class="bash"> 重启服务</span></span><br><span class="line">service crond restart</span><br><span class="line"><span class="meta">#</span><span class="bash"> 重新载入配置</span></span><br><span class="line">service crond reload</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看服务状态</span></span><br><span class="line">service crond status</span><br><span class="line"><span class="meta">#</span><span class="bash"> 启动cron进程</span></span><br><span class="line">/etc/init.d/crond start</span><br><span class="line"><span class="meta">#</span><span class="bash"> 开机就启动cron进程的设置命令：</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 方法一：</span></span><br><span class="line">chkconfig --add crond</span><br><span class="line"><span class="meta">#</span><span class="bash"> 方法二：</span></span><br><span class="line">rc-update add vixie-cron default</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看crontab是否执行的日志</span></span><br><span class="line">tail -f /var/log/cron</span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2020/03/12/Python中pickle用法/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            Python中pickle用法
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2020/03/01/Redis数据类型/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Redis数据类型</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="图片来自网络"></img>
+    <h3 class="avatar-name">
+      
+        宁静致远
+      
+    </h3>
+    <p class="avatar-slogan">
+      个人小站，记录一些日常零碎的日常！
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-C/">C/C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DB/">DB</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Django/">Django</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Git/">Git</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Golang/">Golang</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MAC/">MAC</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/小程序/">小程序</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/测试/">测试</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/面试题/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/">C/C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DB/">DB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Django/">Django</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Golang/">Golang</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MAC/">MAC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tool/">Tool</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小程序/">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试/">测试</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面试题/">面试题</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C-C/" style="font-size: 14px;">C/C++</a> <a href="/tags/DB/" style="font-size: 15px;">DB</a> <a href="/tags/Django/" style="font-size: 17px;">Django</a> <a href="/tags/Git/" style="font-size: 12px;">Git</a> <a href="/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/tags/Java/" style="font-size: 11px;">Java</a> <a href="/tags/MAC/" style="font-size: 15px;">MAC</a> <a href="/tags/Python/" style="font-size: 18px;">Python</a> <a href="/tags/Tool/" style="font-size: 19px;">Tool</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/小程序/" style="font-size: 13px;">小程序</a> <a href="/tags/测试/" style="font-size: 16px;">测试</a> <a href="/tags/面试题/" style="font-size: 11px;">面试题</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/02/">February 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">May 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/06/02/axios超时时间设置/">axios超时时间设置</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/31/JavaScriptのjoin()方法/">JavaScriptのjoin()方法</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/23/JavaScript展开运算符/">JavaScript展开运算符</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/20/Charles抓包异常排查/">Charles抓包异常排查</a>
+          </li>
+        
+          <li>
+            <a href="/2021/05/11/axios传递数组参数の坑/">axios传递数组参数の坑</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://yiluyanxia.github.io/" title target='_blank'
+        >一路烟霞</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2021 新波 &nbsp;&nbsp;
+    Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>个人小站</title>
+  
+  <subtitle>Stay Hungry, Stay Foolish</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://bjlxb.github.io/"/>
+  <updated>2021-11-15T13:04:53.541Z</updated>
+  <id>http://bjlxb.github.io/</id>
+  
+  <author>
+    <name>新波</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>axios超时时间设置</title>
+    <link href="http://bjlxb.github.io/2021/06/02/axios%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4%E8%AE%BE%E7%BD%AE/"/>
+    <id>http://bjlxb.github.io/2021/06/02/axios超时时间设置/</id>
+    <published>2021-06-02T11:07:16.000Z</published>
+    <updated>2021-11-15T13:04:53.541Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;后端某个接口运行时间长，需要单独对接口设置超时时间！&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScriptのjoin()方法</title>
+    <link href="http://bjlxb.github.io/2021/05/31/JavaScript%E3%81%AEjoin()%E6%96%B9%E6%B3%95/"/>
+    <id>http://bjlxb.github.io/2021/05/31/JavaScriptのjoin()方法/</id>
+    <published>2021-05-31T12:41:16.000Z</published>
+    <updated>2021-11-15T13:04:53.541Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录一下JavaScript中join()的使用！&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript展开运算符</title>
+    <link href="http://bjlxb.github.io/2021/05/23/JavaScript%E5%B1%95%E5%BC%80%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    <id>http://bjlxb.github.io/2021/05/23/JavaScript展开运算符/</id>
+    <published>2021-05-23T09:51:46.000Z</published>
+    <updated>2021-11-15T13:04:53.541Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录一下展开运算符这个新知识点&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Charles抓包异常排查</title>
+    <link href="http://bjlxb.github.io/2021/05/20/Charles%E6%8A%93%E5%8C%85%E5%BC%82%E5%B8%B8%E6%8E%92%E6%9F%A5/"/>
+    <id>http://bjlxb.github.io/2021/05/20/Charles抓包异常排查/</id>
+    <published>2021-05-20T09:23:21.000Z</published>
+    <updated>2021-11-15T13:04:53.541Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录一下遇到的异常情况和解决方案&lt;br&gt;
+    
+    </summary>
+    
+      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>axios传递数组参数の坑</title>
+    <link href="http://bjlxb.github.io/2021/05/11/axios%E4%BC%A0%E9%80%92%E6%95%B0%E7%BB%84%E5%8F%82%E6%95%B0%E3%81%AE%E5%9D%91/"/>
+    <id>http://bjlxb.github.io/2021/05/11/axios传递数组参数の坑/</id>
+    <published>2021-05-11T12:54:10.000Z</published>
+    <updated>2021-11-15T13:04:53.541Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用axios发送请求时，当参数中有数组，参数的键值会带上[]。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac安装adb教程</title>
+    <link href="http://bjlxb.github.io/2021/04/29/Mac%E5%AE%89%E8%A3%85adb%E6%95%99%E7%A8%8B/"/>
+    <id>http://bjlxb.github.io/2021/04/29/Mac安装adb教程/</id>
+    <published>2021-04-29T10:44:05.000Z</published>
+    <updated>2021-11-15T13:04:53.540Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Mac需要使用adb操作安卓手机，记录一下adb安装步骤。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="MAC" scheme="http://bjlxb.github.io/categories/MAC/"/>
+    
+    
+      <category term="MAC" scheme="http://bjlxb.github.io/tags/MAC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tornado框架Session封装</title>
+    <link href="http://bjlxb.github.io/2021/04/28/tornado%E6%A1%86%E6%9E%B6Session%E5%B0%81%E8%A3%85/"/>
+    <id>http://bjlxb.github.io/2021/04/28/tornado框架Session封装/</id>
+    <published>2021-04-28T03:49:18.000Z</published>
+    <updated>2021-11-15T13:04:53.540Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Tornado框架官方没有提供Session相关方案，看到一个简单的封装，记录一下！&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Django" scheme="http://bjlxb.github.io/categories/Django/"/>
+    
+    
+      <category term="Django" scheme="http://bjlxb.github.io/tags/Django/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript截取数组</title>
+    <link href="http://bjlxb.github.io/2021/04/22/JavaScript%E6%88%AA%E5%8F%96%E6%95%B0%E7%BB%84/"/>
+    <id>http://bjlxb.github.io/2021/04/22/JavaScript截取数组/</id>
+    <published>2021-04-22T09:52:06.000Z</published>
+    <updated>2021-11-15T13:04:53.540Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录一下JavaScript中截取数组函数slice&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>less-loader因为版本导致的问题</title>
+    <link href="http://bjlxb.github.io/2021/04/20/less-loader%E5%9B%A0%E4%B8%BA%E7%89%88%E6%9C%AC%E5%AF%BC%E8%87%B4%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>http://bjlxb.github.io/2021/04/20/less-loader因为版本导致的问题/</id>
+    <published>2021-04-20T11:06:09.000Z</published>
+    <updated>2021-11-15T13:04:53.540Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;升级less-loader后因为版本过高报错！&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue ui命令没反应</title>
+    <link href="http://bjlxb.github.io/2021/04/18/vue-ui%E5%91%BD%E4%BB%A4%E6%B2%A1%E5%8F%8D%E5%BA%94/"/>
+    <id>http://bjlxb.github.io/2021/04/18/vue-ui命令没反应/</id>
+    <published>2021-04-18T12:15:09.000Z</published>
+    <updated>2021-11-15T13:04:53.540Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;安装完vue和vue-cli后，使用vue ui命令后没反应解决方案&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue列表循环指定下标</title>
+    <link href="http://bjlxb.github.io/2021/04/15/vue%E5%88%97%E8%A1%A8%E5%BE%AA%E7%8E%AF%E6%8C%87%E5%AE%9A%E4%B8%8B%E6%A0%87/"/>
+    <id>http://bjlxb.github.io/2021/04/15/vue列表循环指定下标/</id>
+    <published>2021-04-15T11:46:54.000Z</published>
+    <updated>2021-11-15T13:04:53.540Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;vue项目中v-for循环有指定下标的需求。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iview框架中i-table数据处理</title>
+    <link href="http://bjlxb.github.io/2021/04/12/iview%E6%A1%86%E6%9E%B6%E4%B8%ADi-table%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
+    <id>http://bjlxb.github.io/2021/04/12/iview框架中i-table数据处理/</id>
+    <published>2021-04-12T07:11:36.000Z</published>
+    <updated>2021-11-15T13:04:53.540Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;iview 框架中 i-table组件对某个单元格进行单独处理！&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>js中const,var,let区别</title>
+    <link href="http://bjlxb.github.io/2021/04/09/js%E4%B8%ADconst-var-let%E5%8C%BA%E5%88%AB/"/>
+    <id>http://bjlxb.github.io/2021/04/09/js中const-var-let区别/</id>
+    <published>2021-04-09T02:32:58.000Z</published>
+    <updated>2021-11-15T13:04:53.539Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;js中三种定义变量的方式const， var， let的区别。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue中跨域问题</title>
+    <link href="http://bjlxb.github.io/2021/04/07/Vue%E4%B8%AD%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/"/>
+    <id>http://bjlxb.github.io/2021/04/07/Vue中跨域问题/</id>
+    <published>2021-04-07T08:06:13.000Z</published>
+    <updated>2021-11-15T13:04:53.539Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录一下vue中跨域问题的解决方案！&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python中subprocess模块</title>
+    <link href="http://bjlxb.github.io/2021/03/25/Python%E4%B8%ADsubprocess%E6%A8%A1%E5%9D%97/"/>
+    <id>http://bjlxb.github.io/2021/03/25/Python中subprocess模块/</id>
+    <published>2021-03-25T07:52:09.000Z</published>
+    <updated>2021-11-15T13:04:53.539Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Python中subprocess模块使用教程&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Python" scheme="http://bjlxb.github.io/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://bjlxb.github.io/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jmeter从CSV文件中随机取数据</title>
+    <link href="http://bjlxb.github.io/2021/03/19/Jmeter%E4%BB%8ECSV%E6%96%87%E4%BB%B6%E4%B8%AD%E9%9A%8F%E6%9C%BA%E5%8F%96%E6%95%B0%E6%8D%AE/"/>
+    <id>http://bjlxb.github.io/2021/03/19/Jmeter从CSV文件中随机取数据/</id>
+    <published>2021-03-19T08:31:51.000Z</published>
+    <updated>2021-11-15T13:04:53.539Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Jmeter中Random CSV Data Set使用教程&lt;br&gt;
+    
+    </summary>
+    
+      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript基础</title>
+    <link href="http://bjlxb.github.io/2021/02/27/JavaScript%E5%9F%BA%E7%A1%80/"/>
+    <id>http://bjlxb.github.io/2021/02/27/JavaScript基础/</id>
+    <published>2021-02-27T05:56:50.000Z</published>
+    <updated>2021-11-15T13:04:53.539Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;JavaScript基础巩固&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>rsync用法教程</title>
+    <link href="http://bjlxb.github.io/2021/01/29/rsync%E7%94%A8%E6%B3%95%E6%95%99%E7%A8%8B/"/>
+    <id>http://bjlxb.github.io/2021/01/29/rsync用法教程/</id>
+    <published>2021-01-29T11:45:58.000Z</published>
+    <updated>2021-11-15T13:04:53.539Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录下sync的常见用法&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Tool" scheme="http://bjlxb.github.io/categories/Tool/"/>
+    
+    
+      <category term="Tool" scheme="http://bjlxb.github.io/tags/Tool/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS中redis相关操作</title>
+    <link href="http://bjlxb.github.io/2021/01/29/CentOS%E4%B8%ADredis%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/"/>
+    <id>http://bjlxb.github.io/2021/01/29/CentOS中redis相关操作/</id>
+    <published>2021-01-29T08:04:34.000Z</published>
+    <updated>2021-11-15T13:04:53.539Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;CentOS中redis的使用&lt;br&gt;
+    
+    </summary>
+    
+      <category term="DB" scheme="http://bjlxb.github.io/categories/DB/"/>
+    
+    
+      <category term="DB" scheme="http://bjlxb.github.io/tags/DB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS3基础</title>
+    <link href="http://bjlxb.github.io/2021/01/27/CSS3%E5%9F%BA%E7%A1%80/"/>
+    <id>http://bjlxb.github.io/2021/01/27/CSS3基础/</id>
+    <published>2021-01-27T08:27:09.000Z</published>
+    <updated>2021-11-15T13:04:53.538Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;css基础巩固！&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+</feed>
