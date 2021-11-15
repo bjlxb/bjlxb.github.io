@@ -12,20 +12,20 @@
   
   <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
   
-  <meta name="description" content="Django中的Error出现UNICODEENCODEERROR: ‘ASCII’ CODEC CAN’T ENCODE CHARACTERS IN POSITION 2-5: ORDINAL NOT IN RANGE(128)错误解决方案：字符集出现问题，在文件前加两行代码解决问题。12reload(sys)sys.setdefaultencoding(&apos;utf-8&apos;)">
+  <meta name="description" content="记录一下Django中遇到的错误。">
 <meta name="keywords" content="Django">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Django-ERROR">
 <meta property="og:url" content="http://bjlxb.github.io/2019/03/04/Django-ERROR/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="Django中的Error出现UNICODEENCODEERROR: ‘ASCII’ CODEC CAN’T ENCODE CHARACTERS IN POSITION 2-5: ORDINAL NOT IN RANGE(128)错误解决方案：字符集出现问题，在文件前加两行代码解决问题。12reload(sys)sys.setdefaultencoding(&apos;utf-8&apos;)">
+<meta property="og:description" content="记录一下Django中遇到的错误。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://cn.bing.com/az/hprichbg/rb/FinWhale_ZH-CN9010064973_1920x1080.jpg">
 <meta property="og:image" content="https://cn.bing.com/az/hprichbg/rb/HZMB_ZH-CN5238831909_1920x1080.jpg">
-<meta property="og:updated_time" content="2021-11-15T13:04:53.507Z">
+<meta property="og:updated_time" content="2021-11-15T14:44:59.027Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django-ERROR">
-<meta name="twitter:description" content="Django中的Error出现UNICODEENCODEERROR: ‘ASCII’ CODEC CAN’T ENCODE CHARACTERS IN POSITION 2-5: ORDINAL NOT IN RANGE(128)错误解决方案：字符集出现问题，在文件前加两行代码解决问题。12reload(sys)sys.setdefaultencoding(&apos;utf-8&apos;)">
+<meta name="twitter:description" content="记录一下Django中遇到的错误。">
 <meta name="twitter:image" content="https://cn.bing.com/az/hprichbg/rb/FinWhale_ZH-CN9010064973_1920x1080.jpg">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
@@ -99,11 +99,11 @@
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="https://cn.bing.com/az/hprichbg/rb/FinWhale_ZH-CN9010064973_1920x1080.jpg" rel="gallery_ckw0qyqgi00842xs6oq3etw2w">
+      <a class="article-gallery-img fancybox" href="https://cn.bing.com/az/hprichbg/rb/FinWhale_ZH-CN9010064973_1920x1080.jpg" rel="gallery_ckw0s6uwm00019ns6owhck9l7">
         <img src="https://cn.bing.com/az/hprichbg/rb/FinWhale_ZH-CN9010064973_1920x1080.jpg" itemprop="image">
       </a>
     
-      <a class="article-gallery-img fancybox" href="https://cn.bing.com/az/hprichbg/rb/HZMB_ZH-CN5238831909_1920x1080.jpg" rel="gallery_ckw0qyqgi00842xs6oq3etw2w">
+      <a class="article-gallery-img fancybox" href="https://cn.bing.com/az/hprichbg/rb/HZMB_ZH-CN5238831909_1920x1080.jpg" rel="gallery_ckw0s6uwm00019ns6owhck9l7">
         <img src="https://cn.bing.com/az/hprichbg/rb/HZMB_ZH-CN5238831909_1920x1080.jpg" itemprop="image">
       </a>
     
@@ -112,7 +112,7 @@
 
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <a id="more"></a>
+        <p>记录一下Django中遇到的错误。<br><a id="more"></a></p>
 <h1 id="Django中的Error"><a href="#Django中的Error" class="headerlink" title="Django中的Error"></a>Django中的Error</h1><p>出现<font color="#FF0000">UNICODEENCODEERROR: ‘ASCII’ CODEC CAN’T ENCODE CHARACTERS IN POSITION 2-5: ORDINAL NOT IN RANGE(128)</font>错误<br><!--more--><br>解决方案：<br>字符集出现问题，在文件前加两行代码解决问题。<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">reload(sys)</span><br><span class="line">sys.setdefaultencoding(<span class="string">'utf-8'</span>)</span><br></pre></td></tr></table></figure></div></p>
 
       
