@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bjlxb.github.io/"/>
-  <updated>2021-11-15T13:04:53.541Z</updated>
+  <updated>2021-11-16T12:43:48.832Z</updated>
   <id>http://bjlxb.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试学习笔记一</title>
+    <link href="http://bjlxb.github.io/2021/11/16/%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/"/>
+    <id>http://bjlxb.github.io/2021/11/16/测试学习笔记一/</id>
+    <published>2021-11-16T12:42:23.000Z</published>
+    <updated>2021-11-16T12:43:48.832Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;日常测试学习笔记记录。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>axios超时时间设置</title>
@@ -393,26 +413,6 @@
     
     
       <category term="DB" scheme="http://bjlxb.github.io/tags/DB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS3基础</title>
-    <link href="http://bjlxb.github.io/2021/01/27/CSS3%E5%9F%BA%E7%A1%80/"/>
-    <id>http://bjlxb.github.io/2021/01/27/CSS3基础/</id>
-    <published>2021-01-27T08:27:09.000Z</published>
-    <updated>2021-11-15T13:04:53.538Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;css基础巩固！&lt;br&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
