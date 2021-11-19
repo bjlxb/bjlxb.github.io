@@ -7,7 +7,7 @@ date: 2020-09-08 22:55:31
 categories: Python
 photos:
 ---
-
+记录一下Python中datetime的使用。
 <!--more-->
 **获取当前时间**
 ```python

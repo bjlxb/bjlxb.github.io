@@ -9,6 +9,7 @@ photos:
   - https://cn.bing.com/az/hprichbg/rb/FinWhale_ZH-CN9010064973_1920x1080.jpg
   - https://cn.bing.com/az/hprichbg/rb/HZMB_ZH-CN5238831909_1920x1080.jpg
 ---
+记录一下Django中遇到的错误。
 <!--more-->
 # Django中的Error #
 出现<font color="#FF0000">UNICODEENCODEERROR: 'ASCII' CODEC CAN'T ENCODE CHARACTERS IN POSITION 2-5: ORDINAL NOT IN RANGE(128)</font>错误
