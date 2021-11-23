@@ -20,12 +20,10 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="测试基础相关的学习笔记。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://bjlxb.github.io/image/">
-<meta property="og:updated_time" content="2021-11-23T14:04:45.581Z">
+<meta property="og:updated_time" content="2021-11-23T14:11:09.023Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="测试学习笔记二">
 <meta name="twitter:description" content="测试基础相关的学习笔记。">
-<meta name="twitter:image" content="http://bjlxb.github.io/image/">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -118,7 +116,7 @@
 <h3 id="软件测试缺陷报告的-5C-原则"><a href="#软件测试缺陷报告的-5C-原则" class="headerlink" title="软件测试缺陷报告的 5C 原则"></a>软件测试缺陷报告的 5C 原则</h3><p>Correct(准确):每个组成部分的描述准确，不会引起误解;<br>Clear(清晰):每个组成部分的描述清晰，易于理解;<br>Concise(简洁):只包含必不可少的信息，不包括任何多余的内容;<br>Complete(完整):包含复现该缺陷的完整步骤和其他本质信息;<br>Consistent(一致):按照一致的格式书写全部缺陷报告; </p>
 <h3 id="软件缺陷的生命周期"><a href="#软件缺陷的生命周期" class="headerlink" title="软件缺陷的生命周期"></a>软件缺陷的生命周期</h3><p>测试人员提交新的Bug，错误状态为New;<br>测试人员验证错误，如果确认是错误，分配给相应的开 发人员，设置状态为 Open;<br>开发人员查询状态为Open的Bug，不是错误，则置状态为 Declined;<br>Bug修复并置状态为Fixed;<br>不能解决的 Bug，要留下文字说明及保持 Bug为Open状态。对于不能解决和延期解决的 Bug，不能由开发人员自己决定，一般要通过某种会议(评审会)通过才能认可;<br>测试人员查询状态为 Fixed 的 Bug，然后验证 Bug 是否已解决，如解决置 Bug 的状态为 Closed，如没有解决置状态为 Reopen;</p>
 <h3 id="一个缺陷被开发人员认为不是缺陷，怎么处理"><a href="#一个缺陷被开发人员认为不是缺陷，怎么处理" class="headerlink" title="一个缺陷被开发人员认为不是缺陷，怎么处理?"></a>一个缺陷被开发人员认为不是缺陷，怎么处理?</h3><p>1、缺陷提交到缺陷管理库里面进行备案。<br>2、判断的依据和标准:<br>v.根据需求说明书、产品说明、设计文档等，确认实际结果与计划不一致的地方，提供缺陷是否确认的直接依据;<br>vi.如果没有文档依据，可以根据类似软件的一般特性来说明是否存在不一致的地方，来确认是否是缺陷;<br>vii.根据用户的一般使用习惯，来确认是否是缺陷;<br>viii.与设计人员、开发人员和客户代表等相关人员探讨，确认是否是缺陷;<br>3、合理的论述，向测试经理说明自己的判断的理由，注意客观、严谨，不掺杂个人情绪。<br>4、等待测试经理做出最终决定，如果仍然存在争议，可以通过公司政策所提供的渠道，向上级反映，并有上级做出决定。</p>
-<p><img src="/image/"></p>
+<h3 id="缺陷的优先级划分和描述"><a href="#缺陷的优先级划分和描述" class="headerlink" title="缺陷的优先级划分和描述"></a>缺陷的优先级划分和描述</h3><p>一般来说按照下面的来分，具体的是由每个公司而定。<br>软件缺陷有四种级别，分别为:致命的(Fatal)、严重的(Critical)、一般的(Major)、微小的(Minor)<br>A 类：致命的软件缺陷(Fatal):造成系统或应用程序崩溃、死机、系统挂起，或造成数据丢失，主要功能完全丧失，导致本模块以及相关模块异常等问题。如代码错误，死循环，数据库发生死锁、与数据库连接错误或数据通讯错误， 未考虑异常操作，功能错误等<br>B 类：严重错误的软件缺陷(critical):系统的主要功能部分丧失、数据不能保存，系统的次要功能完全丧失。 问题局限在本模块，导致模块功能失效或异常退出。如致命的错误声明，程序接口错误，数据库的表、业务规则、缺省值未加完整性等约束条件<br>C 类：一般错误的软件缺陷(major):次要功能没有完全实现但不影响使用。如提示信息不太准确，或用户界面差，操作时间长，模块功能部分失效等，打印内容、格式错误，删除操作未给出提示，数据库表中有过多的空字段等<br>D 类：较小错误的软件缺陷(Minor):使操作者不方便或遇到麻烦，但它不影响功能过的操作和执行，如错别字、界面不规范(字体大小不统一，文字排列不整齐，可输入区域和只读区域没有明显的区分标志)，辅助说明描述不清 楚<br>E 类：建议问题的软件缺陷(Enhancemental):由问题提出人对测试对象的改进意见或测试人员提出的建议、质疑。</p>
 
       
     </div>
