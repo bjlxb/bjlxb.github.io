@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bjlxb.github.io/"/>
-  <updated>2021-11-24T13:46:12.542Z</updated>
+  <updated>2021-11-24T13:54:21.682Z</updated>
   <id>http://bjlxb.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cookie中的httponly的属性和作用</title>
+    <link href="http://bjlxb.github.io/2021/11/24/Cookie%E4%B8%AD%E7%9A%84httponly%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E4%BD%9C%E7%94%A8/"/>
+    <id>http://bjlxb.github.io/2021/11/24/Cookie中的httponly的属性和作用/</id>
+    <published>2021-11-24T13:47:02.000Z</published>
+    <updated>2021-11-24T13:54:21.682Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;偶尔接触到Cookie中的httponly的属性，学习下。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>测试学习笔记三</title>
@@ -393,26 +413,6 @@
     
     
       <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript基础</title>
-    <link href="http://bjlxb.github.io/2021/02/27/JavaScript%E5%9F%BA%E7%A1%80/"/>
-    <id>http://bjlxb.github.io/2021/02/27/JavaScript基础/</id>
-    <published>2021-02-27T05:56:50.000Z</published>
-    <updated>2021-11-15T13:04:53.539Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;JavaScript基础巩固&lt;br&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
