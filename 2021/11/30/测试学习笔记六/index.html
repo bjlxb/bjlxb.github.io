@@ -5,34 +5,27 @@
   
 
   
-  <title>JMeter服务器性能资源监控 | 个人小站</title>
+  <title>测试学习笔记六 | 个人小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
   
-  <meta name="description" content="简单介绍一下jmeter压测时如何对服务器性能监控。">
+  <meta name="description" content="网页测试用例">
 <meta name="keywords" content="测试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JMeter服务器性能资源监控">
-<meta property="og:url" content="http://bjlxb.github.io/2020/03/21/JMeter服务器性能资源监控/index.html">
+<meta property="og:title" content="测试学习笔记六">
+<meta property="og:url" content="http://bjlxb.github.io/2021/11/30/测试学习笔记六/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="简单介绍一下jmeter压测时如何对服务器性能监控。">
+<meta property="og:description" content="网页测试用例">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://bjlxb.github.io/image/JMeter/JMeter-0.png">
-<meta property="og:image" content="http://bjlxb.github.io/image/JMeter/JMeter-1.png">
-<meta property="og:image" content="http://bjlxb.github.io/image/JMeter/JMeter-2.png">
-<meta property="og:image" content="http://bjlxb.github.io/image/JMeter/JMeter-3.png">
-<meta property="og:image" content="http://bjlxb.github.io/image/JMeter/JMeter-7.png">
-<meta property="og:image" content="http://bjlxb.github.io/image/JMeter/JMeter-8.png">
-<meta property="og:image" content="http://bjlxb.github.io/image/JMeter/JMeter-5.png">
-<meta property="og:image" content="http://bjlxb.github.io/image/JMeter/JMeter-6.png">
-<meta property="og:updated_time" content="2021-11-15T13:04:53.529Z">
+<meta property="og:image" content="http://bjlxb.github.io/image/">
+<meta property="og:updated_time" content="2021-11-30T14:09:49.131Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JMeter服务器性能资源监控">
-<meta name="twitter:description" content="简单介绍一下jmeter压测时如何对服务器性能监控。">
-<meta name="twitter:image" content="http://bjlxb.github.io/image/JMeter/JMeter-0.png">
+<meta name="twitter:title" content="测试学习笔记六">
+<meta name="twitter:description" content="网页测试用例">
+<meta name="twitter:image" content="http://bjlxb.github.io/image/">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -69,21 +62,21 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="photo-JMeter服务器性能资源监控" class="article global-container article-type-photo" itemscope itemprop="blogPost">
+        <section id="main"><article id="photo-测试学习笔记六" class="article global-container article-type-photo" itemscope itemprop="blogPost">
   
     <header class="article-header">
       
   
     <h1 class="article-title" itemprop="name">
-      JMeter服务器性能资源监控
+      测试学习笔记六
     </h1>
   
 
     </header>
   
   <div class="article-meta">
-    <a href="/2020/03/21/JMeter服务器性能资源监控/" class="article-date">
-  <time datetime="2020-03-21T14:23:38.000Z" itemprop="datePublished">2020-03-21</time>
+    <a href="/2021/11/30/测试学习笔记六/" class="article-date">
+  <time datetime="2021-11-30T13:44:22.000Z" itemprop="datePublished">2021-11-30</time>
 </a>
     
   <div class="article-category">
@@ -104,42 +97,84 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p>简单介绍一下jmeter压测时如何对服务器性能监控。<br><a id="more"></a></p>
-<h4 id="安装插件plugins-manager"><a href="#安装插件plugins-manager" class="headerlink" title="安装插件plugins-manager"></a>安装插件plugins-manager</h4><p><a href="**https://jmeter-plugins.org/install/Install**">点击下载plugins-manager</a>，将下载后文件放置到JMeter文件的lib/ext目录下，重启JMeter。</p>
-<p><img src="/image/JMeter/JMeter-0.png"><br><img src="/image/JMeter/JMeter-1.png"></p>
-<h4 id="安装PerfMon插件"><a href="#安装PerfMon插件" class="headerlink" title="安装PerfMon插件"></a>安装PerfMon插件</h4><p><img src="/image/JMeter/JMeter-2.png"></p>
-<h4 id="下载ServerAgent"><a href="#下载ServerAgent" class="headerlink" title="下载ServerAgent"></a>下载ServerAgent</h4><ol>
-<li>去github的<a href="https://github.com/undera/perfmon-agent" target="_blank" rel="noopener">perfmon-agent</a>项目中下载</li>
-</ol>
-<p><img src="/image/JMeter/JMeter-3.png"></p>
-<ol start="2">
-<li><p>将压缩包上传至服务器，服务器需安装jdk，版本要在jdk8以上。</p>
-</li>
-<li><p>解压压缩包，进入目录后执行chmod 777 startAgent.sh</p>
-</li>
-<li><p>执行./startAgent.sh，默认端口为4444</p>
-</li>
-</ol>
-<p>若端口冲突，需修改端口，命令为：</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第一种命令</span></span><br><span class="line">./startAgent.sh --udp-port 7777 --tcp-port 7777</span><br><span class="line"><span class="comment"># 第二种命令</span></span><br><span class="line">java -jar ./CMDRunner.jar --tool PerfMonAgent --udp-port 7879 --tcp-port 7879</span><br></pre></td></tr></table></figure></div>
-<p>校验ServerAgent是否可以使用</p>
-<p>Windows系统进入cmd命令行，输入如下内容</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SHELL"><figure class="iseeu highlight /shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">telnet 部署服务器外网IP 启动端口号</span><br></pre></td></tr></table></figure></div>
-<p>出现如下提示：</p>
-<p><em>C:\Users\xb&gt;telent 129.204.169.23 8000</em><br><em>‘telent’ 不是内部或外部命令，也不是可运行的程序</em><br><em>或批处理文件。</em></p>
-<p>解决方案：</p>
-<ol>
-<li>“开始菜单” –&gt; 右键 –&gt; “应用和功能” –&gt; “程序和功能（右上角）”</li>
-</ol>
-<p><img src="/image/JMeter/JMeter-7.png"></p>
-<ol start="2">
-<li>“启动或关闭Windows功能” –&gt; 勾上”Telnet Client” –&gt; 确定。</li>
-</ol>
-<p><img src="/image/JMeter/JMeter-8.png"></p>
-<h4 id="在JMeter中添加监听器"><a href="#在JMeter中添加监听器" class="headerlink" title="在JMeter中添加监听器"></a>在JMeter中添加监听器</h4><ol>
-<li>添加监听器jp@gc - PerfMon Metrics Collector<br><img src="/image/JMeter/JMeter-5.png"></li>
-<li>配置要监听的资源<br><img src="/image/JMeter/JMeter-6.png"></li>
-</ol>
+        <p>网页测试用例<br><a id="more"></a></p>
+<h3 id="身份证号码输入框，测试用例设计"><a href="#身份证号码输入框，测试用例设计" class="headerlink" title="身份证号码输入框，测试用例设计"></a>身份证号码输入框，测试用例设计</h3><p>校验身份证号规则的有效性(包括地址码、生日期码、顺序码和校验码）<br>校验 15 位身份证号和 18 位身份正好都是可用的<br>校验末位是 X 的情况<br>校验不足 15 位、16-17 位和大于 18 位的情况<br>如果是必输项，校验不输入的时候会不会有正确的提示<br>如果不是必输项，则要校验不输入的时候流程能否正常进行<br>校验输入非数字的情况，是否会有正确提示信息(包括大小写字母、汉字、特殊字符和标点符号)<br>校验输入全角的数字的时候，系统是否会识别(这个得根据需求确定是否可以使用全角的数字)</p>
+<h3 id="登录功能测试用例设计"><a href="#登录功能测试用例设计" class="headerlink" title="登录功能测试用例设计"></a>登录功能测试用例设计</h3><p>具体需求:<br>有一个登录页面，有一个账号和一个密码输入框, 一个提交按钮。</p>
+<p>此题的考察目的:<br>1、了解需求(测什么都是从了解需求开始);<br>2、是否有设计 Test Case 的能力<br>3、是否熟悉各种测试方法;<br>4、是否有丰富的 Web 测试经验;<br>5、是否了解 Web 开发;</p>
+<p>了解需求:<br>1、登录界面应该是弹出窗口式的，还是直接在网页里面;<br>2、账号长度和密码的强度(比如需要多少位、大小写敏感、特殊字符混搭等); 3、界面美观是否有特殊要求?(即是否要进行 UI 测试);<br>4、……..</p>
+<p>用例设计:<br>测试需求分析完成后，开始用例设计，主要可以从以下几个方面考虑:<br>功能测试(Function Test)<br>1、输入正确的账号和密码，点击提交按钮，验证是否能正确登录。(正常输入)<br>2、输入错误的账号或者密码, 验证登录会失败，并且提示相应的错误信息。(错误校验)<br>3、登录成功后能否跳转到正确的页面(低)<br>4、账号和密码，如果太短或者太长，应该怎么处理(安全性，密码太短时是否有提示)<br>5、账号和密码，中有特殊字符(比如空格)，和其他非英文的情况(是否做了过滤)<br>6、记住账号的功能<br>7、登录失败后，不能记录密码的功能<br>8、账号和密码前后有空格的处理<br>9、密码是否加密显示(星号圆点等)<br>10、牵扯到验证码的，还要考虑文字是否扭曲过度导致辨认难度大，考虑颜色(色盲使用者)，刷新或换一个按钮是否好用<br>11、登录页面中的注册、忘记密码，登出用另一帐号登录等链接是否正确 12、输入密码的时候，大写键盘开启的时候要有提示信息。<br>13、什么都不输入，点击提交按钮，看提示信息。(非空检查)</p>
+<p>界面测试(UI Test)<br>1、布局是否合理，2 个 Testbox 和一个按钮是否对齐<br>2、Testbox 和按钮的长度，高度是否符合要求<br>3、界面的设计风格是否与 UI 的设计风格统一<br>4、界面中的文字简洁易懂，没有错别字。</p>
+<p>性能测试(Performance Test)<br>1、打开登录页面，需要几秒<br>2 、输入正确的账号和密码后，登录成功跳转到新页面，不超过5秒</p>
+<p>安全性测试(Security Test)<br>1、登录成功后生成的 Cookie 是否有 HttpOnly(降低脚本盗取风险)<br>2、账号和密码是否通过加密的方式，发送给 Web 服务器<br>3、账号和密码的验证，应该是用服务器端验证，而不能单单是在客户端用 javaScript 验证<br>4、账号和密码的输入框，应该屏蔽 SQL 注入攻击<br>5、账号和密码的输入框，应该禁止输入脚本(防止 XSS 攻击)<br>6、错误登录的次数限制(防止暴力破解)<br>7、考虑是否支持多用户在同一机器上登录;<br>8、考虑一用户在多台机器上登录</p>
+<p>可用性测试(Usability Test)<br>1、是否可以全用键盘操作，是否有快捷键<br>2、输入账号，密码后按回车，是否可以登录<br>3、输入框是否可以以 Tab 键切换</p>
+<p>兼容性测试(Compatibility Test)<br>1、主流的浏览器下能否显示正常已经功能正常(IE6~11, FireFox, Chrome, Safari 等 )<br>2、不同的平台是否能正常工作，比如 Windows, Mac<br>3、移动设备上是否正常工作，比如 iPhone, Android<br>4、不同的分辨率</p>
+<p>本地化测试 (Localization Test)<br>1、不同语言环境下，页面的显示是否正确。<br>软件辅助性测试 (Accessibility Test)<br>软件辅助功能测试是指测试软件是否向残疾用户提供足够的辅助功能<br>1、高对比度下能否显示正常(视力不好的人使用)</p>
+<h3 id="测试一个网上购物的购物车"><a href="#测试一个网上购物的购物车" class="headerlink" title="测试一个网上购物的购物车"></a>测试一个网上购物的购物车</h3><p>界面测试: </p>
+<ul>
+<li>打开页面后，页面的布局是否合理，显示是否完整; </li>
+<li>鼠标浮动在购物车按钮，迷你购物车界面显示是否正常; </li>
+<li>不同卖家的商品在不同的 table 区域显示，区分明显;</li>
+<li>页面的 tooltips 能正常显示; 功能测试:</li>
+<li>所有页面链接功能正常，可以点击到正确页面;</li>
+<li>页面关联本地软件阿里旺旺的 icon 点击后，能打开软件; </li>
+<li>从商品信息页面添加的商品能显示在购物车中; </li>
+<li>购物车页面打开的同时，在其他页面添加了商品，购物车页面刷新后，新的商品能显示; </li>
+<li>若未登录，点击购物车，则提示用户输入用户名和密码，或者提示其他的非注册用户购物方式; </li>
+<li>商品未勾选的状态下，结算按钮是灰色无法点击的; </li>
+<li>勾选商品后，已选商品的总价会显示，结算按钮变高亮可点击工作; </li>
+<li>勾选商品，点击结算按钮后，进入确认订单信息页面; </li>
+<li>购物车页面中，可以对添加的商品信息做信息的修改，并自动保存成功; </li>
+<li>卖家在线的时候，旺旺 icon 高亮，反之，灰色; </li>
+<li>购物车有商品降价或者库存告急的，那么点击对应的 tab，降价或者告急商品会归类后显示; </li>
+<li>购物车能添加的商品种类是有数量上限的;</li>
+<li>不要的商品，可以删除;</li>
+</ul>
+<p>(其他特有的功能不做赘述，只讨论常见通用功能)<br>若商品已经失效，购物车的商品是否可以继续结算<br>已进入支付界面但支付未成功，重新进入购物车，又重新添加了一些物品，则原有的物品是否能正确保留;<br>(感觉这个还挺关键，经常是没完成支付，又添加了一些物品，最后再一起支付)<br>性能测试:</p>
+<ul>
+<li>打开购物车页面要多久;<br>可用性测试:</li>
+<li>快捷键功能知否支持 兼容测试:</li>
+<li>不同浏览器上的测试功能是否正常; </li>
+<li>app 上测试</li>
+</ul>
+<h3 id="微信点赞，功能测试"><a href="#微信点赞，功能测试" class="headerlink" title="微信点赞，功能测试"></a>微信点赞，功能测试</h3><p>1、功能测试<br>  考虑功能是否符合预期<br>2、接口<br>  考虑各内部和外部的接口，比如朋友圈客户端和服务端的交互接口的功能。朋友圈点赞功能和消息提示功能的<br>  接口(点了赞之后对应的朋友收到提示信息)<br>3、平台<br>  手机版 pad 版 web 版<br>4、用户操作场景<br>  测试用户常用场景，比如:用户打开微信看到十条消息提示，点击后进入朋友圈界面显示了“谁谁谁点了赞”<br>5、速度、延迟<br>6、性能测试<br>  模拟一些多用户并发操作的场景<br>7、安全</p>
+<h3 id="搜索框怎么测"><a href="#搜索框怎么测" class="headerlink" title="搜索框怎么测"></a>搜索框怎么测</h3><p>增:<br>  搜索功能分为简单搜索和高级搜索<br>简单搜索:<br>  先展示百度的简单搜索界面，仅供参考:<br>界面测试</p>
+<ul>
+<li>搜索框 UI 显示正常，布局合理;</li>
+<li>搜索页面布局合理，无错别字;</li>
+<li>搜索出的结果展示，布局合理; </li>
+<li>已查看过的结果链接，链接的眼神要灰化处理，和没有点击过的结果链接区分; </li>
+<li>结果数量庞大时，页面的分页布局合理;<br>功能测试</li>
+<li>链接测试:页面上的链接都可连接至正确的页面 </li>
+<li>搜索历史内容记录，便于查找检索过的内容 </li>
+<li>搜索内容联想输入，便于用户搜索的便捷与准确性</li>
+<li>搜索功能测试(重点)</li>
+<li>搜索内容为空，验证系统如何处理 </li>
+<li>搜索内容为空格，查看系统如何处理 </li>
+<li>边界值验证，在允许的字符串范围内外，验证系统的处理 </li>
+<li>超长字符串的输入，系统是否会截取允许的长度来检索结果</li>
+<li>合法的字符串长度后，加空格，验证检索结果 </li>
+<li>多个关键词中间加入空格，tab，逗号后，验证系统的结果是否正确 </li>
+<li>验证每种合法的输入，结果是否正确 </li>
+<li>是否支持检索内容的复制、粘贴、编辑等操作 </li>
+<li>是否支持回车键搜索 </li>
+<li>多次输入相同的内容，查看系统每次检索的结果是否正确，相同 </li>
+<li>特殊字符，转义符，html 脚本等需作处理 </li>
+<li>敏感词汇，提示用户无权限等信息 </li>
+<li>输入的内容，是否支持快捷键操作等</li>
+<li>只能输入允许的字符串长度<br>安全性测试(没有做过，只能列出一些简单的注意点)</li>
+<li>脚本的禁用</li>
+<li>SQl 注入，检索 sql select 语句等</li>
+<li>敏感内容的检索是禁止的</li>
+<li>特殊字符的检索 </li>
+<li>被删除、加密、授权的数据，不允许被查出来的，是否有安全控制设计<br>兼容性测试</li>
+<li>多平台 windows，mac</li>
+<li>移动平台 ios，android</li>
+<li>多浏览器 FF，Chrome，IE，国内主流浏览器等<br>性能测试</li>
+<li>搜索页面打开的速度是否满足设计要求 </li>
+<li>搜索出结果消耗的时间，是否满足设计要求<br>本地化测试</li>
+<li>登录时，自动切换至相应语言国家的搜索主页</li>
+</ul>
+<p><img src="/image/"></p>
 
       
     </div>
@@ -154,20 +189,11 @@
 <nav id="article-nav">
   <div class="article-nav-block">
     
-      <a href="/2020/03/22/JMeter界面设置为简体中文/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            JMeter界面设置为简体中文
-          
-        </div>
-      </a>
-    
   </div>
   <div class="article-nav-block">
     
-      <a href="/2020/03/18/查看Linux版本信息命令/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">查看Linux版本信息命令</div>
+      <a href="/2021/11/29/测试学习笔记五/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">测试学习笔记五</div>
         <strong class="article-nav-caption"></strong>
       </a>
     
