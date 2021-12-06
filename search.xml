@@ -6600,7 +6600,6 @@ class Activity(models.Model):
 <h3 id="11、打包压缩成-tar-gz-的命令，解压拆包-tar-gz-的命令"><a href="#11、打包压缩成-tar-gz-的命令，解压拆包-tar-gz-的命令" class="headerlink" title="11、打包压缩成.tar.gz 的命令，解压拆包.tar.gz 的命令"></a>11、打包压缩成.tar.gz 的命令，解压拆包.tar.gz 的命令</h3><p>tar zcvf xxx.tar.gz file<br>tar zxvf xxx.tar.gz</p>
 <h3 id="12、-etc-passwd-的前五行内容提取用户名"><a href="#12、-etc-passwd-的前五行内容提取用户名" class="headerlink" title="12、/etc/passwd 的前五行内容提取用户名"></a>12、/etc/passwd 的前五行内容提取用户名</h3><p>cat /etc/passwd | head -n 5 | cut -d : -f 1</p>
 <h3 id="13、-find-和-grep-的区别"><a href="#13、-find-和-grep-的区别" class="headerlink" title="13、 find 和 grep 的区别"></a>13、 find 和 grep 的区别</h3><p>grep：<br>一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来。 grep全称是 Global Regular Expression Print，表示全局正则表达式版本，它的使用权限是所有用户。<br>find：<br>功能：在目录结构中搜索文件，并执行指定的操作。此命令提供了相当多的查找条件，功能很强大。<br>语法：find起始目录寻找条件操作<br>说明：find命令从指定的起始目录开始，递归地搜索其各个子目录，查找满足寻找条件的文件并对之采取相关的操作。<br>总结：grep是查找匹配条件的行，find 是搜索匹配条件的文件。</p>
-<p><img src="/image/"></p>
 ]]></content>
       <categories>
         <category>测试</category>
