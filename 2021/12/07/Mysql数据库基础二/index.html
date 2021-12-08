@@ -5,25 +5,24 @@
   
 
   
-  <title>axios传递数组参数の坑 | 个人小站</title>
+  <title>Mysql数据库基础二 | 个人小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
   
-  <meta name="description" content="使用axios发送请求时，当参数中有数组，参数的键值会带上[]。">
-<meta name="keywords" content="前端">
+  <meta name="keywords" content="测试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="axios传递数组参数の坑">
-<meta property="og:url" content="http://bjlxb.github.io/2021/05/11/axios传递数组参数の坑/index.html">
+<meta property="og:title" content="Mysql数据库基础二">
+<meta property="og:url" content="http://bjlxb.github.io/2021/12/07/Mysql数据库基础二/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="使用axios发送请求时，当参数中有数组，参数的键值会带上[]。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-11-15T13:04:53.541Z">
+<meta property="og:image" content="http://bjlxb.github.io/image/">
+<meta property="og:updated_time" content="2021-12-07T13:08:05.143Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="axios传递数组参数の坑">
-<meta name="twitter:description" content="使用axios发送请求时，当参数中有数组，参数的键值会带上[]。">
+<meta name="twitter:title" content="Mysql数据库基础二">
+<meta name="twitter:image" content="http://bjlxb.github.io/image/">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -60,29 +59,29 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="photo-axios传递数组参数の坑" class="article global-container article-type-photo" itemscope itemprop="blogPost">
+        <section id="main"><article id="photo-Mysql数据库基础二" class="article global-container article-type-photo" itemscope itemprop="blogPost">
   
     <header class="article-header">
       
   
     <h1 class="article-title" itemprop="name">
-      axios传递数组参数の坑
+      Mysql数据库基础二
     </h1>
   
 
     </header>
   
   <div class="article-meta">
-    <a href="/2021/05/11/axios传递数组参数の坑/" class="article-date">
-  <time datetime="2021-05-11T12:54:10.000Z" itemprop="datePublished">2021-05-11</time>
+    <a href="/2021/12/07/Mysql数据库基础二/" class="article-date">
+  <time datetime="2021-12-07T13:07:46.000Z" itemprop="datePublished">2021-12-07</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/前端/">前端</a>
+    <a class="article-category-link" href="/categories/测试/">测试</a>
   </div>
 
     
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/测试/">测试</a></li></ul>
 
   </div>
   
@@ -95,9 +94,8 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p>使用axios发送请求时，当参数中有数组，参数的键值会带上[]。<br><a id="more"></a><br>引入js：<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import axios from &apos;axios&apos;</span><br><span class="line">import qs from &apos;qs&apos;</span><br></pre></td></tr></table></figure></div></p>
-<p>get / delete请求方式解决方式如下<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">axios.get(url, &#123;</span><br><span class="line">    params: &#123;</span><br><span class="line">     ids: [1,2,3]</span><br><span class="line">    &#125;,</span><br><span class="line">    paramsSerializer: params =&gt; &#123;</span><br><span class="line">      return qs.stringify(params, &#123; indices: false &#125;)</span><br><span class="line">&#125;&#125;)</span><br><span class="line"></span><br><span class="line">axios.delete(url, &#123;</span><br><span class="line">     params: &#123;</span><br><span class="line">     ids: [1,2,3]</span><br><span class="line">    &#125;,</span><br><span class="line">    paramsSerializer: params =&gt; &#123;</span><br><span class="line">      return qs.stringify(params, &#123; indices: false &#125;)</span><br><span class="line">&#125;&#125;)</span><br></pre></td></tr></table></figure></div></p>
-<p>post / put 请求方式解决方式如下<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">axios.post(url, qs.stringify(</span><br><span class="line">    params: &#123;</span><br><span class="line">     ids: [1,2,3]</span><br><span class="line">&#125;, &#123; indices: false &#125;))</span><br><span class="line"></span><br><span class="line"> axios.put(url, qs.stringify(params: &#123;</span><br><span class="line">     ids: [1,2,3]</span><br><span class="line">&#125;, &#123; indices: false &#125;))</span><br></pre></td></tr></table></figure></div></p>
+        <a id="more"></a>
+<p><img src="/image/"></p>
 
       
     </div>
@@ -112,20 +110,11 @@
 <nav id="article-nav">
   <div class="article-nav-block">
     
-      <a href="/2021/05/20/Charles抓包异常排查/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            Charles抓包异常排查
-          
-        </div>
-      </a>
-    
   </div>
   <div class="article-nav-block">
     
-      <a href="/2021/04/29/Mac安装adb教程/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">Mac安装adb教程</div>
+      <a href="/2021/12/06/Mysql数据库基础一/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Mysql数据库基础一</div>
         <strong class="article-nav-caption"></strong>
       </a>
     
