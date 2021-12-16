@@ -6582,7 +6582,8 @@ https://github.com/caoxinyu/RedisClient/tree/OSX
     <title>Mysql数据库基础三</title>
     <url>/2021/12/14/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E4%B8%89/</url>
     <content><![CDATA[<p>sql实战训练<br><a id="more"></a></p>
-]]></content>
+<h3 id="Student-Sourse-SC-Teacher-表关系如下"><a href="#Student-Sourse-SC-Teacher-表关系如下" class="headerlink" title="Student-Sourse-SC-Teacher 表关系如下:"></a>Student-Sourse-SC-Teacher 表关系如下:</h3><p>Student(sid，Sname，Sage，Ssex)学生表<br>Course(cid，Cname，tid)课程表<br>SC(sid，cid，score)成绩表<br>Teacher(tid，Tname)教师表<br>写出 sql 语句:<br>1、查询课程“001“课程比”002“课程成绩高的所有学生的学号<br>2、修改学号为 20131201 的语文成绩为 100‘<br>3、插入一条名为“李四”的教师记录<br>4、删除学习“叶平”老师课程的 sc 表记录</p>
+<h3 id="员工信息-A-员工亲属信息表-B-表关系如下"><a href="#员工信息-A-员工亲属信息表-B-表关系如下" class="headerlink" title="员工信息 A-员工亲属信息表 B 表关系如下:"></a>员工信息 A-员工亲属信息表 B 表关系如下:</h3>]]></content>
       <categories>
         <category>测试</category>
       </categories>
