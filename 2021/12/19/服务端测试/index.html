@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="服务端相关测试笔记">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2021-12-19T06:58:54.649Z">
+<meta property="og:updated_time" content="2021-12-19T07:37:00.092Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="服务端测试">
 <meta name="twitter:description" content="服务端相关测试笔记">
@@ -97,6 +97,12 @@
       
         <p>服务端相关测试笔记<br><a id="more"></a></p>
 <h3 id="浏览器访问-www-baidu-com-的过程"><a href="#浏览器访问-www-baidu-com-的过程" class="headerlink" title="浏览器访问 www.baidu.com 的过程"></a>浏览器访问 <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 的过程</h3><p>先要解析出 baidu.com 对应的 ip 地址:<br>1、要先使用 arp 获取默认网关的 mac 地址<br>2、组织数据发送给默认网关(ip 还是 dns 服务器的 ip，但是 mac 地址是默认网关的 mac 地址)<br>3、默认网关拥有转发数据的能力，把数据转发给路由器<br>4、路由器根据自己的路由协议，来选择一个合适的较快的路径转发数据给目的网关<br>5、目的网关(dns 服务器所在的网关)，把数据转发给 dns 服务<br>6、dns 服务器查询解析出 baidu.com 对应的 ip 地址，并原路返回请求这个域名的 client得到了 baidu.com 对应的 ip 地址之后，会发送 tcp 的 3 次握手，进行连接<br>7、使用 http 协议发送请求数据给 web 服务器<br>8、web 服务器收到数据请求之后，通过查询自己的服务器得到相应的结果，原路返回给浏览器<br>9、浏览器接收到数据之后通过浏览器自己的渲染功能来显示这个网页<br>10、浏览器关闭 tcp 连接，即 4 次挥手结束，完成整个访问过程</p>
+<hr>
+<p>1、浏览器向DNS服务器发出解析域名的请求<br>2、DNS服务器将”<a href="http://www.baidu.com/" target="_blank" rel="noopener">www.baidu.com</a>“域名解析为对应的IP地址，并返回给浏览器<br>3、得到IP地址后，客户端会发起TCP请求，以及3次握手建立连接<br>4、建立连接成功之后，客户端通过HTTP协议发起请求给web服务器<br>5、web服务器接收到请求之后，查询所有结果生成HTTP响应返回给浏览器<br>6、浏览器得到响应的结果后进行渲染到前端给用户进行展示<br>7、浏览器释放TCP连接，执行四次挥手，完成整个过程</p>
+<p>IP地址解析的描述<br>第一个环节就是DNS解析域名并返回IP，实际上浏览器访问DNS服务器的过程还包含许多步骤：<br>1、首先DNS服务器通常与本地客户端（假设为图中192.168.1.1）不在同一个网络中，则需要通过网关转发客户端对DNS的请求数据<br>2、发送ARP数据包获取默认网关（192.168.1.254）的 mac 地址<br>3、然后将请求DNS的数据包发送给默认网关<br>4、默认网关拥有转发数据的能力，把数据转发给路由器<br>5、路由器根据自己的路由协议，来选择一个合适的较快的路径转发数据给目的网关（192.168.2.254）<br>6、目的网关，把数据转发给 DNS 服务器<br>7、DNS 服务器查询解析出 <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 对应的 ip 地址，并原路返回请求这个域名的客户端，至此，客户端才获得了百度的IP地址</p>
+<h3 id="购买下单和退货流程测试点"><a href="#购买下单和退货流程测试点" class="headerlink" title="购买下单和退货流程测试点"></a>购买下单和退货流程测试点</h3><h3 id="sql注入，跨站脚本，跨站请求伪造"><a href="#sql注入，跨站脚本，跨站请求伪造" class="headerlink" title="sql注入，跨站脚本，跨站请求伪造"></a>sql注入，跨站脚本，跨站请求伪造</h3><h4 id="sql注入"><a href="#sql注入" class="headerlink" title="sql注入"></a>sql注入</h4><p>SQL 注入攻击是注入攻击最常见的形式(此外还有 OS 注入攻击(Struts 2 的高危漏洞就是通过 OGNL 实施 OS 注 入攻击导致的))，当服务器使用请求参数构造 SQL 语句时，恶意的 SQL 被嵌入到 SQL 中交给数据库执行。SQL 注入 攻击需要攻击者对数据库结构有所了解才能进行，攻击者想要获得表结构有多种方式:<br>(1)如果使用开源系统搭建网站，数据库结构也是公开的(目前有很多现成的系统可以直接搭建论坛，电商网 站，虽然方便快捷但是风险是必须要认真评估的);<br>(2)错误回显(如果将服务器的错误信息直接显示在页面上，攻击者可以通过非法参数引发页面错误从而通过 错误信息了解数据库结构，Web 应用应当设置友好的错误页，一方面符合最小惊讶原则，一方面屏蔽掉可能给系统 带来危险的错误回显信息);<br>(3)盲注。防范 SQL 注入攻击也可以采用消毒的方式，通过正则表达式对请求参数进行验证，此外，参数绑定 也是很好的手段，这样恶意的 SQL 会被当做 SQL 的参数而不是命令被执行，JDBC 中的 PreparedStatement 就是支持参数绑定的语句对象，从性能和安全性上都明显优于 Statement。</p>
+<h4 id="跨站脚本"><a href="#跨站脚本" class="headerlink" title="跨站脚本"></a>跨站脚本</h4><p>XSS(Cross Site Script，跨站脚本攻击)是向网页中注入恶意脚本在用户浏览网页时在用户浏览器中执行恶意脚 本的攻击方式。跨站脚本攻击分有两种形式:<br>反射型攻击(诱使用户点击一个嵌入恶意脚本的链接以达到攻击的目标，目前有很多攻击者利用论坛、微博发 布含有恶意脚本的 URL 就属于这种方式)<br>持久型攻击(将恶意脚本提交到被攻击网站的数据库中，用户浏览网页时，恶意脚本从数据库中被加载到页面 执行，QQ 邮箱的早期版本就曾经被利用作为持久型跨站脚本攻击的平台)。</p>
+<h4 id="跨站请求伪造"><a href="#跨站请求伪造" class="headerlink" title="跨站请求伪造"></a>跨站请求伪造</h4><p>CSRF 攻击(Cross Site Request Forgery，跨站请求伪造)是攻击者通过跨站请求，以合法的用户身份进行非法操 作(如转账或发帖等)。CSRF 的原理是利用浏览器的 Cookie 或服务器的 Session，盗取用户身份，其原理如下图所示。 防范 CSRF 的主要手段是识别请求者的身份，主要有以下几种方式:<br>(1)在表单中添加令牌(token);<br>(2)验证码;<br>(3)检查请求头中的 Referer(前面提到防图片盗链接也是用的这种方式)。 令牌和验证都具有一次消费性的特征，因此在原理上一致的，但是验证码是一种糟糕的用户体验，不是必要的<br>情况下不要轻易使用验证码，目前很多网站的做法是如果在短时间内多次提交一个表单未获得成功后才要求提供验 证码，这样会获得较好的用户体验。</p>
 
       
     </div>
