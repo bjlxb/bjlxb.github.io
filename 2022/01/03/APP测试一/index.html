@@ -12,17 +12,18 @@
   
   <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
   
-  <meta name="keywords" content="测试">
+  <meta name="description" content="复习APP测试相关内容">
+<meta name="keywords" content="测试">
 <meta property="og:type" content="article">
 <meta property="og:title" content="APP测试一">
 <meta property="og:url" content="http://bjlxb.github.io/2022/01/03/APP测试一/index.html">
 <meta property="og:site_name" content="个人小站">
+<meta property="og:description" content="复习APP测试相关内容">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://bjlxb.github.io/image/">
-<meta property="og:updated_time" content="2022-01-03T07:48:06.541Z">
+<meta property="og:updated_time" content="2022-01-06T14:28:10.107Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="APP测试一">
-<meta name="twitter:image" content="http://bjlxb.github.io/image/">
+<meta name="twitter:description" content="复习APP测试相关内容">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -94,8 +95,10 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <a id="more"></a>
-<p><img src="/image/"></p>
+        <p>复习APP测试相关内容<br><a id="more"></a></p>
+<h3 id="Android四大组件及生命周期"><a href="#Android四大组件及生命周期" class="headerlink" title="Android四大组件及生命周期"></a>Android四大组件及生命周期</h3><p>Android 的四大组件包括:Activity、Service、BroadcasReceiver、ContentProvider</p>
+<h3 id="APP启动发生的过程"><a href="#APP启动发生的过程" class="headerlink" title="APP启动发生的过程"></a>APP启动发生的过程</h3><p>1、点击桌面 app 图标，Launcher 进程采用 Binder IPC 向 system_server 进程发起 startActivity 请求;<br>2、system_server 进程收到请求后，向 zygote 进程发送创建进程的请求(zygote 进程是 Android 系统的第一个进 程，zygote 意为受精卵，所有进程都是由它孵化而来)<br>3、zygote 进程 fork 出新的子进程，即 App 进程;<br>4、App 进程，通过 Binder IPC 向 system_server 进程发起attachApplication 请求<br>5、system_server 进程收到请求后，进行一系列的准备工作，通过 Binder IPC 向 App 进程发送 scheduleLaunchActivity请求<br>6、App 的 binder 线程(Application Thread)在收到请求后，通过 handler 向主线程发送 LAUNCH_ACTIVITY 消息<br>7、主线程收到 Message 后，通过发射机制创建目标 Activity，并回调 Activity.onCreate()方法</p>
+<h3 id="APP测试的内容"><a href="#APP测试的内容" class="headerlink" title="APP测试的内容"></a>APP测试的内容</h3><p>功能测试:<br>1.业务逻辑正确性测试:依据:产品文档-&gt;测试用例编写<br>兼容性测试:<br>1、系统版本:Android:官方版本,定制版本;IOS:官方提供版本<br>2、分辨率:720 * 1280 1080* 1920<br>3、网络情况:2g 3g 4g 5g Wi-Fi<br>异常测试<br>1、热启动应用:应用在后台长时间待机;应用在后台待机过程中，手机重启<br>2、网络切换和中断恢复:网络切换;中断恢复:<br>3、电话信息中断恢复<br>升级，安装，卸载测试<br>1、升级测试:临近版本升级(1.0-&gt;1.1);跨版本(1.0-&gt;….-&gt;2.2)<br>2、安装测试:首次安装;覆盖安装(同版本，不同版本覆盖);卸载后安装<br>3、卸载测试:首次卸载;卸载安装后在卸载<br>健壮性测试<br>1、手机资源消耗:cpu，内存<br>2、流量消耗:图片，数据，视频<br>3、电量测试<br>4、崩溃恢复</p>
 
       
     </div>
