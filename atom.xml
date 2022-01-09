@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bjlxb.github.io/"/>
-  <updated>2022-01-08T11:10:42.222Z</updated>
+  <updated>2022-01-09T11:00:34.331Z</updated>
   <id>http://bjlxb.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>APP测试二</title>
+    <link href="http://bjlxb.github.io/2022/01/09/APP%E6%B5%8B%E8%AF%95%E4%BA%8C/"/>
+    <id>http://bjlxb.github.io/2022/01/09/APP测试二/</id>
+    <published>2022-01-09T10:58:00.000Z</published>
+    <updated>2022-01-09T11:00:34.331Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录一下APP测试中常用的ADB命令&lt;br&gt;
+    
+    </summary>
+    
+      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>APP测试一</title>
@@ -393,26 +413,6 @@
     
     
       <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac安装adb教程</title>
-    <link href="http://bjlxb.github.io/2021/04/29/Mac%E5%AE%89%E8%A3%85adb%E6%95%99%E7%A8%8B/"/>
-    <id>http://bjlxb.github.io/2021/04/29/Mac安装adb教程/</id>
-    <published>2021-04-29T10:44:05.000Z</published>
-    <updated>2021-11-15T13:04:53.540Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Mac需要使用adb操作安卓手机，记录一下adb安装步骤。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="MAC" scheme="http://bjlxb.github.io/categories/MAC/"/>
-    
-    
-      <category term="MAC" scheme="http://bjlxb.github.io/tags/MAC/"/>
     
   </entry>
   
