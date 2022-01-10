@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="记录一下APP测试中常用的ADB命令">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-01-09T11:00:34.331Z">
+<meta property="og:updated_time" content="2022-01-09T11:29:43.153Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="APP测试二">
 <meta name="twitter:description" content="记录一下APP测试中常用的ADB命令">
@@ -96,6 +96,7 @@
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
         <p>记录一下APP测试中常用的ADB命令<br><a id="more"></a></p>
+<h3 id="常用的ADB命令"><a href="#常用的ADB命令" class="headerlink" title="常用的ADB命令"></a>常用的ADB命令</h3><p>adb –help / adb :看见帮助信息<br>adb start-server:启动 adb 服务<br>adb kill-server:关闭 adb 服务<br>adb devices:查看手机设备号<br>adb shell getpropro.build.version.release:获取系统版本 adb push 电脑 手机<br>adb pull 手机 电脑<br>adb logcat | grep(unix) 包名<br>adb logcat | findstr(win) 包名<br>adb shell :进入 shell 命令行，可以操作 Linux 命令<br>adb shell dumpsys window windows | grep mFocusedApp:获取包名<br>启动名(win:adb shell dumpsys window windows | findstr mFocusedApp)<br>adb install 路径/apk 文件:安装 apk 到手机上<br>adb uninstall 包名:卸载 app 从手机上<br>adb shell am start -W 包名/启动名: app 启动时间</p>
 
       
     </div>
