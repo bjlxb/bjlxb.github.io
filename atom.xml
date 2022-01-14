@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bjlxb.github.io/"/>
-  <updated>2022-01-13T13:16:26.507Z</updated>
+  <updated>2022-01-14T12:29:39.222Z</updated>
   <id>http://bjlxb.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>APP测试三</title>
+    <link href="http://bjlxb.github.io/2022/01/13/APP%E6%B5%8B%E8%AF%95%E4%B8%89/"/>
+    <id>http://bjlxb.github.io/2022/01/13/APP测试三/</id>
+    <published>2022-01-13T13:31:03.000Z</published>
+    <updated>2022-01-14T12:29:39.222Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;移动端自动化&lt;br&gt;
+    
+    </summary>
+    
+      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>APP测试二</title>
@@ -393,26 +413,6 @@
     
     
       <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>axios传递数组参数の坑</title>
-    <link href="http://bjlxb.github.io/2021/05/11/axios%E4%BC%A0%E9%80%92%E6%95%B0%E7%BB%84%E5%8F%82%E6%95%B0%E3%81%AE%E5%9D%91/"/>
-    <id>http://bjlxb.github.io/2021/05/11/axios传递数组参数の坑/</id>
-    <published>2021-05-11T12:54:10.000Z</published>
-    <updated>2021-11-15T13:04:53.541Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;使用axios发送请求时，当参数中有数组，参数的键值会带上[]。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="前端" scheme="http://bjlxb.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-      <category term="前端" scheme="http://bjlxb.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
