@@ -6025,6 +6025,7 @@ https://github.com/caoxinyu/RedisClient/tree/OSX
     <title>APP测试三</title>
     <url>/2022/01/13/APP%E6%B5%8B%E8%AF%95%E4%B8%89/</url>
     <content><![CDATA[<p>移动端自动化<br><a id="more"></a></p>
+<h3 id="定位-APP-上的元素"><a href="#定位-APP-上的元素" class="headerlink" title="定位 APP 上的元素"></a>定位 APP 上的元素</h3><h3 id="使用-xpath-定位兄弟元素"><a href="#使用-xpath-定位兄弟元素" class="headerlink" title="使用 xpath 定位兄弟元素"></a>使用 xpath 定位兄弟元素</h3><h3 id="“-contains-text-’登录’-”"><a href="#“-contains-text-’登录’-”" class="headerlink" title="“//*[contains(@text,’登录’)]”"></a>“//*[contains(@text,’登录’)]”</h3><p>定位第一个元素 text 属性包含登录的元素</p>
 ]]></content>
       <categories>
         <category>测试</category>
