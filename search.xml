@@ -6738,8 +6738,9 @@ https://github.com/caoxinyu/RedisClient/tree/OSX
   <entry>
     <title>管理工具使用</title>
     <url>/2022/01/19/%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<a id="more"></a>
-<p><img src="/image/"></p>
+    <content><![CDATA[<p>测试中常用的管理工具。<br><a id="more"></a></p>
+<h3 id="常用的软件项目管理工具"><a href="#常用的软件项目管理工具" class="headerlink" title="常用的软件项目管理工具"></a>常用的软件项目管理工具</h3><p>testlink，QC，mantis，禅道，TAPD，JIRA</p>
+<h3 id="常用的Bug管理或者用例管理工具的工作流程"><a href="#常用的Bug管理或者用例管理工具的工作流程" class="headerlink" title="常用的Bug管理或者用例管理工具的工作流程?"></a>常用的Bug管理或者用例管理工具的工作流程?</h3><p>常用:testlink，QC，mantis，禅道，TAPD，JIRA 。<br>TAPD:产品创建(需求，计划，模块)–&gt;项目创建(PM 排期、任务分解)–&gt;研发(编码、单元 测试等)–&gt;测试(测 试计划，用例，执行，bug，报告等)。</p>
 ]]></content>
       <categories>
         <category>测试</category>
