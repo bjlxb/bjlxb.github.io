@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bjlxb.github.io/"/>
-  <updated>2022-02-10T08:50:35.713Z</updated>
+  <updated>2022-02-11T09:04:18.329Z</updated>
   <id>http://bjlxb.github.io/</id>
   
   <author>
@@ -17,21 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>mysql时间相减</title>
+    <link href="http://bjlxb.github.io/2022/02/11/mysql%E6%97%B6%E9%97%B4%E7%9B%B8%E5%87%8F/"/>
+    <id>http://bjlxb.github.io/2022/02/11/mysql时间相减/</id>
+    <published>2022-02-11T09:01:59.000Z</published>
+    <updated>2022-02-11T09:04:18.329Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;工作中遇到需要查询时间相减的数据&lt;br&gt;
+    
+    </summary>
+    
+      <category term="DB" scheme="http://bjlxb.github.io/categories/DB/"/>
+    
+    
+      <category term="DB" scheme="http://bjlxb.github.io/tags/DB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>测试python基础三</title>
     <link href="http://bjlxb.github.io/2022/02/10/%E6%B5%8B%E8%AF%95python%E5%9F%BA%E7%A1%80%E4%B8%89/"/>
     <id>http://bjlxb.github.io/2022/02/10/测试python基础三/</id>
     <published>2022-02-10T08:50:10.000Z</published>
-    <updated>2022-02-10T08:50:35.713Z</updated>
+    <updated>2022-02-11T02:46:31.851Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;a
-        
-      
+      &lt;p&gt;测试面试中需要简单编程题&lt;br&gt;
     
     </summary>
     
@@ -392,26 +406,6 @@
     <summary type="html">
     
       &lt;p&gt;测试基础相关的学习笔记。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试学习笔记一</title>
-    <link href="http://bjlxb.github.io/2021/11/16/%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/"/>
-    <id>http://bjlxb.github.io/2021/11/16/测试学习笔记一/</id>
-    <published>2021-11-16T12:42:23.000Z</published>
-    <updated>2021-11-18T14:12:25.817Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;非技术面的常见问题和参考答案。&lt;br&gt;
     
     </summary>
     
