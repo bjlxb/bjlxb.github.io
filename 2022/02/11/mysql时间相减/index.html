@@ -20,12 +20,10 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="工作中遇到需要查询时间相减的数据">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://bjlxb.github.io/image/">
-<meta property="og:updated_time" content="2022-02-11T09:04:18.329Z">
+<meta property="og:updated_time" content="2022-02-15T06:49:23.135Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql时间相减">
 <meta name="twitter:description" content="工作中遇到需要查询时间相减的数据">
-<meta name="twitter:image" content="http://bjlxb.github.io/image/">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -97,8 +95,10 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p>工作中遇到需要查询时间相减的数据<br><a id="more"></a></p>
-<p><img src="/image/"></p>
+        <p>工作中遇到需要查询时间相减的数据<br><a id="more"></a><br>MySQL中时间不能直接相减，如果日、分、时不同，相减结果是错误的。</p>
+<p>mysql的时间相减是做了一个隐式转换操作，将时间转换为整数，但不是用unix_timestamp进行转换，而是直接把年月日时分秒拼起来，如2022-02-15 13:59:59 直接转换为20220215135959，由于时间不是十进制，所以最后得到的结果没有意义。</p>
+<p>时间相减的三种解决方案：<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">time_to_sec(timediff(t2, t1)), -- t2-t1</span><br><span class="line">timestampdiff(second, t1, t2), -- t2-t1</span><br><span class="line">unix_timestamp(t2) - unix_timestamp(t1) -- t2-t1</span><br></pre></td></tr></table></figure></div></p>
+<p>例：<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SELECT create_date, verify_time, time_to_sec(timediff(verify_time, create_date)), timestampdiff(second, create_date, verify_time),unix_timestamp(verify_time) - unix_timestamp(create_date) </span><br><span class="line">FROM order</span><br></pre></td></tr></table></figure></div></p>
 
       
     </div>
@@ -112,6 +112,15 @@
     
 <nav id="article-nav">
   <div class="article-nav-block">
+    
+      <a href="/2022/02/15/测试python中列表/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            测试python中列表
+          
+        </div>
+      </a>
     
   </div>
   <div class="article-nav-block">
@@ -208,6 +217,10 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
+            <a href="/2022/02/15/测试python中列表/">测试python中列表</a>
+          </li>
+        
+          <li>
             <a href="/2022/02/11/mysql时间相减/">mysql时间相减</a>
           </li>
         
@@ -221,10 +234,6 @@ gitment.render('gitmentContainer')
         
           <li>
             <a href="/2022/01/24/测试基础算法一/">测试基础算法一</a>
-          </li>
-        
-          <li>
-            <a href="/2022/01/19/管理工具使用/">管理工具使用</a>
           </li>
         
       </ul>
