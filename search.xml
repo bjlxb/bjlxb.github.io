@@ -5655,18 +5655,6 @@ scoop bucket add dodorz https://github.com/dodorz/scoop-bucket
       </tags>
   </entry>
   <entry>
-    <title>测试python中元组</title>
-    <url>/2022/02/18/%E6%B5%8B%E8%AF%95python%E4%B8%AD%E5%85%83%E7%BB%84/</url>
-    <content><![CDATA[<p>复习python中元组相关内容<br><a id="more"></a></p>
-]]></content>
-      <categories>
-        <category>测试</category>
-      </categories>
-      <tags>
-        <tag>测试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>测试python中列表</title>
     <url>/2022/02/15/%E6%B5%8B%E8%AF%95python%E4%B8%AD%E5%88%97%E8%A1%A8/</url>
     <content><![CDATA[<p>记录一下python列表的常用方法<br><a id="more"></a></p>
@@ -7053,6 +7041,24 @@ scoop bucket add dodorz https://github.com/dodorz/scoop-bucket
     <content><![CDATA[<p>温习Selenium相关知识<br><a id="more"></a></p>
 <h3 id="Selenium-定位元素方法"><a href="#Selenium-定位元素方法" class="headerlink" title="Selenium 定位元素方法"></a>Selenium 定位元素方法</h3><p>1、id 定位<br>2、name 定位<br>3、class_name<br>4、tag_name<br>5、link_text<br>6、partial_link_text<br>7、xpath<br>8、css<br>当定位一个元素是，如果存在 ID 属性值时，我们可以优先考虑 ID 定位，当没有 ID，有 name 属性值和 class 属 性值时也可以采用 name 和 class_name 定位。<br>当次能确定该元素的标签为页面唯一时，可以采用 tag_name 定 位，一般来说采用 link_text 定位的方法比较少。<br>如果 ID ，name，class_name 单个定位不了，可以采用 css 和 xpath 定位。</p>
 ]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试python中元组和集合</title>
+    <url>/2022/02/18/%E6%B5%8B%E8%AF%95python%E4%B8%AD%E5%85%83%E7%BB%84%E5%92%8C%E9%9B%86%E5%90%88/</url>
+    <content><![CDATA[<p>复习python中元组和集合相关内容<br><a id="more"></a></p>
+<h3 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h3><p>tuple: 元组，元组将多样的对象集合到一起，不能修改，通过索引进行查找，使用括号”()”。<br>应用场景:把一些 数据当做一个整体去使用，不能修改。<br>用法和列表一样，不能使用修改相关方法。</p>
+<h3 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h3><p>set: set 集合，在 Python 中的书写方式的{}，集合与之前列表、元组类似，可以存储多个数据，但是这些数据 是不重复的。<br>集合对象还支持 union(联合), intersection(交), difference(差)和 ysmmetric_difference(对称差集)等数学 运算。<br>应用场景:集合经常用于列表的去重操作。</p>
+<h3 id="去除列表中的重复元素"><a href="#去除列表中的重复元素" class="headerlink" title="去除列表中的重复元素"></a>去除列表中的重复元素</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="code"><pre><span class="line">a = [<span class="number">11</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">33</span>, <span class="number">44</span>, <span class="number">22</span>, <span class="number">55</span>] </span><br><span class="line">print(set(a))</span><br><span class="line"><span class="comment"># &#123;11, 22, 33, 44, 55&#125;</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="交集-共有的部分"><a href="#交集-共有的部分" class="headerlink" title="交集:共有的部分"></a>交集:共有的部分</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="code"><pre><span class="line">a = &#123;<span class="number">11</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">44</span>, <span class="number">55</span>&#125; </span><br><span class="line">b = &#123;<span class="number">22</span>, <span class="number">44</span>, <span class="number">55</span>, <span class="number">66</span>, <span class="number">77</span>&#125; </span><br><span class="line">print(a&amp;b)</span><br><span class="line"><span class="comment"># &#123;22, 44, 55&#125;</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="并集-总共的部分"><a href="#并集-总共的部分" class="headerlink" title="并集:总共的部分"></a>并集:总共的部分</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="code"><pre><span class="line">a = &#123;<span class="number">11</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">44</span>, <span class="number">55</span>&#125;</span><br><span class="line">b = &#123;<span class="number">22</span>, <span class="number">44</span>, <span class="number">55</span>, <span class="number">66</span>, <span class="number">77</span>&#125;</span><br><span class="line">print(a | b)</span><br><span class="line"><span class="comment"># &#123;11, 22, 33, 44, 55, 66, 77&#125;</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="差集-另一个集合中没有的部分"><a href="#差集-另一个集合中没有的部分" class="headerlink" title="差集:另一个集合中没有的部分"></a>差集:另一个集合中没有的部分</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="code"><pre><span class="line">a = &#123;<span class="number">11</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">44</span>, <span class="number">55</span>&#125; </span><br><span class="line">b = &#123;<span class="number">22</span>, <span class="number">44</span>, <span class="number">55</span>, <span class="number">66</span>, <span class="number">77</span>&#125; </span><br><span class="line">print(b - a)</span><br><span class="line"><span class="comment"># &#123;66, 77&#125;</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="对称差集-在-a-或-b-中，但不会同时出现在二者中"><a href="#对称差集-在-a-或-b-中，但不会同时出现在二者中" class="headerlink" title="对称差集(在 a 或 b 中，但不会同时出现在二者中)"></a>对称差集(在 a 或 b 中，但不会同时出现在二者中)</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="code"><pre><span class="line">a = &#123;<span class="number">11</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">44</span>, <span class="number">55</span>&#125; </span><br><span class="line">b = &#123;<span class="number">22</span>, <span class="number">44</span>, <span class="number">55</span>, <span class="number">66</span>, <span class="number">77</span>&#125; </span><br><span class="line">print(a ^ b)</span><br><span class="line"><span class="comment"># &#123;11, 33, 66, 77&#125;</span></span><br></pre></td></tr></table></figure></div>]]></content>
       <categories>
         <category>测试</category>
       </categories>

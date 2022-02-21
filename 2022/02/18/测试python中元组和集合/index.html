@@ -5,25 +5,25 @@
   
 
   
-  <title>测试python中元组 | 个人小站</title>
+  <title>测试python中元组和集合 | 个人小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   <meta name="keywords" content="个人小站，记录一些日常使用过的知识，目前主要为python，Django，Flask，小程序等！">
   
-  <meta name="description" content="复习python中元组相关内容">
+  <meta name="description" content="复习python中元组和集合相关内容">
 <meta name="keywords" content="测试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="测试python中元组">
-<meta property="og:url" content="http://bjlxb.github.io/2022/02/18/测试python中元组/index.html">
+<meta property="og:title" content="测试python中元组和集合">
+<meta property="og:url" content="http://bjlxb.github.io/2022/02/18/测试python中元组和集合/index.html">
 <meta property="og:site_name" content="个人小站">
-<meta property="og:description" content="复习python中元组相关内容">
+<meta property="og:description" content="复习python中元组和集合相关内容">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-02-19T07:23:55.381Z">
+<meta property="og:updated_time" content="2022-02-21T07:12:58.450Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="测试python中元组">
-<meta name="twitter:description" content="复习python中元组相关内容">
+<meta name="twitter:title" content="测试python中元组和集合">
+<meta name="twitter:description" content="复习python中元组和集合相关内容">
   
     <link rel="alternate" href="/atom.xml" title="个人小站" type="application/atom+xml">
   
@@ -60,20 +60,20 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="photo-测试python中元组" class="article global-container article-type-photo" itemscope itemprop="blogPost">
+        <section id="main"><article id="photo-测试python中元组和集合" class="article global-container article-type-photo" itemscope itemprop="blogPost">
   
     <header class="article-header">
       
   
     <h1 class="article-title" itemprop="name">
-      测试python中元组
+      测试python中元组和集合
     </h1>
   
 
     </header>
   
   <div class="article-meta">
-    <a href="/2022/02/18/测试python中元组/" class="article-date">
+    <a href="/2022/02/18/测试python中元组和集合/" class="article-date">
   <time datetime="2022-02-18T03:23:16.000Z" itemprop="datePublished">2022-02-18</time>
 </a>
     
@@ -95,8 +95,14 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p>复习python中元组相关内容<br><a id="more"></a></p>
-
+        <p>复习python中元组和集合相关内容<br><a id="more"></a></p>
+<h3 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h3><p>tuple: 元组，元组将多样的对象集合到一起，不能修改，通过索引进行查找，使用括号”()”。<br>应用场景:把一些 数据当做一个整体去使用，不能修改。<br>用法和列表一样，不能使用修改相关方法。</p>
+<h3 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h3><p>set: set 集合，在 Python 中的书写方式的{}，集合与之前列表、元组类似，可以存储多个数据，但是这些数据 是不重复的。<br>集合对象还支持 union(联合), intersection(交), difference(差)和 ysmmetric_difference(对称差集)等数学 运算。<br>应用场景:集合经常用于列表的去重操作。</p>
+<h3 id="去除列表中的重复元素"><a href="#去除列表中的重复元素" class="headerlink" title="去除列表中的重复元素"></a>去除列表中的重复元素</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">11</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">33</span>, <span class="number">44</span>, <span class="number">22</span>, <span class="number">55</span>] </span><br><span class="line">print(set(a))</span><br><span class="line"><span class="comment"># &#123;11, 22, 33, 44, 55&#125;</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="交集-共有的部分"><a href="#交集-共有的部分" class="headerlink" title="交集:共有的部分"></a>交集:共有的部分</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="number">11</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">44</span>, <span class="number">55</span>&#125; </span><br><span class="line">b = &#123;<span class="number">22</span>, <span class="number">44</span>, <span class="number">55</span>, <span class="number">66</span>, <span class="number">77</span>&#125; </span><br><span class="line">print(a&amp;b)</span><br><span class="line"><span class="comment"># &#123;22, 44, 55&#125;</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="并集-总共的部分"><a href="#并集-总共的部分" class="headerlink" title="并集:总共的部分"></a>并集:总共的部分</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="number">11</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">44</span>, <span class="number">55</span>&#125;</span><br><span class="line">b = &#123;<span class="number">22</span>, <span class="number">44</span>, <span class="number">55</span>, <span class="number">66</span>, <span class="number">77</span>&#125;</span><br><span class="line">print(a | b)</span><br><span class="line"><span class="comment"># &#123;11, 22, 33, 44, 55, 66, 77&#125;</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="差集-另一个集合中没有的部分"><a href="#差集-另一个集合中没有的部分" class="headerlink" title="差集:另一个集合中没有的部分"></a>差集:另一个集合中没有的部分</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="number">11</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">44</span>, <span class="number">55</span>&#125; </span><br><span class="line">b = &#123;<span class="number">22</span>, <span class="number">44</span>, <span class="number">55</span>, <span class="number">66</span>, <span class="number">77</span>&#125; </span><br><span class="line">print(b - a)</span><br><span class="line"><span class="comment"># &#123;66, 77&#125;</span></span><br></pre></td></tr></table></figure></div>
+<h3 id="对称差集-在-a-或-b-中，但不会同时出现在二者中"><a href="#对称差集-在-a-或-b-中，但不会同时出现在二者中" class="headerlink" title="对称差集(在 a 或 b 中，但不会同时出现在二者中)"></a>对称差集(在 a 或 b 中，但不会同时出现在二者中)</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="number">11</span>, <span class="number">22</span>, <span class="number">33</span>, <span class="number">44</span>, <span class="number">55</span>&#125; </span><br><span class="line">b = &#123;<span class="number">22</span>, <span class="number">44</span>, <span class="number">55</span>, <span class="number">66</span>, <span class="number">77</span>&#125; </span><br><span class="line">print(a ^ b)</span><br><span class="line"><span class="comment"># &#123;11, 33, 66, 77&#125;</span></span><br></pre></td></tr></table></figure></div>
       
     </div>
     
@@ -205,7 +211,7 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
-            <a href="/2022/02/18/测试python中元组/">测试python中元组</a>
+            <a href="/2022/02/18/测试python中元组和集合/">测试python中元组和集合</a>
           </li>
         
           <li>

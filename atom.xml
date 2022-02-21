@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bjlxb.github.io/"/>
-  <updated>2022-02-19T07:23:55.381Z</updated>
+  <updated>2022-02-21T07:12:58.450Z</updated>
   <id>http://bjlxb.github.io/</id>
   
   <author>
@@ -17,15 +17,15 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>测试python中元组</title>
-    <link href="http://bjlxb.github.io/2022/02/18/%E6%B5%8B%E8%AF%95python%E4%B8%AD%E5%85%83%E7%BB%84/"/>
-    <id>http://bjlxb.github.io/2022/02/18/测试python中元组/</id>
+    <title>测试python中元组和集合</title>
+    <link href="http://bjlxb.github.io/2022/02/18/%E6%B5%8B%E8%AF%95python%E4%B8%AD%E5%85%83%E7%BB%84%E5%92%8C%E9%9B%86%E5%90%88/"/>
+    <id>http://bjlxb.github.io/2022/02/18/测试python中元组和集合/</id>
     <published>2022-02-18T03:23:16.000Z</published>
-    <updated>2022-02-19T07:23:55.381Z</updated>
+    <updated>2022-02-21T07:12:58.450Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;复习python中元组相关内容&lt;br&gt;
+      &lt;p&gt;复习python中元组和集合相关内容&lt;br&gt;
     
     </summary>
     
