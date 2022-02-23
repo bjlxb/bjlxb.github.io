@@ -6154,7 +6154,11 @@ https://github.com/caoxinyu/RedisClient/tree/OSX
   <entry>
     <title>测试-python文件操作</title>
     <url>/2022/02/22/%E6%B5%8B%E8%AF%95-python%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</url>
-    <content><![CDATA[<a id="more"></a>
+    <content><![CDATA[<p>python中文件操作相关<br><a id="more"></a></p>
+<h3 id="4G内存怎么读取一个5G的数据"><a href="#4G内存怎么读取一个5G的数据" class="headerlink" title="4G内存怎么读取一个5G的数据"></a>4G内存怎么读取一个5G的数据</h3><p>方法一:<br>可以通过生成器，分多次读取，每次读取数量相对少的数据(比如 500MB)进行处理，处理结束后在读取后面的500MB的数据。<br>方法二:<br>可以通过linux命令split切割成小文件，然后再对数据进行处理，此方法效率比较高。<br>可以按照行数切割，可以按照文件大小切割。</p>
+<h3 id="处理一个大小为-10G-的文件，但是内存只有-4G，如果在只修改get-lines-函数而其他代码保持不变的情况下，实现方案。有什么问题需要考虑。"><a href="#处理一个大小为-10G-的文件，但是内存只有-4G，如果在只修改get-lines-函数而其他代码保持不变的情况下，实现方案。有什么问题需要考虑。" class="headerlink" title="处理一个大小为 10G 的文件，但是内存只有 4G，如果在只修改get_lines 函数而其他代码保持不变的情况下，实现方案。有什么问题需要考虑。"></a>处理一个大小为 10G 的文件，但是内存只有 4G，如果在只修改get_lines 函数而其他代码保持不变的情况下，实现方案。有什么问题需要考虑。</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_lines</span><span class="params">()</span>:</span></span><br><span class="line">	l = []</span><br><span class="line">	<span class="keyword">with</span> open(‘file.txt’，’rb’) <span class="keyword">as</span> f:</span><br><span class="line">		data = f.readlines(<span class="number">60000</span>)</span><br><span class="line">		l.append(data)</span><br><span class="line">		<span class="keyword">yield</span> l</span><br></pre></td></tr></table></figure></div>
+<p>  要考虑到的问题有:内存只有 4G 无法一次性读入 10G 的文件，需要分批读入。<br>  分批读入数据要记录每次读入数据的位置。<br>  分批每次读入数据的大小，太小就会在读取操作上花费过多时间。</p>
+<h3 id="read、readline-和-readlines-的区别"><a href="#read、readline-和-readlines-的区别" class="headerlink" title="read、readline 和 readlines 的区别"></a>read、readline 和 readlines 的区别</h3><p>  read: 读取整个文件。<br>  readline: 读取下一行，使用生成器方法。<br>  readlines: 读取整个文件到一个迭代器以供我们遍历。</p>
 ]]></content>
       <categories>
         <category>测试</category>
