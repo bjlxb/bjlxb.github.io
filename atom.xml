@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bjlxb.github.io/"/>
-  <updated>2022-02-23T13:33:32.426Z</updated>
+  <updated>2022-02-24T13:26:45.884Z</updated>
   <id>http://bjlxb.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试-python内建函数</title>
+    <link href="http://bjlxb.github.io/2022/02/24/%E6%B5%8B%E8%AF%95-python%E5%86%85%E5%BB%BA%E5%87%BD%E6%95%B0/"/>
+    <id>http://bjlxb.github.io/2022/02/24/测试-python内建函数/</id>
+    <published>2022-02-24T13:22:57.000Z</published>
+    <updated>2022-02-24T13:26:45.884Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;学习内建函数&lt;br&gt;
+    
+    </summary>
+    
+      <category term="python" scheme="http://bjlxb.github.io/categories/python/"/>
+    
+    
+      <category term="python" scheme="http://bjlxb.github.io/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>测试-python文件操作</title>
@@ -386,26 +406,6 @@
     <summary type="html">
     
       &lt;p&gt;网页测试用例&lt;br&gt;
-    
-    </summary>
-    
-      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试学习笔记五</title>
-    <link href="http://bjlxb.github.io/2021/11/29/%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%BA%94/"/>
-    <id>http://bjlxb.github.io/2021/11/29/测试学习笔记五/</id>
-    <published>2021-11-29T07:24:20.000Z</published>
-    <updated>2021-12-01T14:40:50.054Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;常见的面试题&lt;br&gt;
     
     </summary>
     
