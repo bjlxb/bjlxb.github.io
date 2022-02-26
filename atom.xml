@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bjlxb.github.io/"/>
-  <updated>2022-02-25T13:39:12.983Z</updated>
+  <updated>2022-02-26T09:15:18.140Z</updated>
   <id>http://bjlxb.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试-python函数</title>
+    <link href="http://bjlxb.github.io/2022/02/26/%E6%B5%8B%E8%AF%95-python%E5%87%BD%E6%95%B0/"/>
+    <id>http://bjlxb.github.io/2022/02/26/测试-python函数/</id>
+    <published>2022-02-26T09:07:16.000Z</published>
+    <updated>2022-02-26T09:15:18.140Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;python中函数相关内容&lt;br&gt;
+    
+    </summary>
+    
+      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>测试-python内建函数</title>
@@ -386,26 +406,6 @@
     <summary type="html">
     
       &lt;p&gt;复习Linux基础知识。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试学习笔记六</title>
-    <link href="http://bjlxb.github.io/2021/11/30/%E6%B5%8B%E8%AF%95%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%85%AD/"/>
-    <id>http://bjlxb.github.io/2021/11/30/测试学习笔记六/</id>
-    <published>2021-11-30T13:44:22.000Z</published>
-    <updated>2021-12-01T14:40:40.124Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;网页测试用例&lt;br&gt;
     
     </summary>
     
