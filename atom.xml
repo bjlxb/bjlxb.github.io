@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bjlxb.github.io/"/>
-  <updated>2022-02-26T09:15:18.140Z</updated>
+  <updated>2022-02-28T12:14:28.643Z</updated>
   <id>http://bjlxb.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试-Lambda函数</title>
+    <link href="http://bjlxb.github.io/2022/02/28/%E6%B5%8B%E8%AF%95-Lambda%E5%87%BD%E6%95%B0/"/>
+    <id>http://bjlxb.github.io/2022/02/28/测试-Lambda函数/</id>
+    <published>2022-02-28T11:57:01.000Z</published>
+    <updated>2022-02-28T12:14:28.643Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;复习python中Lambda函数相关知识&lt;br&gt;
+    
+    </summary>
+    
+      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>测试-python函数</title>
@@ -386,26 +406,6 @@
     <summary type="html">
     
       &lt;p&gt;复习一下Mysql数据库基础知识&lt;br&gt;
-    
-    </summary>
-    
-      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux基础学习一</title>
-    <link href="http://bjlxb.github.io/2021/12/02/Linux%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E4%B8%80/"/>
-    <id>http://bjlxb.github.io/2021/12/02/Linux基础学习一/</id>
-    <published>2021-12-02T02:50:45.000Z</published>
-    <updated>2021-12-06T11:24:57.576Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;复习Linux基础知识。&lt;br&gt;
     
     </summary>
     
