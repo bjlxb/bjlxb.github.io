@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bjlxb.github.io/"/>
-  <updated>2022-02-28T12:14:28.643Z</updated>
+  <updated>2022-03-01T12:20:48.816Z</updated>
   <id>http://bjlxb.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试-python面向对象</title>
+    <link href="http://bjlxb.github.io/2022/03/01/%E6%B5%8B%E8%AF%95-python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://bjlxb.github.io/2022/03/01/测试-python面向对象/</id>
+    <published>2022-03-01T02:02:16.000Z</published>
+    <updated>2022-03-01T12:20:48.816Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;学习一下python面向对象相关知识。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>测试-Lambda函数</title>
@@ -386,26 +406,6 @@
     <summary type="html">
     
       &lt;p&gt;记录Mysql数据库基础&lt;br&gt;
-    
-    </summary>
-    
-      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mysql数据库基础一</title>
-    <link href="http://bjlxb.github.io/2021/12/06/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E4%B8%80/"/>
-    <id>http://bjlxb.github.io/2021/12/06/Mysql数据库基础一/</id>
-    <published>2021-12-06T13:07:45.000Z</published>
-    <updated>2021-12-07T07:47:54.517Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;复习一下Mysql数据库基础知识&lt;br&gt;
     
     </summary>
     
