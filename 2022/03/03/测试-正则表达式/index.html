@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="复习正则表达式相关内容">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-03-03T13:59:18.301Z">
+<meta property="og:updated_time" content="2022-03-06T06:47:15.472Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="测试-正则表达式">
 <meta name="twitter:description" content="复习正则表达式相关内容">
@@ -96,6 +96,9 @@
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
         <p>复习正则表达式相关内容<br><a id="more"></a></p>
+<h3 id="Python中match与search的区别"><a href="#Python中match与search的区别" class="headerlink" title="Python中match与search的区别"></a>Python中match与search的区别</h3><p>match()函数只检测RE是不是在string的开始位置匹配，search()会扫描整个string查找匹配;也就是说match()只有在0位置匹配成功的话才有返回，如果不是开始位置匹配成功的话，match()就返回none。</p>
+<h3 id="Python字符串查找和替换"><a href="#Python字符串查找和替换" class="headerlink" title="Python字符串查找和替换"></a>Python字符串查找和替换</h3><p>re.findall(r’目的字符串’，’原有字符串’) #查询<br>re.findall(r’cast’，’itcast.cn’)[0]<br>re.sub(r‘要替换原字符’，’要替换新字符’，’原始字符串’)<br>re.sub(r’cast’，’heima’，’itcast.cn’)</p>
+<h3 id="用Python匹配HTML-g-tag-的时候，-lt-gt-和-lt-gt-区别"><a href="#用Python匹配HTML-g-tag-的时候，-lt-gt-和-lt-gt-区别" class="headerlink" title="用Python匹配HTML g tag 的时候，&lt;.&gt; 和 &lt;.?&gt; 区别"></a>用Python匹配HTML g tag 的时候，&lt;.<em>&gt; 和 &lt;.</em>?&gt; 区别</h3><p>&lt;.<em>&gt;是贪婪匹配，会从第一个“&lt;”开始匹配，直到最后一个“&gt;”中间所有的字符都会匹配到，中间可能会包含”&lt;&gt;”。<br>&lt;.</em>?&gt;是非贪婪匹配，从第一个“&lt;”开始往后，遇到第一个“&gt;”结束匹配，这中间的字符串都会匹配到，但是不会有“&lt;&gt;”。</p>
 
       
     </div>
