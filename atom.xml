@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bjlxb.github.io/"/>
-  <updated>2022-03-06T06:47:15.472Z</updated>
+  <updated>2022-03-07T07:45:37.403Z</updated>
   <id>http://bjlxb.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试-python模块和包</title>
+    <link href="http://bjlxb.github.io/2022/03/07/%E6%B5%8B%E8%AF%95-python%E6%A8%A1%E5%9D%97%E5%92%8C%E5%8C%85/"/>
+    <id>http://bjlxb.github.io/2022/03/07/测试-python模块和包/</id>
+    <published>2022-03-07T06:59:59.000Z</published>
+    <updated>2022-03-07T07:45:37.403Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;学习python中模块和包的概念&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>测试-python异常</title>
+    <link href="http://bjlxb.github.io/2022/03/06/%E6%B5%8B%E8%AF%95-python%E5%BC%82%E5%B8%B8/"/>
+    <id>http://bjlxb.github.io/2022/03/06/测试-python异常/</id>
+    <published>2022-03-06T10:13:10.000Z</published>
+    <updated>2022-03-06T10:20:43.065Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;python中异常的处理&lt;br&gt;
+    
+    </summary>
+    
+      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>测试-正则表达式</title>
@@ -366,46 +402,6 @@
     <summary type="html">
     
       &lt;p&gt;温习Selenium相关知识&lt;br&gt;
-    
-    </summary>
-    
-      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>服务端测试一</title>
-    <link href="http://bjlxb.github.io/2021/12/19/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B5%8B%E8%AF%95%E4%B8%80/"/>
-    <id>http://bjlxb.github.io/2021/12/19/服务端测试一/</id>
-    <published>2021-12-19T06:25:40.000Z</published>
-    <updated>2021-12-27T14:49:37.155Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;服务端相关测试笔记&lt;br&gt;
-    
-    </summary>
-    
-      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mysql数据库基础三</title>
-    <link href="http://bjlxb.github.io/2021/12/14/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E4%B8%89/"/>
-    <id>http://bjlxb.github.io/2021/12/14/Mysql数据库基础三/</id>
-    <published>2021-12-14T13:15:06.000Z</published>
-    <updated>2021-12-16T14:51:07.812Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;sql实战训练&lt;br&gt;
     
     </summary>
     
