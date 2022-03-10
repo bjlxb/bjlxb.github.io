@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="学习python中模块和包的概念">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-03-09T14:13:34.576Z">
+<meta property="og:updated_time" content="2022-03-10T06:38:11.373Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="测试-python模块和包">
 <meta name="twitter:description" content="学习python中模块和包的概念">
@@ -92,6 +92,14 @@
         <p>学习python中模块和包的概念<br><a id="more"></a></p>
 <h3 id="Python常用的标准库"><a href="#Python常用的标准库" class="headerlink" title="Python常用的标准库"></a>Python常用的标准库</h3><p>os 操作系统，time 时间，random 随机，pymysql 连接数据库，threading 线程，multiprocessing 进程，queue 队列。<br>第三方库:django 和 flask 也是第三方库，requests，virtualenv，selenium，scrapy，xadmin，celery， re，hashlib，md5。<br>常用的科学计算库(如 Numpy，Scipy，Pandas)。</p>
 <h3 id="赋值、浅拷贝和深拷贝"><a href="#赋值、浅拷贝和深拷贝" class="headerlink" title="赋值、浅拷贝和深拷贝"></a>赋值、浅拷贝和深拷贝</h3><p>一、 赋值在Python中，对象的赋值就是简单的对象引用，这点和 C++不同，如下所示:<br>a = [1,2,”hello”,[‘python’, ‘C++’]]<br>b= a<br>在上述情况下，a和b是一样的，他们指向同一片内存，b不过是a的别名，是引用。<br>我们可以使用 b is a 去判断，返回 True，表明他们地址相同，内容相同，也可以使用id()函数来查看两个列 表的地址是否相同。<br>赋值操作(包括对象作为参数、返回值)不会开辟新的内存空间，它只是复制了对象的引用。也就是 说除了b这个名字之外，没有其他的内存开销。修改了a，也就影响了b，同理，修改了b，也就影响了a。<br>二、 浅拷贝(shallow copy)<br>浅拷贝会创建新对象，其内容非原对象本身的引用，而是原对象内第一层对象的引用。<br>浅拷贝有三种形式:切片操作、工厂函数、copy模块中的copy函数。<br>比如上述的列表a;<br>切片操作:b = a[:] 或者 b = [x for x in a];<br>工厂函数:b = list(a);<br>copy 函数:b = copy.copy(a);<br>浅拷贝产生的列表b不再是列表a了，使用is判断可以发现他们不是同一个对象，使用id查看，他们也不指向同一片内存空间。但是当我们使用 id(x) for x in a 和 id(x) for x in b 来查看a和b中元素的地址时，可以看到二者包含的元素的地址是相同的。<br>在这种情况下，列表a和b是不同的对象，修改列表b理论上不会影响到列表a。 但是要注意的是，浅拷贝之所以称之为浅拷贝，是它仅仅只拷贝了一层，在列表a中有一个嵌套的list，如果我们修改了它，情况就不一样了。<br>比如:a[3].append(‘java’)。查看列表b，会发现列表b也发生了变化，这是因为，我们修改了嵌套的list，修改外层元素，会修改它的引用，让它们指向别的位置，修改嵌套列表中的元素，列表的地址并未发生变化，指向的都是用一个位置。<br>三、深拷贝(deep copy)<br>深拷贝只有一种形式，copy模块中的deepcopy()函数。 深拷贝和浅拷贝对应，深拷贝拷贝了对象的所有元素，包括多层嵌套的元素。因此，它的时间和空间开销要高。<br>同样的对列表a，如果使用b = copy.deepcopy(a)，再修改列表b将不会影响到列表a，即使嵌套的列表具有更深的层次，也不会产生任何影响，因为深拷贝拷贝出来的对象根本就是一个全新的对象，不再与原来的对象有任何的关联。<br>四、拷贝的注意点<br>对于非容器类型，如数字、字符，以及其他的“原子”类型，没有拷贝一说，产生的都是原对象的引用。 如果元组变量值包含原子类型对象，即使采用了深拷贝，也只能得到浅拷贝。</p>
+<h3 id="init-和new区别"><a href="#init-和new区别" class="headerlink" title="init 和new区别"></a><strong>init</strong> 和<strong>new</strong>区别</h3><p>init 在对象创建后，对对象进行初始化。<br>new 是在对象创建之前创建一个对象，并将该对象返回给 init。 </p>
+<h3 id="Python-生成随机数"><a href="#Python-生成随机数" class="headerlink" title="Python 生成随机数"></a>Python 生成随机数</h3><p>在 Python 中用于生成随机数的模块是 random，在使用前需要 import.<br>如下例子可以酌情列举:<br>random.random(): 生成一个 0-1 之间的随机浮点数;<br>random.uniform(a, b): 生成[a,b]之间的浮点数;<br>random.randint(a, b): 生成[a,b]之间的整数;<br>random.randrange(a, b, step): 在指定的集合[a,b)中，以 step 为基数随机取一个数;<br>random.choice(sequence): 从特定序列中随机取一个元素，这里的序列可以是字符串，列表，元组等。</p>
+<h3 id="输入某年某月某日，判断这一天是这一年的第几天"><a href="#输入某年某月某日，判断这一天是这一年的第几天" class="headerlink" title="输入某年某月某日，判断这一天是这一年的第几天"></a>输入某年某月某日，判断这一天是这一年的第几天</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dayofyear</span><span class="params">()</span>:</span></span><br><span class="line">	year = input(<span class="string">"请输入年份:"</span>)</span><br><span class="line">	month = input(<span class="string">"请输入月份:"</span>)</span><br><span class="line">	day = input(<span class="string">"请输入天:"</span>)</span><br><span class="line">	date1 = datetime.date(year=int(year),	month=int(month)，day=int(day)) </span><br><span class="line">	date2 = datetime.date(year=int(year)，month=<span class="number">1</span>，day=<span class="number">1</span>)</span><br><span class="line">	<span class="keyword">return</span> (date1 - date2 + <span class="number">1</span>).days</span><br></pre></td></tr></table></figure></div>
+<h3 id="打乱一个排好序的-list-对象-alist"><a href="#打乱一个排好序的-list-对象-alist" class="headerlink" title="打乱一个排好序的 list 对象 alist?"></a>打乱一个排好序的 list 对象 alist?</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line">random.shuffle(alist)</span><br></pre></td></tr></table></figure></div>
+<h3 id="os-path-和-sys-path"><a href="#os-path-和-sys-path" class="headerlink" title="os.path 和 sys.path"></a>os.path 和 sys.path</h3><p>os.path 主要是用于对系统路径文件的操作。<br>sys.path 主要是对 Python 解释器的系统环境参数的操作<br>(动态的改变 Python 解释器搜索路径)。 </p>
+<h3 id="Python-中的-os-模块常见方法"><a href="#Python-中的-os-模块常见方法" class="headerlink" title="Python 中的 os 模块常见方法"></a>Python 中的 os 模块常见方法</h3><p>os.remove()删除文件<br>os.rename()重命名文件<br>os.walk()生成目录树下的所有文件名<br>os.chdir()改变目录<br>os.mkdir/makedirs 创建目录/多层目录<br>os.rmdir/removedirs 删除目录/多层目录<br>os.listdir()列出指定目录的文件<br>os.getcwd()取得当前工作目录<br>os.chmod()改变目录权限<br>os.path.basename()去掉目录路径，返回文件名<br>os.path.dirname()去掉文件名，返回目录路径<br>os.path.join()将分离的各部分组合成一个路径名<br>os.path.split()返回(dirname(),basename())元组<br>os.path.splitext()(返回 filename,extension)元组<br>os.path.getatime\ctime\mtime 分别返回最近访问、创建、修改时间  os.path.getsize()返回文件大小     os.path.exists()是否存在<br>os.path.isabs()是否为绝对路径<br>os.path.isdir()是否为目录<br>os.path.isfile()是否为文件</p>
+<h3 id="Python-的-sys-模块常用方法"><a href="#Python-的-sys-模块常用方法" class="headerlink" title="Python 的 sys 模块常用方法"></a>Python 的 sys 模块常用方法</h3><p>sys.argv 命令行参数 List，第一个元素是程序本身路径<br>sys.modules.keys() 返回所有已经导入的模块列表<br>sys.exc_info() 获取当前正在处理的异常类,exc_type、exc_value、exc_traceback 当前处理的异常详细信息<br>sys.exit(n) 退出程序，正常退出时 exit(0)<br>sys.hexversion 获取 Python 解释程序的版本值，16进制格式如:0x020403F0<br>sys.version 获取 Python 解释程序的版本信息<br>sys.maxint 最大的 Int 值<br>sys.maxunicode 最大的 Unicode 值<br>sys.modules 返回系统导入的模块字段，key 是模块名，value 是模块<br>sys.path 返回模块的搜索路径，初始化时使用 PYTHONPATH 环境变量的值<br>sys.platform 返回操作系统平台名称<br>sys.stdout 标准输出<br>sys.stdin 标准输入<br>sys.stderr 错误输出<br>sys.exc_clear() 用来清除当前线程所出现的当前的或最近的错误信息<br>sys.exec_prefix 返回平台独立的 python 文件安装的位置<br>sys.byteorder 本地字节规则的指示器，big-endian 平台的值是’big’,little-endian 平台的值是 ‘little’<br>sys.copyright 记录 python 版权相关的东西<br>sys.api_version 解释器的 C 的 API 版本<br>sys.version_info 元组则提供一个更简单的方法来使你的程序具备 Python 版本要求功能</p>
+<h3 id="模块和包"><a href="#模块和包" class="headerlink" title="模块和包"></a>模块和包</h3><p>在 Python 中，模块是搭建程序的一种方式。<br>每一个 Python 代码文件都是一个模块，并可以引用其他的模块，比如对象和属性。<br>一个包含许多 Python 代码的文件夹是一个包。<br>一个包可以包含模块和子文件夹。</p>
 
       
     </div>
@@ -105,6 +113,15 @@
     
 <nav id="article-nav">
   <div class="article-nav-block">
+    
+      <a href="/2022/03/10/测试-python特性/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            测试-python特性
+          
+        </div>
+      </a>
     
   </div>
   <div class="article-nav-block">
@@ -180,7 +197,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/C-C/" style="font-size: 14px;">C/C++</a> <a href="/tags/DB/" style="font-size: 16px;">DB</a> <a href="/tags/Django/" style="font-size: 17px;">Django</a> <a href="/tags/Git/" style="font-size: 12px;">Git</a> <a href="/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/tags/Java/" style="font-size: 11px;">Java</a> <a href="/tags/MAC/" style="font-size: 15px;">MAC</a> <a href="/tags/Python/" style="font-size: 18px;">Python</a> <a href="/tags/Tool/" style="font-size: 19px;">Tool</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/小程序/" style="font-size: 13px;">小程序</a> <a href="/tags/测试/" style="font-size: 19px;">测试</a> <a href="/tags/面试题/" style="font-size: 11px;">面试题</a>
+      <a href="/tags/C-C/" style="font-size: 13.64px;">C/C++</a> <a href="/tags/DB/" style="font-size: 15.45px;">DB</a> <a href="/tags/Django/" style="font-size: 16.36px;">Django</a> <a href="/tags/Git/" style="font-size: 11.82px;">Git</a> <a href="/tags/Golang/" style="font-size: 10px;">Golang</a> <a href="/tags/Java/" style="font-size: 10.91px;">Java</a> <a href="/tags/MAC/" style="font-size: 14.55px;">MAC</a> <a href="/tags/Python/" style="font-size: 17.27px;">Python</a> <a href="/tags/Tool/" style="font-size: 18.18px;">Tool</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/前端/" style="font-size: 20px;">前端</a> <a href="/tags/小程序/" style="font-size: 12.73px;">小程序</a> <a href="/tags/测试/" style="font-size: 19.09px;">测试</a> <a href="/tags/面试题/" style="font-size: 10.91px;">面试题</a>
     </div>
   </div>
 
@@ -201,6 +218,10 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
+            <a href="/2022/03/10/测试-python特性/">测试-python特性</a>
+          </li>
+        
+          <li>
             <a href="/2022/03/07/测试-python模块和包/">测试-python模块和包</a>
           </li>
         
@@ -214,10 +235,6 @@ gitment.render('gitmentContainer')
         
           <li>
             <a href="/2022/03/01/测试-python面向对象/">测试-python面向对象</a>
-          </li>
-        
-          <li>
-            <a href="/2022/02/28/测试-Lambda函数/">测试-Lambda函数</a>
           </li>
         
       </ul>
