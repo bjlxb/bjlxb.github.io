@@ -7148,6 +7148,10 @@ https://github.com/caoxinyu/RedisClient/tree/OSX
     <title>测试-python特性</title>
     <url>/2022/03/10/%E6%B5%8B%E8%AF%95-python%E7%89%B9%E6%80%A7/</url>
     <content><![CDATA[<p>复习一下python的特性<br><a id="more"></a></p>
+<h3 id="Python的语言类型"><a href="#Python的语言类型" class="headerlink" title="Python的语言类型"></a>Python的语言类型</h3><p>  Python 是强类型的动态脚本语言。<br>  强类型:不允许不同类型相加。<br>  动态:不使用显示数据类型声明，且确定一个变量的类型是在第一次给它赋值的时候。<br>  脚本语言:一般也是解释型语言，运行代码只需要一个解释器，不需要编译。</p>
+<h3 id="什么是解释性语言，什么是编译性语言"><a href="#什么是解释性语言，什么是编译性语言" class="headerlink" title="什么是解释性语言，什么是编译性语言"></a>什么是解释性语言，什么是编译性语言</h3><p>  计算机不能直接理解高级语言，只能直接理解机器语言，所以必须要把高级语言翻译成机器语言，计算机才能执行高级语言编写的程序。<br>  解释性语言在运行程序的时候才会进行翻译。<br>  编译型语言写的程序在执行之前，需要一个专门的编译过程，把程序编译成机器语言(可执行文件)。</p>
+<h3 id="Python有日志吗-怎么使用"><a href="#Python有日志吗-怎么使用" class="headerlink" title="Python有日志吗?怎么使用?"></a>Python有日志吗?怎么使用?</h3><p>有日志。<br>Python 自带 logging 模块，调用 logging.basicConfig()方法，配置需要的日志等级和相应的参数， Python 解释器会按照配置的参数生成相应的日志。</p>
+<h3 id="Python类型转换"><a href="#Python类型转换" class="headerlink" title="Python类型转换"></a>Python类型转换</h3><p>  内建函数封装了各种转换函数，可以使用目标类型关键字强制类型转换，进制之间的转换可以用 int(‘str ’, base=’n’)将特定进制的字符串转换为十进制，再用相应的进制转换函数将十进制转换为目标进制。<br>可以使用内置函数直接转换的有:<br>  list—-&gt;tuple tuple(list)<br>  tuple—-&gt;list list(tuple)</p>
 ]]></content>
       <categories>
         <category>测试</category>
