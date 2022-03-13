@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="复习一下python的特性">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-03-11T13:48:29.340Z">
+<meta property="og:updated_time" content="2022-03-13T09:12:55.541Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="测试-python特性">
 <meta name="twitter:description" content="复习一下python的特性">
@@ -96,10 +96,22 @@
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
         <p>复习一下python的特性<br><a id="more"></a></p>
+<h3 id="Python介绍"><a href="#Python介绍" class="headerlink" title="Python介绍"></a>Python介绍</h3><p>Python 是一种编程语言，它有对象、模块、线程、异常处理和自动内存管理，可以加入其他语言的 对比。<br>Python 是一种解释型语言，Python 在代码运行之前不需要解释。<br>Python 是动态类型语言，在声明变量时，不需要说明变量的类型。<br>Python 适合面向对象的编程，因为它支持通过组合与继承的方式定义类。<br>在 Python 语言中，函数是第一类对象。<br>Python 代码编写快，但是运行速度比编译型语言通常要慢。<br>Python 用途广泛，常被用走”胶水语言”，可帮助其他语言和组件改善运行状况。<br>使用 Python，程序员可以专注于算法和数据结构的设计，而不用处理底层的细节。</p>
 <h3 id="Python的语言类型"><a href="#Python的语言类型" class="headerlink" title="Python的语言类型"></a>Python的语言类型</h3><p>  Python 是强类型的动态脚本语言。<br>  强类型:不允许不同类型相加。<br>  动态:不使用显示数据类型声明，且确定一个变量的类型是在第一次给它赋值的时候。<br>  脚本语言:一般也是解释型语言，运行代码只需要一个解释器，不需要编译。</p>
 <h3 id="什么是解释性语言，什么是编译性语言"><a href="#什么是解释性语言，什么是编译性语言" class="headerlink" title="什么是解释性语言，什么是编译性语言"></a>什么是解释性语言，什么是编译性语言</h3><p>  计算机不能直接理解高级语言，只能直接理解机器语言，所以必须要把高级语言翻译成机器语言，计算机才能执行高级语言编写的程序。<br>  解释性语言在运行程序的时候才会进行翻译。<br>  编译型语言写的程序在执行之前，需要一个专门的编译过程，把程序编译成机器语言(可执行文件)。</p>
 <h3 id="Python有日志吗-怎么使用"><a href="#Python有日志吗-怎么使用" class="headerlink" title="Python有日志吗?怎么使用?"></a>Python有日志吗?怎么使用?</h3><p>有日志。<br>Python 自带 logging 模块，调用 logging.basicConfig()方法，配置需要的日志等级和相应的参数， Python 解释器会按照配置的参数生成相应的日志。</p>
 <h3 id="Python类型转换"><a href="#Python类型转换" class="headerlink" title="Python类型转换"></a>Python类型转换</h3><p>  内建函数封装了各种转换函数，可以使用目标类型关键字强制类型转换，进制之间的转换可以用 int(‘str ’, base=’n’)将特定进制的字符串转换为十进制，再用相应的进制转换函数将十进制转换为目标进制。<br>可以使用内置函数直接转换的有:<br>  list—-&gt;tuple tuple(list)<br>  tuple—-&gt;list list(tuple)</p>
+<h3 id="Python作用域"><a href="#Python作用域" class="headerlink" title="Python作用域"></a>Python作用域</h3><p>Python 中，一个变量的作用域总是由在代码中被赋值的地方所决定。当 Python 遇到一个变量的话它会 按照这的顺序进行搜索:<br>本地作用域(Local)—&gt;当前作用域被嵌入的本地作用域(Enclosing locals)—&gt;全局/模块作用域(Global)—&gt;内置作用域(Built-in)。</p>
+<h3 id="Python命名空间"><a href="#Python命名空间" class="headerlink" title="Python命名空间"></a>Python命名空间</h3><p>在 Python 中，所有的名字都存在于一个空间中，它们在该空间中存在和被操作——这就是命名空间。<br>它就好像一个盒子，每一个变量名字都对应装着一个对象。<br>当查询变量的时候，会从该盒子里面寻找相应的对象。</p>
+<h3 id="Python代码规范-PEP8规范"><a href="#Python代码规范-PEP8规范" class="headerlink" title="Python代码规范-PEP8规范"></a>Python代码规范-PEP8规范</h3><ol>
+<li>变量<br>常量:大写加下划线USER_CONSTANT。<br>私有变量: 小写和一个前导下划线 _private_value。<br>Python中不存在私有变量一说，若是遇到需要保护的变量，使用小写和一个前导下划线。但这只是程序员之间的一个约定，用于警告说明这是一个私有变量，外部类不要去访问它。但实际上，外部类还是可以访问到这个变量。<br>内置变量 : 小写，两个前导下划线和两个后置下划线 <strong>class</strong> 两个前导下划线会导致变量在解释期间 被更名。这是为了避免内置变量和其他变量产生冲突。用户定义的变量要严格避免这种风格。以免导致混乱。</li>
+<li>函数和方法<br>总体而言应该使用，小写和下划线。但有些比较老的库使用的是混合大小写，即首单词小写，之后每个 单词第一个字母大写，其余小写。但现在，小写和下划线已成为规范。<br>私有方法 :小写和一个前导下划线这里和私有变量一样，并不是真正的私有访问权限。同时也应该注意一般函数不要使用两个前导下划线 (当遇到两个前导下划线时，Python 的名称改编特性将发挥作用)。<br>特殊方法 :小写和两个前导下划线，两个后置下划线这种风格只应用于特殊函数，比如操作符重载等。<br>函数参数 : 小写和下划线，缺省值等号两边无空格</li>
+<li>类<br>类总是使用驼峰格式命名，即所有单词首字母大写其余字母小写。类名应该简明，精确，并足以从中理 解类所完成的工作。常见的一个方法是使用表示其类型或者特性的后缀，例如:<br>SQLEngine，MimeTypes 对于基类而言，可以使用一个 Base 或者 Abstract 前缀 BaseCookie，<br>AbstractGroup 4. 模块和包<br>除特殊模块 <strong>init</strong> 之外，模块名称都使用不带下划线的小写字母。 若是它们实现一个协议，那么通常使用 lib 为后缀，例如:<br>import smtplib<br>import os<br>import sys</li>
+<li>关于参数<br>不要用断言来实现静态类型检测。断言可以用于检查参数，但不应仅仅是进行静态类型检测。<br>Python 是动态类型语言，静态类型检测违背了其设计思想。断言应该用于避免函数不被毫无意义的调用。<br>不要滥用 <em>args 和 **kwargs。</em>args 和 **kwargs 参数可能会破坏函数的健壮性。它们使签名变得模糊， 而且代码常常开始在不应该的地方构建小的参数解析器。</li>
+<li>其他<br>使用 has 或 is 前缀命名布尔元素 is_connect = True<br>has_member = False<br>用复数形式命名序列<br>members = [‘user_1’, ‘user_2’]<br>用显式名称命名字典<br>person_address = {‘user_1’:’10 road WD’, ‘user_2’ : ‘20 street huafu’}<br>避免通用名称<br>诸如 list, dict, sequence 或者 element 这样的名称应该避免。 避免现有名称诸如 os, sys 这种系统已经存在的名称应该避免。</li>
+<li>一些数字<br>一行列数 : PEP 8 规定为 79 列。根据自己的情况，比如不要超过满屏时编辑器的显示列数。<br>一个函数 : 不要超过 30 行代码, 即可显示在一个屏幕类，可以不使用垂直游标即可看到整个函数。<br>一个类 : 不要超过 200 行代码，不要有超过 10 个方法。一个模块不要超过 500 行。</li>
+<li>验证脚本可以安装一个 pep8 脚本用于验证你的代码风格是否符合 PEP8。</li>
+</ol>
 
       
     </div>
