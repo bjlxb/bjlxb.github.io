@@ -7197,7 +7197,9 @@ https://github.com/caoxinyu/RedisClient/tree/OSX
   <entry>
     <title>测试-Jmeter压测</title>
     <url>/2022/03/15/%E6%B5%8B%E8%AF%95-Jmeter%E5%8E%8B%E6%B5%8B/</url>
-    <content><![CDATA[<p>学习Jmeter压测相关内容。<br><a id="more"></a></p>
+    <content><![CDATA[<p>学习Jmeter压测相关内容。<br><a id="more"></a><br>Jmeter的七大原件</p>
+<p>聚合报告每个字段意思</p>
+<p>一台客户端有500个客户与500个客户端有300个用户对服务器施压的区别</p>
 ]]></content>
       <categories>
         <category>测试</category>
