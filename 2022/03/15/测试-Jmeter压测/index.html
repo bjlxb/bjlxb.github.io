@@ -20,7 +20,7 @@
 <meta property="og:site_name" content="个人小站">
 <meta property="og:description" content="学习Jmeter压测相关内容。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2022-03-21T13:47:23.035Z">
+<meta property="og:updated_time" content="2022-03-22T12:59:03.632Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="测试-Jmeter压测">
 <meta name="twitter:description" content="学习Jmeter压测相关内容。">
@@ -118,7 +118,11 @@
 <p>Received KB/Sec：每秒从服务器端接收到的数据量。</p>
 <h3 id="一台客户端有500个客户与500个客户端有300个用户对服务器施压的区别"><a href="#一台客户端有500个客户与500个客户端有300个用户对服务器施压的区别" class="headerlink" title="一台客户端有500个客户与500个客户端有300个用户对服务器施压的区别"></a>一台客户端有500个客户与500个客户端有300个用户对服务器施压的区别</h3><p>500个用户在一个客户端上，会占用客户机更多的资源，而影响测试的结果。线程之间可能发生干扰，而产生一些异常。<br>500个用户在一个客户端上，需要更大的带宽。<br>IP地址的问题，可能需要使用IP Spoof来绕过服务器对于单一IP地址最大连接数的限制。<br>所有用户在一个客户端上，不必考虑分布式管理的问题；而用户分布在不同的客户端上，需要考虑使用控制器来整体调配不同客户机上的用户。同时，还需要给予相应的权限配置和防火墙设置。</p>
 <h3 id="Jmeter参数化"><a href="#Jmeter参数化" class="headerlink" title="Jmeter参数化"></a>Jmeter参数化</h3><p>jdbc参数化，csv参数化，函数参数化，计数器参数化，mock参数化</p>
-<h3 id="jmeter常用函数有哪些，2个举例说明"><a href="#jmeter常用函数有哪些，2个举例说明" class="headerlink" title="jmeter常用函数有哪些，2个举例说明"></a>jmeter常用函数有哪些，2个举例说明</h3><p>random ：随机数<br>__setProperty:设置全局变量<br>__P:获取全局变量<br>__count计数器：TRUE:用户单独技术  FALSE:不单独计数<br>__CSVRead函数：循环读取由线程组控制<br>time函数：默认13位时间戳<br>beanshell<br>vars：put,get方法<br>// put获取已定义的变量给外部使用<br>// get获取外部变量<br>vars.put(“name1”,name);  　　<br>vars.get(“src_${num}”)<br>log：日志  log.info()<br>prev：获取响应数据<br>ctx：获取请求/响应数据<br>props：获取jmeter变量–Debug Sampler</p>
+<h3 id="jmeter常用函数"><a href="#jmeter常用函数" class="headerlink" title="jmeter常用函数"></a>jmeter常用函数</h3><p>random ：随机数<br>__setProperty:设置全局变量<br>__P:获取全局变量<br>__count计数器：TRUE:用户单独技术  FALSE:不单独计数<br>__CSVRead函数：循环读取由线程组控制<br>time函数：默认13位时间戳<br>beanshell<br>vars：put,get方法<br>// put获取已定义的变量给外部使用<br>// get获取外部变量<br>vars.put(“name1”,name);  　　<br>vars.get(“src_${num}”)<br>log：日志  log.info()<br>prev：获取响应数据<br>ctx：获取请求/响应数据<br>props：获取jmeter变量–Debug Sampler</p>
+<h3 id="jmeter断言"><a href="#jmeter断言" class="headerlink" title="jmeter断言"></a>jmeter断言</h3><p>1、断言响应持续时间<br>2、断言正则，json，xpath变量<br>3、beanshell断言<br>4、jmeter响应断言变量不需要$ ，断言文本，响应代码和响应信息，断言请求头和响应头，断言数据大小</p>
+<h3 id="beanshell常用变量"><a href="#beanshell常用变量" class="headerlink" title="beanshell常用变量"></a>beanshell常用变量</h3><p>vars：put,get方法<br>//put获取已定义的变量给外部使用 get获取外部变量<br>vars.put(“name1”,name);  　　<br>vars.get(“src_${num}”)</p>
+<p>log：日志  log.info()<br>prev：获取响应数据<br>ctx：获取请求/响应数据<br>props：获取jmeter变量–Debug Sampler</p>
+<h3 id="关联"><a href="#关联" class="headerlink" title="关联"></a>关联</h3><p>Add -&gt; Post Processors -&gt; Regular Expresstion Extractor<br>正则，json,xpath </p>
 
       
     </div>
