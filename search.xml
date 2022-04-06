@@ -7237,7 +7237,8 @@ https://github.com/caoxinyu/RedisClient/tree/OSX
   <entry>
     <title>测试-Selenium基础一</title>
     <url>/2022/03/24/%E6%B5%8B%E8%AF%95-Selenium%E5%9F%BA%E7%A1%80%E4%B8%80/</url>
-    <content><![CDATA[<p>学习Selenium基础相关内容<br><a id="more"></a><br>WebDriver8种基本元素定位方式<br>1、find_element_by_id()<br>2、find_element_by_name()<br>3、find_element_by_class_name()<br>4、find_element_by_xpath()<br>5、find_element_by_css_selector()<br>6、find_element_by_tag_name ()<br>7、find_element_by_link_text()<br>8、find_element_by_partial_link_text()</p>
+    <content><![CDATA[<p>学习Selenium基础相关内容<br><a id="more"></a></p>
+<h3 id="WebDriver8种基本元素定位方式"><a href="#WebDriver8种基本元素定位方式" class="headerlink" title="WebDriver8种基本元素定位方式"></a>WebDriver8种基本元素定位方式</h3><p>1、find_element_by_id()<br>2、find_element_by_name()<br>3、find_element_by_class_name()<br>4、find_element_by_xpath()<br>5、find_element_by_css_selector()<br>6、find_element_by_tag_name ()<br>7、find_element_by_link_text()<br>8、find_element_by_partial_link_text()</p>
 ]]></content>
       <categories>
         <category>测试</category>
