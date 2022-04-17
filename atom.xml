@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bjlxb.github.io/"/>
-  <updated>2022-04-16T07:33:55.018Z</updated>
+  <updated>2022-04-17T11:49:08.900Z</updated>
   <id>http://bjlxb.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mysql查询结果拼接组合</title>
+    <link href="http://bjlxb.github.io/2022/04/17/mysql%E6%9F%A5%E8%AF%A2%E7%BB%93%E6%9E%9C%E6%8B%BC%E6%8E%A5%E7%BB%84%E5%90%88/"/>
+    <id>http://bjlxb.github.io/2022/04/17/mysql查询结果拼接组合/</id>
+    <published>2022-04-17T11:48:12.000Z</published>
+    <updated>2022-04-17T11:49:08.900Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;记录一下sql语句查询结果，多个列拼接成一个列的实现方案！&lt;br&gt;
+    
+    </summary>
+    
+      <category term="DB" scheme="http://bjlxb.github.io/categories/DB/"/>
+    
+    
+      <category term="DB" scheme="http://bjlxb.github.io/tags/DB/"/>
+    
+  </entry>
   
   <entry>
     <title>sql语句判断是否为空</title>
@@ -382,26 +402,6 @@
     <summary type="html">
     
       &lt;p&gt;测试中常用的管理工具。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>APP测试三</title>
-    <link href="http://bjlxb.github.io/2022/01/13/APP%E6%B5%8B%E8%AF%95%E4%B8%89/"/>
-    <id>http://bjlxb.github.io/2022/01/13/APP测试三/</id>
-    <published>2022-01-13T13:31:03.000Z</published>
-    <updated>2022-01-18T12:42:07.239Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;移动端自动化&lt;br&gt;
     
     </summary>
     
