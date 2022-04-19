@@ -7251,7 +7251,9 @@ https://github.com/caoxinyu/RedisClient/tree/OSX
     <content><![CDATA[<p>记录一下sql语句查询结果，多个列拼接成一个列的实现方案！<br><a id="more"></a></p>
 <h3 id="concat-函数"><a href="#concat-函数" class="headerlink" title="concat()函数"></a>concat()函数</h3><p>功能：将多个字符串连接成一个字符串。</p>
 <p>语法：concat(str1, str2,…)<br>返回结果为连接参数产生的字符串，如果有任何一个参数为null，则返回值为null。</p>
-<p>例子：<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line">select concat (id, name, score) as info from tt2;</span><br></pre></td></tr></table></figure></div></p>
+<p>例子：</p>
+<pre><code class="mysql">
+</code></pre>
 ]]></content>
       <categories>
         <category>DB</category>
