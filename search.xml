@@ -7251,9 +7251,12 @@ https://github.com/caoxinyu/RedisClient/tree/OSX
     <content><![CDATA[<p>记录一下sql语句查询结果，多个列拼接成一个列的实现方案！<br><a id="more"></a></p>
 <h3 id="concat-函数"><a href="#concat-函数" class="headerlink" title="concat()函数"></a>concat()函数</h3><p>功能：将多个字符串连接成一个字符串。</p>
 <p>语法：concat(str1, str2,…)<br>返回结果为连接参数产生的字符串，如果有任何一个参数为null，则返回值为null。</p>
-<p>例子：</p>
-<pre><code class="mysql">
-</code></pre>
+<p>例子：<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div></p>
+<h3 id="concat-ws-函数"><a href="#concat-ws-函数" class="headerlink" title="concat_ws()函数"></a>concat_ws()函数</h3><p>功能：和concat()一样，将多个字符串连接成一个字符串，但是可以一次性指定分隔符～（concat_ws就是concat with separator）<br>语法：concat_ws(separator, str1, str2, …)<br>说明：第一个参数指定分隔符。需要注意的是分隔符不能为null，如果为null，则返回结果为null。</p>
+<p>例子：<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div></p>
+<h3 id="group-concat-函数"><a href="#group-concat-函数" class="headerlink" title="group_concat()函数"></a>group_concat()函数</h3><p>在有group by的查询语句中，select指定的字段要么就包含在group by语句的后面，作为分组的依据，要么就包含在聚合函数中。</p>
+<p>功能：将group by产生的同一个分组中的值连接起来，返回一个字符串结果。<br>语法：group_concat( [distinct] 要连接的字段 [order by 排序字段 asc/desc  ] [separator ‘分隔符’] )<br>说明：通过使用distinct可以排除重复值；如果希望对结果中的值进行排序，可以使用order by子句；separator是一个字符串值，缺省为一个逗号。</p>
+<p>例子：<br><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></div></p>
 ]]></content>
       <categories>
         <category>DB</category>
