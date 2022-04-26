@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bjlxb.github.io/"/>
-  <updated>2022-04-25T13:40:52.890Z</updated>
+  <updated>2022-04-26T13:42:28.817Z</updated>
   <id>http://bjlxb.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>by详解</title>
+    <link href="http://bjlxb.github.io/2022/04/26/by%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://bjlxb.github.io/2022/04/26/by详解/</id>
+    <published>2022-04-26T13:41:09.000Z</published>
+    <updated>2022-04-26T13:42:28.817Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="DB" scheme="http://bjlxb.github.io/categories/DB/"/>
+    
+    
+      <category term="DB" scheme="http://bjlxb.github.io/tags/DB/"/>
+    
+  </entry>
   
   <entry>
     <title>mysql查询结果拼接组合</title>
@@ -382,26 +409,6 @@
     <summary type="html">
     
       &lt;p&gt;记录测试面试中简单的算法题&lt;br&gt;
-    
-    </summary>
-    
-      <category term="测试" scheme="http://bjlxb.github.io/categories/%E6%B5%8B%E8%AF%95/"/>
-    
-    
-      <category term="测试" scheme="http://bjlxb.github.io/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>管理工具使用</title>
-    <link href="http://bjlxb.github.io/2022/01/19/%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
-    <id>http://bjlxb.github.io/2022/01/19/管理工具使用/</id>
-    <published>2022-01-19T13:50:04.000Z</published>
-    <updated>2022-01-22T11:01:07.076Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;测试中常用的管理工具。&lt;br&gt;
     
     </summary>
     
